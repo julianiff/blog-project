@@ -2,4 +2,4 @@
 
 # blog-project
 
-Added new Github Action -> for deployment
+1: Added new Github Action -> for deployment
