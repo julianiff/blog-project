@@ -94,52 +94,54 @@
         </ul>
       </ol>
     </section>
+    <section style="width: 50%;">
+      <h1>Design Doc</h1>
 
-    <h2>Design Doc for the Blog "Time-X"</h2>
+      <h2>Overview</h2>
+      <p>
+        The Blog Time-X has the Goal to demonstrate how to build a blog from
+        scratch and the user should have the ability to see previous iteration
+        easily. A goal is also to iteratively build the infrastructure and have
+        a high amount of automation to speed up the work. Again this automation
+        should also be covered in the blog. A non-goal to start is to have all
+        the common functionality a WordPress Blog site or Medium Blog site has.
+        The focus at start is only on basic styling, automation and letting the
+        user experience the old iterations.
+      </p>
 
-    <h3>Overview</h3>
-    <p>
-      The Blog Time-X has the Goal to demonstrate how to build a blog from
-      scratch and the user should have the ability to see previous iteration
-      easily. A goal is also to iteratively build the infrastructure and have a
-      high amount of automation to speed up the work. Again this automation
-      should also be covered in the blog. A non-goal to start is to have all the
-      common functionality a WordPress Blog site or Medium Blog site has. The
-      focus at start is only on basic styling, automation and letting the user
-      experience the old iterations.
-    </p>
+      <h2>Automation</h2>
+      Trying to automate early to decrease the time from last commit to
+      production, to have a lean and fast deployment process.
+      <p>
+        For the Automation the project uses
+        <a href="https://docs.github.com/en/actions">Github Actions</a>. There
+        exist many different CI/CD tools, for example CircleCI, Gitlab
+        Pipelines, Azure DevOps and many more. Github has the advantage that it
+        resides close to the source code and allows to version the pipeline with
+        the other code.
+      </p>
+      <h3>Idea</h3>
+      <p>
+        On every push on the Master branch a github Action first builds the
+        project and the deploys the project to the production environment.
+      </p>
+      <h3>Example</h3>
+      A working example can be found under the github link with the version
+      <a
+        href="https://github.com/julianiff/blog-project/blob/v0.0.3/.github/workflows/upload.yml"
+        >v0.0.3</a
+      >.
 
-    <h2>Automation</h2>
-    Trying to automate early to decrease the time from last commit to
-    production, to have a lean and fast deployment process.
-    <p>
-      For the Automation the project uses
-      <a href="https://docs.github.com/en/actions">Github Actions</a>. There
-      exist many different CI/CD tools, for example CircleCI, Gitlab Pipelines,
-      Azure DevOps and many more. Github has the advantage that it resides close
-      to the source code and allows to version the pipeline with the other code.
-    </p>
-    <h3>Idea</h3>
-    <p>
-      On every push on the Master branch a github Action first builds the
-      project and the deploys the project to the production environment.
-    </p>
-    <h3>Example</h3>
-    A working example can be found under the github link with the version
-    <a
-      href="https://github.com/julianiff/blog-project/blob/v0.0.3/.github/workflows/upload.yml"
-      >v0.0.3</a
-    >.
+      <h2>Frontend</h2>
+      <p>The Frontend starts with 2 components:</p>
 
-    <h2>Frontend</h2>
-    <p>The Frontend starts with 2 components:</p>
-
-    <ul>
-      <li>A Navigation to switch between the blog posts.</li>
-      <li>
-        A component where the Text of the Blog post will be. In early iterations
-        images and other additions are a non-goal.
-      </li>
-    </ul>
+      <ul>
+        <li>A Navigation to switch between the blog posts.</li>
+        <li>
+          A component where the Text of the Blog post will be. In early
+          iterations images and other additions are a non-goal.
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
