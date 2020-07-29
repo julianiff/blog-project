@@ -1,7 +1,3 @@
-![Deploy](https://github.com/julianiff/blog-project/workflows/Deploy/badge.svg)
-
-# blog-project
-
 <section style="width: 50%;">
 
 # 1\. The Blog Project
@@ -84,4 +80,8 @@ The Frontend starts with 2 components:
 
 The components should be build in a way that they are highly reusable and decoupled. Therefore it is a goal to build components that provide styling interfaces that can be adjusted according to a respective theme.
 
-</section>
+### Reuse of Components
+
+##### Increasing Software [Empathy](https://www.industrialempathy.com/posts/designing-even-larger-applications/#if-uncertainty-is-high-then-reduce-the-degree-of-abstraction.).
+
+What is it in the existing infrastructure that users struggle with and how are they struggling with it? What is the class of applications that folks will build using your work in broad terms? What are the trends that influence the industry and how do those trends influence the software that folks are probably going to write in the future?</section>
