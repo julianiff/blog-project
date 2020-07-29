@@ -95,6 +95,6 @@ The components should be build in a way that they are highly reusable and decoup
 
 Increasing Software [Empathy](https://www.industrialempathy.com/posts/designing-even-larger-applications/#if-uncertainty-is-high-then-reduce-the-degree-of-abstraction.).
 
-A goal for the frontend is to build components with empathy towards other software engineers.
+A goal for the frontend is to build components with empathy towards other software engineers. Starting point will be that we "Think about what it means to not know everything about your framework".
 
 </section>
