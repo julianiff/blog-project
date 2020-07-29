@@ -51,7 +51,18 @@ A design doc should be written in whatever form is best suited for the project. 
 
 ## Overview
 
-The Blog Time-X has the Goal to demonstrate how to build a blog from scratch and the user should have the ability to see previous iteration easily. A goal is also to iteratively build the infrastructure and have a high amount of automation to speed up the work. Again this automation should also be covered in the blog. A non-goal to start is to have all the common functionality a WordPress Blog site or Medium Blog site has. The focus at start is only on basic styling, automation and letting the user experience the old iterations.
+The Blog Time-X has the Goals to demonstrate:
+
+*   How Fostering software empathy
+*   How to Build a blog from scratch
+*   Have the Users to see the ability to see previous iterations
+*   Iteratively build the infrastructure and have a high amount of automation to speed up the work
+*   All the steps to build automation, building the frontend will be mentioned in blog posts
+
+non-goals are:
+
+*   Don't need all the common functionality of WordPRess or Medium Blog sites.
+*   Only Basic Styling at start
 
 ## Automation
 
@@ -82,6 +93,8 @@ The components should be build in a way that they are highly reusable and decoup
 
 ### Reuse of Components
 
-##### Increasing Software [Empathy](https://www.industrialempathy.com/posts/designing-even-larger-applications/#if-uncertainty-is-high-then-reduce-the-degree-of-abstraction.).
+Increasing Software [Empathy](https://www.industrialempathy.com/posts/designing-even-larger-applications/#if-uncertainty-is-high-then-reduce-the-degree-of-abstraction.).
 
-What is it in the existing infrastructure that users struggle with and how are they struggling with it? What is the class of applications that folks will build using your work in broad terms? What are the trends that influence the industry and how do those trends influence the software that folks are probably going to write in the future?</section>
+A goal for the frontend is to build components with empathy towards other software engineers.
+
+</section>
