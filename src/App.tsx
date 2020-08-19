@@ -1,6 +1,7 @@
 import React from "react";
-// @ts-ignore
-import Button from "living-styleguide-card";
+
+import { Button } from "ls-button";
+import { LSCard } from "ls-card";
 
 import "./App.css";
 
@@ -215,9 +216,10 @@ function App() {
             inspect multiple variations of a component from the side of the
             developer (while developing them) and the enduser / customer to
             verify the behaviour and the visual appeal.
-            <Button>Import of living styleguide</Button>
           </p>
         </section>
+        <Button label="test"></Button>
+        <LSCard onClick={() => console.log("yippy")}>hild</LSCard>
       </header>
     </div>
   );
