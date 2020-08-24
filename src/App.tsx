@@ -1,7 +1,8 @@
 import React from "react";
 
 import { Button } from "ls-button";
-import { LSCard } from "ls-card";
+import { Card } from "ls-card";
+import { Title } from "ls-title";
 
 import "./App.css";
 
@@ -219,7 +220,12 @@ function App() {
           </p>
         </section>
         <Button label="test"></Button>
-        <LSCard onClick={() => console.log("yippy")}>hild</LSCard>
+        <Card onClick={() => console.log("yippy")}>Im a Button Card</Card>
+        <Title fontSize={3}>Title</Title>
+        <p>
+          These are the basic components that were pulled from the style
+          library. The next Blogpost will be from this style lib.
+        </p>
       </header>
     </div>
   );
