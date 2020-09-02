@@ -6782,26 +6782,42 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-ls-button@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/ls-button/-/ls-button-0.5.2.tgz#0f0b6e3f2ee806680008bf520b19081e087732ac"
-  integrity sha512-2Xp5YI+zAVHH880cQbdGoLeHytKq34aKSvjjx7aLYPVkSKNoTAwZupOVjyTHXEkTv/xznFX8hVTc5qVYo4Pfpw==
+ls-button@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/ls-button/-/ls-button-0.7.0.tgz#d7e7417da57aea97f71aa2137a34a6db1e6ed6cd"
+  integrity sha512-93bkFBHfnvZgKRExPJsXUyb9RLoEUf1GHn4VarSsewI/RiuzF69vj+aqZCosNidjJ1iuWiuSJoJaz+dfPgP4Mg==
   dependencies:
     "@types/styled-components" "^5.1.2"
     styled-components "^5.1.1"
 
-ls-card@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/ls-card/-/ls-card-0.5.2.tgz#badbe993df344cd6aecec8d1a0178e7019c51118"
-  integrity sha512-ouhn8A5ghIjLne9J9gWPJS4zySkXKvyla1ZjXBsgLIlkiIqhVcxQ+YAS8+9VX3F/mzhg444ac8qX5buBnGvA9Q==
+ls-card@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/ls-card/-/ls-card-0.7.0.tgz#01b988570d43fa29bd53eeaeeb092cb039181c98"
+  integrity sha512-zd+Gvx6IkorU25ofPNy6L/zr0tw8GWTcrrYPFx1sA90p3UsF/dwkcWNdpcuqLELWpaFpCFFuIezX1ZhoCFMRCA==
   dependencies:
     "@types/styled-components" "^5.1.2"
     styled-components "^5.1.1"
 
-ls-title@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/ls-title/-/ls-title-0.5.2.tgz#2a642393d6db6d06fcd5ee7f835f67a6c0e6f324"
-  integrity sha512-jqjBuDt1fC8vmYAR1SSFuWmajAlEXy1mMt/vLV2uI0k76UA1HyfTyUOpkgBIWXezNN6te268+yNdJjwnOrviGA==
+ls-curved-bg@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/ls-curved-bg/-/ls-curved-bg-0.7.0.tgz#5ae6876dbca25572be30bd2727f11b1e1757c39f"
+  integrity sha512-R728Q2LwnM67WSIl/1zsPmU5Won/KfwtxGOmE8jy30/cN9VfDDfoC/hA1rx5kliKiYJeBs1suQUTifDYDGlG0g==
+  dependencies:
+    "@types/styled-components" "^5.1.2"
+    styled-components "^5.1.1"
+
+ls-header@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/ls-header/-/ls-header-0.7.0.tgz#d8dbf106aeea3b417ff55d93fecd0994a423283a"
+  integrity sha512-nGyu0eW9qgjJWVQ4MrJm2xLriPgD5kd9f0keb6QUxCXVEHqTYmUeSsAPYxumTxRV2p4lWRmFU+YXpF2ZvZMX4g==
+  dependencies:
+    "@types/styled-components" "^5.1.2"
+    styled-components "^5.1.1"
+
+ls-title@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/ls-title/-/ls-title-0.7.0.tgz#802f5794d86df968ed6ffd823c3c85d65a48bc0c"
+  integrity sha512-syYUZRsCt/CcYjxPlHPzKa5nnunJSjm5AxXGZPojCWGJ7xJS5yNubFP3LPZ0eek1hktz/mJEB5STIlH4DnVbbw==
   dependencies:
     "@types/styled-components" "^5.1.2"
     styled-components "^5.1.1"
