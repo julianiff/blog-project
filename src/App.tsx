@@ -1,18 +1,11 @@
 import React from "react";
 
-import { Header } from "ls-header";
+import { BlogDetail } from "./views/BlogDetail";
 
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        This is a blank Page
-        <Header></Header>
-      </header>
-    </div>
-  );
+  return <BlogDetail></BlogDetail>;
 }
 
 export default App;
