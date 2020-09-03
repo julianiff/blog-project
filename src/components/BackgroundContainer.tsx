@@ -12,7 +12,6 @@ const Bottom = styled.div`
   left: 0;
   transform: translate(0, 25px);
   width: 100vw;
-  z-index: -1;
 `;
 
 export const BackgroundContainer: React.FC = ({ children }) => {

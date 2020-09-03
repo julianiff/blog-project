@@ -1,10 +1,15 @@
 import React from "react";
 import { BackgroundContainer } from "../components/BackgroundContainer";
+import styled from "styled-components";
+
+const Title = styled.h3`
+  margin: 0;
+`;
 
 export const BlogDetail = () => {
   return (
     <BackgroundContainer>
-      <h3>Component Framework</h3>
+      <Title>Component Framework</Title>
       <p>
         To build extendable Components we use the library lit-element and
         lit-html. For the management of the state of the blog it will use either
