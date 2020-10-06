@@ -7,86 +7,109 @@ const backgroundColor = "#0f3057";
 const color = "white";
 
 const Container = styled.div`
-  background-color: ${backgroundColor};
-  border: 1px solid ${borderColor};
+  border: ${spacing}rem solid ${borderColor};
   
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 10fr;
   grid-template-columns: ${spacing}rem 1fr ${spacing}rem; 
   grid-template-areas: 
     "header header header"
     "main main main"
     "main main main";
-  height: 100vh;
-  // height: calc(100vh - ${spacing}rem - ${spacing}rem - 2px);
-  // margin: ${spacing}rem;
-  // width: calc(100vw - ${spacing}rem - ${spacing}rem - 2px);
-  // flex-direction: column;
-  // border-radius: ${spacing}rem;
-  
-  
+  gap: ${spacing}rem ${spacing}rem;
+  max-height: calc(100vh - ${2 * spacing}rem);
 `
 
 const Heading = styled.div`
-  border-bottom: ${spacing}rem solid ${borderColor};
   grid-area: header;
-  // height: ${25 * spacing}rem;
-  // width: 100%;
+  background-color: ${backgroundColor};
 `
 
 const TwoGrid = styled.div`
   grid-area: main;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  justify-items: center;
-  height: 100%;
+  grid-template-areas: "left right";
+  gap: ${spacing}rem ${spacing}rem;
 `
 
 const LeftEntry = styled.div`
-  border-right: ${spacing}rem solid ${borderColor};
+  grid-area: left;
   color: ${color};
-  width: 100%;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: 
+    "top"
+    "bottom";
+  gap: ${spacing}rem ${spacing}rem;
 `
 
 const RightEntry = styled.div`
+  grid-area: right;
   color: ${color};
-  width: 100%;
-`
-
-const TwoGridHorizontal = styled.div`
+  background-color: ${backgroundColor};
   display: grid;
-  grid-template-rows: 2fr 1fr;
-  height: 100%;
-  width: calc(100% + 1px);
+  align-items: center;
 `
 
 const TopHorizontal = styled.div`
-  border-bottom: solid ${spacing}rem ${borderColor};
-
+  grid-area: top;
+  background-color: ${backgroundColor};
+  display: grid;
+  align-items: center;
+`
+const BottomHorizontal = styled.div`
+  grid-area: bottom;
+  background-color: ${backgroundColor};
+  display: grid;
+  align-items: center;
 `
 
 const Text = styled.div`
   color: ${color};
 `
 
+const TextCenterContainer = styled.div`
+  text-align: center;
+`
+
+const Title = styled.h1`
+  color: ${color};
+  font-size: 2rem;
+  line-height: 1.5;
+`
+
 export const BlogDetail = () => {
     return (
         <Container>
             <Heading>
-                <Text>
-                </Text>
+                <TextCenterContainer>
+                    <Title>
+                        Just a grid, not much more
+                    </Title>
+                </TextCenterContainer>
             </Heading>
             <TwoGrid>
                 <LeftEntry>
-                    <TwoGridHorizontal>
-                        <TopHorizontal>
-                            <Text></Text>
-                        </TopHorizontal>
-                        <Text></Text>
-                    </TwoGridHorizontal>
+                    <TopHorizontal>
+                        <TextCenterContainer>
+                            <Text>{textFragment}</Text>
+                        </TextCenterContainer>
+                    </TopHorizontal>
+                    <BottomHorizontal>
+                        <TextCenterContainer>
+                            <Text>{textFragment}</Text>
+                        </TextCenterContainer>
+                    </BottomHorizontal>
                 </LeftEntry>
-                <RightEntry></RightEntry>
+                <RightEntry>
+                    <TextCenterContainer>
+                        <Text>{textFragment}</Text>
+                    </TextCenterContainer>
+                </RightEntry>
             </TwoGrid>
         </Container>
     );
 };
+
+const textFragment = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
