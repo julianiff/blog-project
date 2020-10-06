@@ -9,21 +9,33 @@ const color = "white";
 const Container = styled.div`
   background-color: ${backgroundColor};
   border: 1px solid ${borderColor};
-  display: flex;
-  height: calc(100vh - ${spacing}rem - ${spacing}rem - 2px);
-  margin: ${spacing}rem;
-  width: calc(100vw - ${spacing}rem - ${spacing}rem - 2px);
-  flex-direction: column;
-  border-radius: ${spacing}rem;
+  
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: ${spacing}rem 1fr ${spacing}rem; 
+  grid-template-areas: 
+    "header header header"
+    "main main main"
+    "main main main";
+  height: 100vh;
+  // height: calc(100vh - ${spacing}rem - ${spacing}rem - 2px);
+  // margin: ${spacing}rem;
+  // width: calc(100vw - ${spacing}rem - ${spacing}rem - 2px);
+  // flex-direction: column;
+  // border-radius: ${spacing}rem;
+  
+  
 `
 
 const Heading = styled.div`
   border-bottom: ${spacing}rem solid ${borderColor};
-  height: ${25 * spacing}rem;
-  width: 100%;
+  grid-area: header;
+  // height: ${25 * spacing}rem;
+  // width: 100%;
 `
 
 const TwoGrid = styled.div`
+  grid-area: main;
   display: grid;
   grid-template-columns: 2fr 1fr;
   justify-items: center;
