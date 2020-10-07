@@ -5,6 +5,7 @@ const spacing = 0.35;
 const borderColor = "white";
 const backgroundColor = "#0f3057";
 const color = "white";
+const fluidFontSize = (minFontSize: number, maxFontSize: number = minFontSize + 6) => `calc(${minFontSize}rem + (${maxFontSize} - ${minFontSize}) * (100vw - 400px) / (1200 - 400));`
 
 const Container = styled.div`
   border: ${spacing}rem solid ${borderColor};
@@ -67,6 +68,8 @@ const BottomHorizontal = styled.div`
 
 const Text = styled.div`
   color: ${color};
+  font-size: ${fluidFontSize(0.8, 2)};
+  padding: 1rem;
 `
 
 const TextCenterContainer = styled.div`
@@ -75,9 +78,10 @@ const TextCenterContainer = styled.div`
 
 const Title = styled.h1`
   color: ${color};
-  font-size: 2rem;
+  font-size: ${fluidFontSize(2, 3)};
   line-height: 1.5;
 `
+
 
 export const BlogDetail = () => {
     return (
