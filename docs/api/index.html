@@ -43,7 +43,7 @@
       </tr>
       
         <tr>
-          <td>name</td><td>The name to say "Hello" to.</td><td>string</td><td>"World"</td>
+          <td>name</td><td>The name to say "Hello" to.</td><td>string</td><td>"boss"</td>
         </tr>
       
         <tr>
@@ -60,37 +60,15 @@
       </tr>
       
         <tr>
-          <td>name</td><td>name</td><td>The name to say "Hello" to.</td><td>string</td><td>"World"</td>
+          <td>styles</td><td>undefined</td><td>undefined</td><td>CSSResultGroup</td><td>"css`\n    :host {\n      display: block;\n      border: solid 1px gray;\n      padding: 16px;\n      max-width: 800px;\n    }\n  `"</td>
+        </tr>
+      
+        <tr>
+          <td>name</td><td>name</td><td>The name to say "Hello" to.</td><td>string</td><td>"boss"</td>
         </tr>
       
         <tr>
           <td>count</td><td>count</td><td>The number of times the button has been clicked.</td><td>number</td><td>0</td>
-        </tr>
-      
-        <tr>
-          <td>renderRoot</td><td>undefined</td><td>Node or ShadowRoot into which element DOM should be rendered. Defaults
-to an open shadowRoot.</td><td>HTMLElement | ShadowRoot</td><td>undefined</td>
-        </tr>
-      
-        <tr>
-          <td>isUpdatePending</td><td>undefined</td><td>undefined</td><td>boolean</td><td>undefined</td>
-        </tr>
-      
-        <tr>
-          <td>hasUpdated</td><td>undefined</td><td>undefined</td><td>boolean</td><td>undefined</td>
-        </tr>
-      
-        <tr>
-          <td>updateComplete</td><td>undefined</td><td>Returns a Promise that resolves when the element has completed updating.
-The Promise value is a boolean that is `true` if the element completed the
-update without triggering another update. The Promise result is `false` if
-a property was set inside `updated()`. If the Promise is rejected, an
-exception was thrown during the update.
-
-To await additional asynchronous work, override the `getUpdateComplete`
-method. For example, it is sometimes useful to await a rendered element
-before fulfilling this Promise. To do this, first await
-`super.getUpdateComplete()`, then any subsequent state.</td><td>Promise<boolean></td><td>undefined</td>
         </tr>
       
     </table>

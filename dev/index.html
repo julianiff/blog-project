@@ -6,17 +6,20 @@
     <title>&lt;my-element> Demo</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="../my-element.js"></script>
-    <style>
-      p {
-        border: solid 1px blue;
-        padding: 8px;
-      }
-    </style>
+    <script type="module" src="../public/index.js"></script>
   </head>
   <body>
-    <my-element>
-      <p>This is child content</p>
-    </my-element>
+    <iff-page-layout>
+      <iff-card>
+        <p slot="title"><iff-text>Das ist ein Text In paragraph</iff-text></p>
+        <p slot="lead">Text</p>
+      </iff-card>
+      <iff-card>
+        <div slot="custom">Testcustom</div>
+      </iff-card>
+      <iff-card>
+        <div slot="custom">Testcustom</div>
+      </iff-card>
+    </iff-page-layout>
   </body>
 </html>
