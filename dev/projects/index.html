@@ -13,10 +13,15 @@
   </head>
   <body>
     <iff-page-layout theme="light">
+      <iff-header slot="header">
+        <div slot="start">left</div>
+        <div slot="end">right</div>
+      </iff-header>
+
       <div slot="body">
         <iff-intro>
-          <iff-link slot="start-text" href="dev/projects"><iff-title level="1">Projects</iff-title></iff-link>
-          <iff-link slot="end-text" href="dev/projects"><iff-title level="1">Person</iff-title></iff-link>
+          <iff-link slot="start-text" href="/dev"><iff-title level="1">Back</iff-title></iff-link>
+          <iff-link slot="end-text" href="/projects"><iff-title level="1">Person</iff-title></iff-link>
         </iff-intro>
       </div>
     </iff-page-layout>
