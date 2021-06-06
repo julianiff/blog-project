@@ -4,7 +4,6 @@ import {customElement, property} from 'lit/decorators.js';
 /**
  * Card to display articles
  *
- * @ - This element has a slot
  * @slot custom -  Slot to override all Card
  * @slot body -  Slot to override body part
  * @slot title -  Slot to set Card Title

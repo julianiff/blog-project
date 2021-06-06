@@ -1,8 +1,9 @@
-import './atom/PageLayout';
+import './template/PageLayout';
 import './atom/Title';
 import './atom/Text';
 import './atom/Link';
 import './atom/Button';
 import './molecule/Card';
 import './organism/Header';
-import './organism/Intro';
+import './template/Split';
+import './page/BasePage';

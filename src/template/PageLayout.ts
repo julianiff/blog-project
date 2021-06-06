@@ -2,12 +2,15 @@ import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 
 type ThemeVariation = 'light' | 'dark';
-import './Title';
-import './Button';
+
+import '../atom/Title';
+import '../atom/Button';
 /**
  * An example element.
  *
- * @slot - This element has a slot
+ * @slot header -  Slot to set header
+ * @slot body -  Slot to set body
+ * @slot footer -  Slot to set footer
  */
 @customElement('iff-page-layout')
 export class PageLayout extends LitElement {

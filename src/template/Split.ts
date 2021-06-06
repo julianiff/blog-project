@@ -1,14 +1,16 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
 import {styleMap} from 'lit/directives/style-map.js';
+import {MouseController} from '../controller/mouse-controller';
 
 /**
  * Text Styling Component
  *
- * @slot - This element has a slot
+ * @slot start-text -  Slot to set the first text
+ * @slot end-text -  Slot to set the end text
  */
-@customElement('iff-intro')
-export class Intro extends LitElement {
+@customElement('iff-split')
+export class Split extends LitElement {
   static styles = css`
     :host {
       position: relative;
@@ -52,25 +54,23 @@ export class Intro extends LitElement {
   `;
 
   @state()
-  private mousePosition: any = 0;
+  private mousePosition = new MouseController(this);
 
   @state()
-  private screenWidth: any = window.innerWidth;
+  private screenWidth: number = window.innerWidth;
 
   constructor() {
     super();
-    this.addEventListener(
-      'mousemove',
-      throttled(5, (e: MouseEvent) => (this.mousePosition = e.clientX))
-    );
   }
 
   render() {
     const mouseMap = {
-      width: `${100 - (100 / this.screenWidth) * this.mousePosition + 15}%`,
+      width: `${
+        100 - (100 / this.screenWidth) * this.mousePosition.pos.x + 15
+      }%`,
     };
     const mouseMapEnd = {
-      width: `${(100 / this.screenWidth) * this.mousePosition + 15}%`,
+      width: `${(100 / this.screenWidth) * this.mousePosition.pos.x + 15}%`,
     };
 
     return html`
@@ -86,18 +86,6 @@ export class Intro extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'iff-intro': Intro;
+    'iff-split': Split;
   }
-}
-
-function throttled(delay: number, fn: (e: MouseEvent) => void) {
-  let lastCall = 0;
-  return function (e: MouseEvent) {
-    const now = new Date().getTime();
-    if (now - lastCall < delay) {
-      return;
-    }
-    lastCall = now;
-    return fn(e);
-  };
 }
