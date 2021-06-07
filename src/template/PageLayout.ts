@@ -5,6 +5,7 @@ type ThemeVariation = 'light' | 'dark';
 
 import '../atom/Title';
 import '../atom/Button';
+import {UpdateControllerConnectedEvent} from '../controller/UpdateControllerConnectedEvent';
 /**
  * An example element.
  *
@@ -55,10 +56,14 @@ export class PageLayout extends LitElement {
       <div class="footer-layout">
         <slot name="footer">
           <iff-button
-            @button-clicked=${() =>
+            @button-clicked=${() => {
+              const event = new UpdateControllerConnectedEvent();
+              this.dispatchEvent(event);
+
               this.theme !== 'light'
                 ? (this.theme = 'light')
-                : (this.theme = 'dark')}
+                : (this.theme = 'dark');
+            }}
           >
             <iff-title level="4">${
               this.theme !== 'light' ? 'light' : 'dark'

@@ -65,12 +65,10 @@ export class Split extends LitElement {
 
   render() {
     const mouseMap = {
-      width: `${
-        100 - (100 / this.screenWidth) * this.mousePosition.pos.x + 15
-      }%`,
+      width: `${100 - (100 / this.screenWidth) * this.mousePosition.pos.x}%`,
     };
     const mouseMapEnd = {
-      width: `${(100 / this.screenWidth) * this.mousePosition.pos.x + 15}%`,
+      width: `${(100 / this.screenWidth) * this.mousePosition.pos.x}%`,
     };
 
     return html`

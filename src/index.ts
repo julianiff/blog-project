@@ -4,6 +4,7 @@ import './atom/Text';
 import './atom/Link';
 import './atom/Button';
 import './molecule/Card';
+import './molecule/TitleModal';
 import './organism/Header';
 import './template/Split';
 import './page/BasePage';

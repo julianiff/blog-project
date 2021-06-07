@@ -1,4 +1,4 @@
-import {LitElement, html} from 'lit';
+import {LitElement} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
 
 import '../template/PageLayout';
@@ -20,8 +20,7 @@ export class BasePage extends LitElement {
   private content = new BuildViewsController(this);
 
   render() {
-    console.log(this.content.renderViews);
-    return html` ${this.content.renderViews} `;
+    return this.content.renderViews;
   }
 }
 
