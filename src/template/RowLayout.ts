@@ -17,7 +17,24 @@ export class RowLayout extends LitElement {
       justify-content: space-evenly;
       align-items: center;
       flex-wrap: wrap;
-      width: 1024;
+    }
+
+    ::slotted(*) {
+      max-width: 75%;
+      margin: 2.5%;
+    }
+
+    @media screen and (min-width: 724px) {
+      ::slotted(*) {
+        max-width: 40%;
+        margin: 2.5%;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      ::slotted(*) {
+        max-width: 25%;
+        margin: 1%;
+      }
     }
   `;
 

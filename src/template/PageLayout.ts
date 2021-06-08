@@ -24,7 +24,7 @@ export class PageLayout extends LitElement {
     }
     [name='body']::slotted(*) {
       width: 100vw;
-      height: calc(
+      min-height: calc(
         100vh - var(--iff-alias__header--height) -
           var(--iff-alias__header--height) - 1.6rem
       );

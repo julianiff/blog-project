@@ -110,13 +110,21 @@ export const Views: ViewType = {
             {
               slotName: '',
               component: 'iff-card',
-              props: [{level: '1'}],
+              props: [{imageSrc: 'dev/transformer.png'}],
               slots: [
                 {
                   slotName: 'title',
                   component: 'iff-title',
                   props: [{level: '4'}],
                   innerText: 'JSON to Lit (Webcomponents) transformer',
+                  slots: [],
+                },
+                {
+                  slotName: 'lead',
+                  component: 'iff-text',
+                  props: [{styling: 'paragraph-slim'}],
+                  innerText:
+                    'Module consumes a specific JSON format and transforms it into lit Webcomponents',
                   slots: [],
                 },
               ],
@@ -130,7 +138,15 @@ export const Views: ViewType = {
                   slotName: 'title',
                   component: 'iff-title',
                   props: [{level: '4'}],
-                  innerText: 'JSON to Lit (Webcomponents) transformer',
+                  innerText: '&lt; iff-* Design System',
+                  slots: [],
+                },
+                {
+                  slotName: 'lead',
+                  component: 'iff-text',
+                  props: [{styling: 'paragraph-slim'}],
+                  innerText:
+                    'A small design system built with Lit Webcomponents with CSS and Slot Stacks',
                   slots: [],
                 },
               ],
@@ -157,7 +173,7 @@ export const Views: ViewType = {
   Slideshow: [
     {
       component: 'iff-page-layout',
-      props: [{theme: 'dark'}],
+      props: [{theme: 'lightdarkdark'}],
       innerText: '',
       slots: [
         {

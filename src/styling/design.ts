@@ -8,6 +8,7 @@ export const design = css`
     --iff__font--family: 'Inter', sans-serif;
 
     --iff__dimension--10: 1rem;
+    --iff__dimension--15: 1.5rem;
     --iff__dimension--20: 2rem;
     --iff__dimension--30: 3rem;
     --iff__dimension--40: 4rem;
@@ -24,7 +25,7 @@ export const design = css`
   iff-page-layout[theme='light'] {
     --iff-alias__color--positive: var(--iff__color--white);
     --iff-alias__color--negative: var(--iff__color--black);
-    --iff-alias__color--complement: grey;
+    --iff-alias__color--complement: darkgrey;
 
     --iff-alias__font--color: var(--iff__color--black);
     --iff-alias__background-color--primary: var(--iff-alias__color--positive);

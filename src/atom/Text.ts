@@ -13,13 +13,22 @@ export type TagVariation = 'p';
 export class Text extends LitElement {
   static styles = css`
     :host([styling='paragraph']) {
-      color: blue;
+      font-family: var(--iff-alias__font--family);
+      color: var(--iff__font--color, var(--iff-alias__font--color));
+      font-weight: 400;
+      font-size: var(--iff__dimension--15);
     }
     :host([styling='paragraph-slim']) {
-      color: blue;
+      font-family: var(--iff-alias__font--family);
+      color: var(--iff__font--color, var(--iff-alias__font--color));
+      font-weight: 100;
+      font-size: var(--iff__dimension--15);
     }
     :host([styling='paragraph-bold']) {
-      color: blue;
+      font-family: var(--iff-alias__font--family);
+      color: var(--iff__font--color, var(--iff-alias__font--color));
+      font-weight: 700;
+      font-size: var(--iff__dimension--15);
     }
   `;
 
@@ -34,6 +43,7 @@ export class Text extends LitElement {
 
   render() {
     const tag = document.createElement(this.tag);
+    tag.classList.add(this.styling);
     tag.innerHTML = '<slot></slot>';
 
     return html`${tag}`;
