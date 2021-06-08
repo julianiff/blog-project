@@ -1,6 +1,8 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {ifDefined} from 'lit/directives/if-defined.js';
+import {viewVariants} from '../controller/ressources/views';
+import {LitCoilConnectedEvent} from '../controller/UpdateControllerConnectedEvent';
 
 export type targetVariations = '_blank' | '_parent' | '_self' | '_top';
 
@@ -13,6 +15,7 @@ export type targetVariations = '_blank' | '_parent' | '_self' | '_top';
 export class Link extends LitElement {
   static styles = css`
     a {
+      cursor: pointer;
       text-decoration: none;
       position: relative;
       display: block;
@@ -23,6 +26,8 @@ export class Link extends LitElement {
     }
   `;
 
+  @property({reflect: true})
+  public event?: viewVariants;
   @property({reflect: true})
   public href?: string;
   @property({reflect: true})
@@ -45,6 +50,12 @@ export class Link extends LitElement {
         aria-label=${ifDefined(this.label)}
         rel=${ifDefined(this.rel)}
         referrerpolicy=${ifDefined(this.referrerpolicy)}
+        @click=${() => {
+          if (this.event) {
+            const event = new LitCoilConnectedEvent(this.event);
+            this.dispatchEvent(event);
+          }
+        }}
       >
         <slot></slot>
       </a>

@@ -12,11 +12,13 @@ export const design = css`
     --iff__dimension--30: 3rem;
     --iff__dimension--40: 4rem;
     --iff__dimension--50: 5rem;
+    --iff__dimension--60: 6rem;
+    --iff__dimension--70: 7rem;
     /**
   Theme independent
   */
     --iff-alias__font--family: var(--iff__font--family);
-    --iff-alias__header--height: var(--iff__dimension--40);
+    --iff-alias__header--height: var(--iff__dimension--70);
   }
 
   iff-page-layout[theme='light'] {

@@ -5,7 +5,6 @@ type ThemeVariation = 'light' | 'dark';
 
 import '../atom/Title';
 import '../atom/Button';
-import {UpdateControllerConnectedEvent} from '../controller/UpdateControllerConnectedEvent';
 /**
  * An example element.
  *
@@ -25,6 +24,10 @@ export class PageLayout extends LitElement {
     }
     [name='body']::slotted(*) {
       width: 100vw;
+      height: calc(
+        100vh - var(--iff-alias__header--height) -
+          var(--iff-alias__header--height) - 1.6rem
+      );
     }
     .footer-layout {
       display: flex;
@@ -57,9 +60,6 @@ export class PageLayout extends LitElement {
         <slot name="footer">
           <iff-button
             @button-clicked=${() => {
-              const event = new UpdateControllerConnectedEvent();
-              this.dispatchEvent(event);
-
               this.theme !== 'light'
                 ? (this.theme = 'light')
                 : (this.theme = 'dark');

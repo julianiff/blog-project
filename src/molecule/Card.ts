@@ -17,12 +17,16 @@ export class Card extends LitElement {
     :host {
       display: flex;
       flex-direction: column;
-      background-color: yellow;
+      background-color: var(--iff-alias__color--complement);
     }
 
     img {
       height: 200px;
       width: 200px;
+    }
+
+    .body {
+      padding: var(--iff__dimension--20);
     }
   `;
 
@@ -42,10 +46,12 @@ export class Card extends LitElement {
     return html`
       <slot name="custom">
         <img src="${this.imageSrc}" alt="Alt tag" />
-        <slot name="body">
-          <slot name="title"></slot>
-          <slot name="lead"></slot>
-        </slot>
+        <div class="body">
+          <slot name="body">
+            <slot name="title"></slot>
+            <slot name="lead"></slot>
+          </slot>
+        </div>
         <slot name="footer"></slot>
       </slot>
     `;

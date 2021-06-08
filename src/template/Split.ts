@@ -15,10 +15,6 @@ export class Split extends LitElement {
     :host {
       position: relative;
       display: flex;
-      height: calc(
-        100vh - var(--iff-alias__header--height) -
-          var(--iff-alias__header--height) - 1.6rem
-      );
       align-items: center;
     }
     [name='start-text']::slotted(*) {
