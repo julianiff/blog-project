@@ -103,6 +103,13 @@ export const Views: ViewType = {
           slots: [],
         },
         {
+          slotName: 'header',
+          component: 'iff-title',
+          props: [{level: '4'}],
+          innerText: 'Code Projects',
+          slots: [],
+        },
+        {
           slotName: 'body',
           component: 'iff-row-layout',
           props: [],
@@ -116,7 +123,7 @@ export const Views: ViewType = {
                   slotName: 'title',
                   component: 'iff-title',
                   props: [{level: '4'}],
-                  innerText: 'JSON to Lit (Webcomponents) transformer',
+                  innerText: 'JSON to Lit (Webcomponents)',
                   slots: [],
                 },
                 {
@@ -124,7 +131,7 @@ export const Views: ViewType = {
                   component: 'iff-text',
                   props: [{styling: 'paragraph-slim'}],
                   innerText:
-                    'Module consumes a specific JSON format and transforms it into lit Webcomponents',
+                    'Input JSON to generate Lit Webcomponents. Can be useful for headless CMS Systems or Design Systems.',
                   slots: [],
                 },
               ],
@@ -132,7 +139,7 @@ export const Views: ViewType = {
             {
               slotName: '',
               component: 'iff-card',
-              props: [{level: '1'}],
+              props: [{imageSrc: 'dev/atom.png'}],
               slots: [
                 {
                   slotName: 'title',
@@ -146,7 +153,7 @@ export const Views: ViewType = {
                   component: 'iff-text',
                   props: [{styling: 'paragraph-slim'}],
                   innerText:
-                    'A small design system built with Lit Webcomponents with CSS and Slot Stacks',
+                    'A small design system built with Lit Webcomponents with CSS and Slot Stacking',
                   slots: [],
                 },
               ],
@@ -160,7 +167,15 @@ export const Views: ViewType = {
                   slotName: 'title',
                   component: 'iff-title',
                   props: [{level: '4'}],
-                  innerText: 'JSON to Lit (Webcomponents) transformer',
+                  innerText: 'Flyby-Test Suite',
+                  slots: [],
+                },
+                {
+                  slotName: 'lead',
+                  component: 'iff-text',
+                  props: [{styling: 'paragraph-slim'}],
+                  innerText:
+                    'Integration API Test Suite to automate Regression tests.',
                   slots: [],
                 },
               ],

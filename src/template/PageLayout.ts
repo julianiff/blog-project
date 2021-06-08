@@ -66,7 +66,7 @@ export class PageLayout extends LitElement {
             }}
           >
             <iff-title level="4">${
-              this.theme !== 'light' ? 'light' : 'dark'
+              this.theme !== 'light' ? 'contrast' : 'dark'
             }-mode</iff-title>
           </iff-button>
         </slot>

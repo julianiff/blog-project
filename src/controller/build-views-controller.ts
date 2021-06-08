@@ -12,7 +12,7 @@ export class BuildViewsController implements ReactiveController {
     this.host = host;
     host.addController(this);
 
-    this.renderViews = directive(RenderContent)(Views['Code']);
+    this.renderViews = directive(RenderContent)(Views['Intro']);
   }
 
   private _updateRender(view: viewVariants) {

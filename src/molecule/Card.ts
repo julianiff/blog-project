@@ -36,9 +36,9 @@ export class Card extends LitElement {
 
     .body {
       padding: var(--iff__dimension--20);
-      border-right: 1px solid var(--iff-alias__color--negative);
-      border-bottom: 1px solid var(--iff-alias__color--negative);
-      border-left: 1px solid var(--iff-alias__color--negative);
+      border-right: 1px solid var(--iff-alias__color--complement);
+      border-bottom: 1px solid var(--iff-alias__color--complement);
+      border-left: 1px solid var(--iff-alias__color--complement);
     }
   `;
 
