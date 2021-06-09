@@ -6,6 +6,7 @@ import './molecule/Card';
 import './molecule/TitleModal';
 import './organism/Header';
 import './template/PageLayout';
-import './template/Split';
+import './template/SplitAnim';
 import './template/RowLayout';
+import './template/ThirdOneLayout';
 import './page/BasePage';

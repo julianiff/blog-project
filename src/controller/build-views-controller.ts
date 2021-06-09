@@ -1,7 +1,7 @@
+import transformJsonToLit from 'json-to-lit-transformer';
 import {ReactiveController, ReactiveControllerHost} from 'lit';
 import {directive, Directive, DirectiveResult} from 'lit/directive.js';
 import {Views, viewVariants} from './ressources/views';
-import {transformJsonToLit} from './transformJsonToLit';
 import {LitCoilConnectedEvent} from './UpdateControllerConnectedEvent';
 
 export class BuildViewsController implements ReactiveController {

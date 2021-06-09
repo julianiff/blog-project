@@ -2,7 +2,7 @@ import {LitElement} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
 
 import '../template/PageLayout';
-import '../template/Split';
+import '../template/SplitAnim';
 import '../atom/Link';
 
 import {design} from '../styling/design';

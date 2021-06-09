@@ -1,7 +1,6 @@
 import {LitElement, html, css} from 'lit';
-import {customElement, state} from 'lit/decorators.js';
+import {customElement} from 'lit/decorators.js';
 import {styleMap} from 'lit/directives/style-map.js';
-import {MouseController} from '../controller/mouse-controller';
 
 /**
  * Text Styling Component
@@ -15,45 +14,32 @@ export class Split extends LitElement {
     :host {
       position: relative;
       display: flex;
-      align-items: center;
+      height: 100%;
+      width: 100%;
     }
     [name='start-text']::slotted(*) {
       position: absolute;
-      left: 0;
-      transform: rotate(-90deg);
       --iff__font--color: var(--iff-alias__background-color--primary);
     }
     [name='end-text']::slotted(*) {
       position: absolute;
-      right: 0;
-      transform: rotate(90deg);
       --iff__font--color: var(--iff-alias__background-color--secondary);
     }
 
     .start {
-      width: 100%;
+      width: 50%;
       height: 100%;
       background-color: var(--iff-alias__background-color--secondary);
       position: relative;
-      display: flex;
-      align-items: center;
     }
 
     .end {
-      width: 100%;
+      width: 50%;
       height: 100%;
       background-color: var(--iff-alias__color--primary);
       position: relative;
-      display: flex;
-      align-items: center;
     }
   `;
-
-  @state()
-  private mousePosition = new MouseController(this);
-
-  @state()
-  private screenWidth: number = window.innerWidth;
 
   constructor() {
     super();
@@ -61,10 +47,10 @@ export class Split extends LitElement {
 
   render() {
     const mouseMap = {
-      width: `${100 - (100 / this.screenWidth) * this.mousePosition.pos.x}%`,
+      width: '40%%',
     };
     const mouseMapEnd = {
-      width: `${(100 / this.screenWidth) * this.mousePosition.pos.x}%`,
+      width: '40%',
     };
 
     return html`
