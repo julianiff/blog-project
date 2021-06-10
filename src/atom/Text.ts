@@ -14,19 +14,28 @@ export class Text extends LitElement {
   static styles = css`
     :host([styling='paragraph']) {
       font-family: var(--iff-alias__font--family);
-      color: var(--iff__font--color, var(--iff-alias__font--color));
+      color: var(
+        --iff-state__font--color,
+        var(--iff__font--color, var(--iff-alias__font--color))
+      );
       font-weight: 400;
       font-size: var(--iff__dimension--15);
     }
     :host([styling='paragraph-slim']) {
       font-family: var(--iff-alias__font--family);
-      color: var(--iff__font--color, var(--iff-alias__font--color));
+      color: var(
+        --iff-state__font--color,
+        var(--iff__font--color, var(--iff-alias__font--color))
+      );
       font-weight: 100;
       font-size: var(--iff__dimension--15);
     }
     :host([styling='paragraph-bold']) {
       font-family: var(--iff-alias__font--family);
-      color: var(--iff__font--color, var(--iff-alias__font--color));
+      color: var(
+        --iff-state__font--color,
+        var(--iff__font--color, var(--iff-alias__font--color))
+      );
       font-weight: 700;
       font-size: var(--iff__dimension--15);
     }

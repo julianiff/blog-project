@@ -1,5 +1,6 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import {styleMap} from 'lit/directives/style-map.js';
 
 /**
  * Card to display articles
@@ -17,13 +18,17 @@ export class Card extends LitElement {
     :host {
       cursor: pointer;
       display: flex;
-      background-color: var(--iff-alias__color--complement);
+      background-color: var(--iff-card__background-color);
+      --iff-state__font--color: white;
     }
 
     .card {
       transition: all 500ms ease-in;
       display: flex;
       flex-direction: row;
+      height: 25vh;
+      width: 100%;
+      border-radius: 5px;
     }
 
     .card:hover {
@@ -32,14 +37,11 @@ export class Card extends LitElement {
     }
 
     img {
-      height: 150px;
+      border-radius: 5px;
     }
 
     .body {
       padding: var(--iff__dimension--20);
-      border-right: 1px solid var(--iff-alias__color--complement);
-      border-bottom: 1px solid var(--iff-alias__color--complement);
-      border-left: 1px solid var(--iff-alias__color--complement);
     }
   `;
 
@@ -50,6 +52,12 @@ export class Card extends LitElement {
   url = 'url.to.link.to';
 
   /**
+   * The number of times the button has been clicked.
+   */
+  @property()
+  backgroundColor = '--iff-alias__color--complement';
+
+  /**
    * Source of the header image
    * https://picsum.photos/200/200
    */
@@ -57,11 +65,14 @@ export class Card extends LitElement {
   imageSrc = 'dev/Download.jpeg';
 
   render() {
+    const backgroundMap = {'background-color': `var(${this.backgroundColor})`};
+
     return html`
-      <div class="card">
+      <div class="card" style=${styleMap(backgroundMap)}>
         <img src="${this.imageSrc}" alt="Alt tag" />
         <div class="body">
           <slot name="body">
+            <slot name="label"></slot>
             <slot name="title"></slot>
             <slot name="lead"></slot>
           </slot>

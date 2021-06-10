@@ -8,7 +8,7 @@ export const Views: ViewType = {
   Intro: [
     {
       component: 'iff-page-layout',
-      props: [{theme: 'dark'}, {test: 'farm'}],
+      props: [],
       innerText: '',
       slots: [
         {
@@ -30,15 +30,13 @@ export const Views: ViewType = {
               slots: [
                 {
                   slotName: '',
-                  component: 'iff-title',
-                  props: [{level: 2}],
-                  innerText: 'Coding Projects',
-                  slots: [],
-                },
-                {
-                  slotName: '',
                   component: 'iff-card',
-                  props: [{imageSrc: 'dev/transformer.png'}],
+                  props: [
+                    {
+                      imageSrc: 'dev/welle.png',
+                      backgroundColor: '--iff-alias__color--complement',
+                    },
+                  ],
                   slots: [
                     {
                       slotName: 'title',
@@ -60,7 +58,10 @@ export const Views: ViewType = {
                 {
                   slotName: '',
                   component: 'iff-card',
-                  props: [{imageSrc: 'dev/atom.png'}],
+                  props: [
+                    {imageSrc: 'dev/welle2.png'},
+                    {backgroundColor: '--iff-alias__color--accent-one'},
+                  ],
                   slots: [
                     {
                       slotName: 'title',
@@ -82,7 +83,10 @@ export const Views: ViewType = {
                 {
                   slotName: '',
                   component: 'iff-card',
-                  props: [{imageSrc: 'dev/go.png'}],
+                  props: [
+                    {imageSrc: 'dev/go.png'},
+                    {backgroundColor: '--iff-alias__color--accent-two'},
+                  ],
                   slots: [
                     {
                       slotName: 'title',
@@ -129,8 +133,9 @@ export const Views: ViewType = {
                         {
                           slotName: 'modal-text',
                           component: 'iff-title',
-                          props: [{level: 3}],
-                          innerText: 'This is the modal text that is not shown',
+                          props: [{level: 4}],
+                          innerText:
+                            'Culpa quis ipsum anim ullamco. In aute dolor nisi do. Non quis quis duis labore. Voluptate culpa dolor labore proident exercitation occaecat. Fugiat tempor et sunt dolore veniam minim deserunt eiusmod occaecat quis proident ad. Anim deserunt amet adipisicing qui est sint consequat anim amet consequat ex. Esse eiusmod sint quis aute tempor ullamco reprehenderit irure culpa mollit tempor elit nostrud.',
                           slots: [],
                         },
                       ],
@@ -157,8 +162,9 @@ export const Views: ViewType = {
                         {
                           slotName: 'modal-text',
                           component: 'iff-title',
-                          props: [{level: 3}],
-                          innerText: 'This is the modal text that is not shown',
+                          props: [{level: 4}],
+                          innerText:
+                            'Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolor nisi do. Non quis quis duis labore. Voluptate culpa dolor labore proident exercitation occaecat. Fugiat tempor et sunt dolore veniam minim deserunt eiusmod occaecat quis proident ad. Anim deserunt amet adipisicing qui est sint consequat anim amet consequat ex. Esse eiusmod sint quis aute tempor ullamco reprehenderit irure culpa mollit tempor elit nostrud.',
                           slots: [],
                         },
                       ],

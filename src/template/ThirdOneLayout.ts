@@ -15,6 +15,8 @@ export class ThirdOneLayout extends LitElement {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-around;
     }
 
     .start {

@@ -16,7 +16,8 @@ export class Button extends LitElement {
       box-shadow: inset 0 0 0 2px var(--iff-alias__background-color--secondary);
       border-radius: 3px;
       cursor: pointer;
-      padding: 2rem 2rem;
+      padding: 0.5rem 2rem;
+      border-radius: 5px;
 
       transition: all 150ms ease-in;
     }

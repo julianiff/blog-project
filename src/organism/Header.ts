@@ -11,19 +11,9 @@ type textStyles = 'paragraph' | 'heading1' | 'heading2';
 @customElement('iff-header')
 export class Header extends LitElement {
   static styles = css`
-    :host {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      height: var(--iff-alias__header--height);
-      background-color: black;
-    }
-    [name='start']::slotted(*) {
-      color: white;
-    }
-    [name='end']::slotted(*) {
-      color: white;
+    .header {
+      padding-left: 25px;
+      height: 100%;
     }
   `;
 
@@ -35,8 +25,12 @@ export class Header extends LitElement {
 
   render() {
     return html`
-      <slot name="start"></slot>
-      <slot name="end"></slot>
+      <div class="header">
+        <slot>
+          <slot name="start"></slot>
+          <slot name="end"></slot>
+        </slot>
+      </div>
     `;
   }
 }

@@ -1,10 +1,9 @@
 import {LitElement, html, css} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-
-type ThemeVariation = 'light' | 'dark';
+import {customElement} from 'lit/decorators.js';
 
 import '../atom/Title';
 import '../atom/Button';
+import '../organism/Header';
 /**
  * An example element.
  *
@@ -22,8 +21,14 @@ export class PageLayout extends LitElement {
       background-color: var(--iff-alias__background-color--primary);
       transition: all 250ms ease-in;
     }
+
+    @media screen and (min-width: 1024px) {
+      :host {
+        display: initial;
+      }
+    }
+
     [name='body']::slotted(*) {
-      width: 100vw;
       min-height: calc(
         100vh - var(--iff-alias__header--height) -
           var(--iff-alias__header--height) - 1.6rem
@@ -43,32 +48,15 @@ export class PageLayout extends LitElement {
     }
   `;
 
-  /**
-   * Type of styling
-   */
-  @property({reflect: true})
-  public theme: ThemeVariation = 'light';
-
   render() {
     return html`
 
-      <slot name="header"></slot>
+      <iff-header><slot name="header"></slot></iff-header>
       <div class="body-layout">
         <slot name="body"></slot>
       </div>
       <div class="footer-layout">
         <slot name="footer">
-          <iff-button
-            @button-clicked=${() => {
-              this.theme !== 'light'
-                ? (this.theme = 'light')
-                : (this.theme = 'dark');
-            }}
-          >
-            <iff-title level="4">${
-              this.theme !== 'light' ? 'contrast' : 'dark'
-            }-mode</iff-title>
-          </iff-button>
         </slot>
         </div>
       </div>

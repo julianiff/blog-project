@@ -17,7 +17,6 @@ export class RowLayout extends LitElement {
       justify-content: space-evenly;
       align-items: center;
       flex-wrap: wrap;
-      max-width: 1200px;
     }
 
     ::slotted(*) {

@@ -1,6 +1,6 @@
 import '../atom/Title';
 import {LitElement, html, css} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import {customElement} from 'lit/decorators.js';
 
 /**
  * Card to display articles
@@ -12,42 +12,18 @@ import {customElement, property} from 'lit/decorators.js';
 @customElement('iff-title-modal')
 export class TitleModal extends LitElement {
   static styles = css`
-    :host {
-      --iff-text-modal__opacity: 0%;
-      --iff-text-modal__display: 0%;
-    }
-
-    :host:hover {
-      --iff-text-modal__opacity: 100%;
+    .title-modal {
+      height: 100%;
     }
 
     .modal {
-      display: block;
-      opacity: var(--iff-text-modal__opacity, 100%);
-      position: absolute;
-      transition: all 250ms ease-in;
-    }
-
-    .modal:hover {
-      --iff-text-modal__opacity: 100%;
-    }
-
-    .title-modal:hover {
-      --iff-text-modal__opacity: 100%;
+      --iff-state__font--color: var(--iff-alias__background-color--primary);
     }
 
     [name='modal-text']::slotted(*) {
-      position: absolute;
-      left: 0;
-      width: 300px;
+      --iff-state__font--color: var(--iff-alias__background-color--primary);
     }
   `;
-
-  /**
-   * The number of times the button has been clicked.
-   */
-  @property()
-  url = 'url.to.link.to';
 
   render() {
     return html`

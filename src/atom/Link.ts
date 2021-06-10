@@ -20,10 +20,6 @@ export class Link extends LitElement {
       position: relative;
       display: block;
     }
-
-    a:hover {
-      background-color: var(--iff-alias__color--complement);
-    }
   `;
 
   @property({reflect: true})

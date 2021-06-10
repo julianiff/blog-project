@@ -1,6 +1,5 @@
 import {LitElement, html, css} from 'lit';
 import {customElement} from 'lit/decorators.js';
-import {styleMap} from 'lit/directives/style-map.js';
 
 /**
  * Text Styling Component
@@ -15,29 +14,42 @@ export class Split extends LitElement {
       position: relative;
       display: flex;
       height: 100%;
-      width: 100%;
+      align-items: flex-end;
     }
+
     [name='start-text']::slotted(*) {
-      position: absolute;
-      --iff__font--color: var(--iff-alias__background-color--primary);
+      display: block;
+      padding: 25px;
     }
+
     [name='end-text']::slotted(*) {
-      position: absolute;
-      --iff__font--color: var(--iff-alias__background-color--secondary);
+      display: block;
+      padding: 25px;
     }
 
     .start {
       width: 50%;
-      height: 100%;
-      background-color: var(--iff-alias__background-color--secondary);
-      position: relative;
+      transition: all 250ms ease-in;
+    }
+
+    .start:hover {
+      background-color: var(--iff-alias__color--complement);
+      --iff__font--color: var(--iff-alias__background-color--primary);
+      transition: all 250ms ease-in;
+      border-radius: 5px;
     }
 
     .end {
       width: 50%;
-      height: 100%;
-      background-color: var(--iff-alias__color--primary);
-      position: relative;
+      background-color: var(--iff-alias__background-color--primary);
+      transition: all 250ms ease-in;
+      border-radius: 5px;
+    }
+
+    .end:hover {
+      background-color: var(--iff-alias__color--complement);
+      --iff__font--color: var(--iff-alias__background-color--primary);
+      transition: all 250ms ease-in;
     }
   `;
 
@@ -46,18 +58,11 @@ export class Split extends LitElement {
   }
 
   render() {
-    const mouseMap = {
-      width: '40%%',
-    };
-    const mouseMapEnd = {
-      width: '40%',
-    };
-
     return html`
-      <div class="start" style=${styleMap(mouseMap)}>
+      <div class="start">
         <slot name="start-text"></slot>
       </div>
-      <div class="end" style=${styleMap(mouseMapEnd)}>
+      <div class="end">
         <slot name="end-text"></slot>
       </div>
     `;

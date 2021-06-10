@@ -13,27 +13,25 @@ export class ColumnLayout extends LitElement {
   static styles = css`
     :host {
       display: flex;
-      justify-content: flex-start;
+      align-content: space-between;
+      justify-content: center;
       align-items: flex-start;
       flex-flow: row wrap;
-      max-width: 1200px;
+      height: 100%;
     }
 
     ::slotted(*) {
       max-width: 75%;
-      margin: 2.5%;
     }
 
     @media screen and (min-width: 724px) {
       ::slotted(*) {
         max-width: 50%;
-        margin: 2.5%;
       }
     }
     @media screen and (min-width: 1024px) {
       ::slotted(*) {
         max-width: 100%;
-        margin: 1%;
       }
     }
   `;
