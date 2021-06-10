@@ -34,8 +34,8 @@ export const Views: ViewType = {
                   props: [
                     {
                       imageSrc: 'dev/welle.png',
-                      backgroundColor: '--iff-alias__color--complement',
                     },
+                    {backgroundColor: '--iff-alias__color--accent-one'},
                   ],
                   slots: [
                     {
@@ -60,7 +60,7 @@ export const Views: ViewType = {
                   component: 'iff-card',
                   props: [
                     {imageSrc: 'dev/welle2.png'},
-                    {backgroundColor: '--iff-alias__color--accent-one'},
+                    {backgroundColor: '--iff-alias__color--accent-two'},
                   ],
                   slots: [
                     {
@@ -85,7 +85,7 @@ export const Views: ViewType = {
                   component: 'iff-card',
                   props: [
                     {imageSrc: 'dev/go.png'},
-                    {backgroundColor: '--iff-alias__color--accent-two'},
+                    {backgroundColor: '--iff-alias__color--accent-three'},
                   ],
                   slots: [
                     {
@@ -164,7 +164,7 @@ export const Views: ViewType = {
                           component: 'iff-title',
                           props: [{level: 4}],
                           innerText:
-                            'Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolor nisi do. Non quis quis duis labore. Voluptate culpa dolor labore proident exercitation occaecat. Fugiat tempor et sunt dolore veniam minim deserunt eiusmod occaecat quis proident ad. Anim deserunt amet adipisicing qui est sint consequat anim amet consequat ex. Esse eiusmod sint quis aute tempor ullamco reprehenderit irure culpa mollit tempor elit nostrud.',
+                            'Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolo r nisi do. Non quis quis duis labore. Voluptate culpa dolor labore proident exercitation occaecat. Fugiat tempor et sunt dolore veniam minim deserunt eiusmod occaecat quis proident ad. Anim deserunt amet adipisicing qui est sint consequat anim amet consequat ex. Esse eiusmod sint quis aute tempor ullamco reprehenderit irure culpa mollit tempor elit nostrud.',
                           slots: [],
                         },
                       ],

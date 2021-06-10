@@ -22,7 +22,7 @@ export const design = css`
     --iff-alias__header--height: var(--iff__dimension--70);
   }
 
-  .light {
+  body[theme='light'] {
     --iff-alias__color--positive: var(--iff__color--white);
     --iff-alias__color--negative: var(--iff__color--black);
     --iff-alias__color--complement: #bfbfbf;
@@ -34,19 +34,19 @@ export const design = css`
     --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
   }
 
-  .black {
+  body[theme='black'] {
     --iff-alias__color--positive: var(--iff__color--black);
     --iff-alias__color--negative: #e5eeff;
     --iff-alias__color--complement: #bfbfbf;
-    --iff-alias__color--accent-one: #bfbfbf;
-    --iff-alias__color--accent-two: #bfbfbf;
+    --iff-alias__color--accent-one: var(--iff__color--black);
+    --iff-alias__color--accent-two: var(--iff__color--black);
 
     --iff-alias__font--color: var(--iff-alias__color--negative);
     --iff-alias__background-color--primary: var(--iff-alias__color--positive);
     --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
   }
 
-  .blue-gradiant {
+  body[theme='blue-gradiant'] {
     --iff-alias__color--positive: #023859;
     --iff-alias__color--negative: #468fbd;
     --iff-alias__color--complement: #05aff2;
@@ -58,7 +58,7 @@ export const design = css`
     --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
   }
 
-  .colorful {
+  body[theme='colorful'] {
     --iff-alias__color--positive: #378c55;
     --iff-alias__color--negative: #d9851e;
     --iff-alias__color--complement: #d96725;
@@ -70,7 +70,7 @@ export const design = css`
     --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
   }
 
-  .darkish {
+  body[theme='darkish'] {
     --iff-alias__color--positive: #291940;
     --iff-alias__color--negative: #d9d9d9;
     --iff-alias__color--complement: #3d734a;
@@ -82,7 +82,7 @@ export const design = css`
     --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
   }
 
-  .wood {
+  body[theme='wood'] {
     --iff-alias__color--positive: #202426;
     --iff-alias__color--negative: #d9d9d9;
     --iff-alias__color--complement: #6c733d;
@@ -94,7 +94,7 @@ export const design = css`
     --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
   }
 
-  .colorbild {
+  body[theme='colorbild'] {
     --iff-alias__color--positive: #3e348c;
     --iff-alias__color--negative: #d9a17c;
     --iff-alias__color--complement: #7366d9;

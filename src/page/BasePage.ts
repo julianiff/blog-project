@@ -12,10 +12,10 @@ type ThemeVariation =
   | 'light'
   | 'black'
   | 'blue-gradiant'
-  | 'colorful'
+  | 'redGreen'
   | 'wood'
-  | 'colorbild'
-  | 'darkish';
+  | 'blueGreen'
+  | 'triColor';
 import '../atom/Text';
 
 /**
@@ -48,33 +48,38 @@ export class BasePage extends LitElement {
   @property({reflect: true})
   public theme: ThemeVariation = 'blue-gradiant';
 
+  @state()
+  private setThemeColor = (theme: ThemeVariation) => {
+    document.querySelector('body')?.setAttribute('theme', theme);
+  };
+
   render() {
     return html`
       <div class="${classMap({[this.theme]: true})}">
         ${this.content.renderViews}
         <div class="button-list">
-          <iff-button @button-clicked=${() => (this.theme = 'light')}>
-            <iff-text>light</iff-text>
+          <iff-button @button-clicked=${() => this.setThemeColor('light')}>
+            <iff-text>Light</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => (this.theme = 'black')}>
-            <iff-text>black</iff-text>
+          <iff-button @button-clicked=${() => this.setThemeColor('black')}>
+            <iff-text>Black</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => (this.theme = 'colorbild')}>
-            <iff-text>colorbild</iff-text>
+          <iff-button
+            @button-clicked=${() => this.setThemeColor('blue-gradiant')}
+          >
+            <iff-text>Blue</iff-text>
           </iff-button>
+          <iff-button @button-clicked=${() => this.setThemeColor('redGreen')}>
+            <iff-text>Red Green</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => (this.theme = 'blue-gradiant')}>
-            <iff-text>blue</iff-text>
+          <iff-button @button-clicked=${() => this.setThemeColor('triColor')}>
+            <iff-text>TriColor</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => (this.theme = 'colorful')}>
-            <iff-text>colorful</iff-text>
+          <iff-button @button-clicked=${() => this.setThemeColor('wood')}>
+            <iff-text>Wood</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => (this.theme = 'darkish')}>
-            <iff-text>darkish</iff-text>
-          </iff-button>
-          </iff-button>
-          <iff-button @button-clicked=${() => (this.theme = 'wood')}>
-            <iff-text>wood</iff-text>
+          <iff-button @button-clicked=${() => this.setThemeColor('blueGreen')}>
+            <iff-text>Blue Green</iff-text>
           </iff-button>
         </div>
       </div>
