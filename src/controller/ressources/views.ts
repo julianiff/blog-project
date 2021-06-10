@@ -18,7 +18,6 @@ export const Views: ViewType = {
           innerText: 'Julian Iff',
           slots: [],
         },
-
         {
           slotName: 'body',
           component: 'iff-third-one-layout',
@@ -26,9 +25,16 @@ export const Views: ViewType = {
           slots: [
             {
               slotName: 'end',
-              component: 'iff-row-layout',
+              component: 'iff-column-layout',
               props: [],
               slots: [
+                {
+                  slotName: '',
+                  component: 'iff-title',
+                  props: [{level: 2}],
+                  innerText: 'Coding Projects',
+                  slots: [],
+                },
                 {
                   slotName: '',
                   component: 'iff-card',
@@ -76,7 +82,7 @@ export const Views: ViewType = {
                 {
                   slotName: '',
                   component: 'iff-card',
-                  props: [{level: '1'}],
+                  props: [{imageSrc: 'dev/go.png'}],
                   slots: [
                     {
                       slotName: 'title',
@@ -139,17 +145,13 @@ export const Views: ViewType = {
                     {
                       slotName: '',
                       component: 'iff-title-modal',
-                      props: [
-                        {
-                          modalTextOrientation: 'rotate(-90deg)',
-                        },
-                      ],
+                      props: [],
                       slots: [
                         {
                           slotName: 'title',
                           component: 'iff-title',
                           props: [{level: 1}],
-                          innerText: 'Projects',
+                          innerText: 'Person',
                           slots: [],
                         },
                         {

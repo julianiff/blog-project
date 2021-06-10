@@ -14,16 +14,28 @@ export class ThirdOneLayout extends LitElement {
       position: relative;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .start {
-      width: 60vw;
-      height: 100%;
+      width: 40vw;
+      height: 30vh;
     }
 
     .end {
-      width: 30vw;
+      max-width: 100vw;
       height: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .start {
+        width: 60vw;
+        height: 100%;
+      }
+      .end {
+        width: 30vw;
+        height: 100%;
+      }
     }
   `;
 

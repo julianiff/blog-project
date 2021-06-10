@@ -17,21 +17,22 @@ export class Card extends LitElement {
     :host {
       cursor: pointer;
       display: flex;
-      flex-direction: column;
       background-color: var(--iff-alias__color--complement);
     }
 
     .card {
       transition: all 500ms ease-in;
+      display: flex;
+      flex-direction: row;
     }
 
     .card:hover {
-      box-shadow: 0px 0px 55px -20px var(--iff-alias__color--complement);
+      box-shadow: 0px 0px 50px 1px var(--iff-alias__color--complement);
       transition: all 250ms ease-in;
     }
 
     img {
-      width: 100%;
+      height: 150px;
     }
 
     .body {

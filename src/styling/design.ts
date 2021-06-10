@@ -25,7 +25,7 @@ export const design = css`
   iff-page-layout[theme='light'] {
     --iff-alias__color--positive: var(--iff__color--white);
     --iff-alias__color--negative: var(--iff__color--black);
-    --iff-alias__color--complement: darkgrey;
+    --iff-alias__color--complement: #bfbfbf;
 
     --iff-alias__font--color: var(--iff__color--black);
     --iff-alias__background-color--primary: var(--iff-alias__color--positive);
@@ -33,9 +33,9 @@ export const design = css`
   }
 
   iff-page-layout[theme='dark'] {
-    --iff-alias__color--positive: #202426;
-    --iff-alias__color--negative: #6c733d;
-    --iff-alias__color--complement: #9da65d;
+    --iff-alias__color--positive: #4f5950;
+    --iff-alias__color--negative: #222622;
+    --iff-alias__color--complement: #58734c;
 
     --iff-alias__font--color: var(--iff-alias__color--negative);
     --iff-alias__background-color--primary: var(--iff-alias__color--positive);

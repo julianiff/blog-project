@@ -1,7 +1,6 @@
 import '../atom/Title';
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import {styleMap} from 'lit/directives/style-map';
 
 /**
  * Card to display articles
@@ -50,26 +49,11 @@ export class TitleModal extends LitElement {
   @property()
   url = 'url.to.link.to';
 
-  /**
-   * The number of times the button has been clicked.
-   */
-  @property({type: String})
-  modalTextOrientation = 'rotate(90deg)';
-
-  @property({type: String})
-  modalTextPosition = '13vw';
-
   render() {
     return html`
       <div class="title-modal">
         <slot name="title"></slot>
-        <div
-          class="modal"
-          style=${styleMap({
-            transform: this.modalTextOrientation,
-            left: this.modalTextPosition,
-          })}
-        >
+        <div class="modal">
           <slot name="modal-text"></slot>
         </div>
       </div>

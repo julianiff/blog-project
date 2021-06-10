@@ -8,5 +8,6 @@ import './organism/Header';
 import './template/PageLayout';
 import './template/SplitAnim';
 import './template/RowLayout';
+import './template/ColumnLayout';
 import './template/ThirdOneLayout';
 import './page/BasePage';
