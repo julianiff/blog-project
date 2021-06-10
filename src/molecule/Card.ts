@@ -30,6 +30,7 @@ export class Card extends LitElement {
       height: 100%;
       width: 100%;
       border-radius: 5px;
+      overflow: hidden;
     }
 
     .card:hover {
@@ -44,6 +45,7 @@ export class Card extends LitElement {
 
     .body {
       padding: var(--iff__dimension--20);
+      text-overflow: ellipsis;
     }
 
     @media screen and (min-width: 1024px) {
@@ -53,6 +55,7 @@ export class Card extends LitElement {
       }
       img {
         height: 100%;
+        width: 200px;
       }
     }
   `;

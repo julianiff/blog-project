@@ -36,7 +36,7 @@ export class BasePage extends LitElement {
         padding-right: 5px;
       }
       .base-layout {
-        padding: 25px;
+        padding: 5px;
       }
 
       @media screen and (min-width: 724px) {

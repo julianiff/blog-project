@@ -30,6 +30,13 @@ export const Views: ViewType = {
               slots: [
                 {
                   slotName: '',
+                  component: 'iff-title',
+                  props: [{level: '4'}],
+                  innerText: 'Code Projects',
+                  slots: [],
+                },
+                {
+                  slotName: '',
                   component: 'iff-card',
                   props: [
                     {
@@ -121,13 +128,13 @@ export const Views: ViewType = {
                       slotName: '',
                       component: 'iff-title-lead',
                       props: [],
-                      innerText: 'Code',
+                      innerText: 'What i Like',
                       slots: [
                         {
                           slotName: 'title',
                           component: 'iff-title',
                           props: [{level: 2}],
-                          innerText: 'Code',
+                          innerText: 'What i Like',
                           slots: [],
                         },
                         {
@@ -346,6 +353,51 @@ export const Views: ViewType = {
                                 },
                               ],
                             },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Design System',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Micro Services',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Cluster',
+                                  slots: [],
+                                },
+                              ],
+                            },
                           ],
                         },
                       ],
@@ -366,7 +418,7 @@ export const Views: ViewType = {
                           slotName: 'title',
                           component: 'iff-title',
                           props: [{level: 2}],
-                          innerText: 'Person',
+                          innerText: 'Who i am',
                           slots: [],
                         },
                         {

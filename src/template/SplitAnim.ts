@@ -53,7 +53,7 @@ export class Split extends LitElement {
         position: relative;
         display: flex;
         height: 100%;
-        align-items: flex-end;
+        align-items: stretch;
         flex-direction: row;
       }
 

@@ -17,7 +17,7 @@ export class Header extends LitElement {
     }
     @media screen and (min-width: 1024px) {
       .header {
-        padding-left: 25px;
+        padding-left: 3.2rem;
       }
     }
   `;
