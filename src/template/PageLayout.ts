@@ -18,7 +18,6 @@ export class PageLayout extends LitElement {
       position: relative;
       display: flex;
       flex-direction: column;
-      background-color: var(--iff-alias__background-color--primary);
       transition: all 250ms ease-in;
     }
 
@@ -42,9 +41,6 @@ export class PageLayout extends LitElement {
     .body-layout {
       display: flex;
       justify-content: center;
-    }
-    button {
-      height: var(--iff-alias__header--height);
     }
   `;
 

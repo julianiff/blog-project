@@ -12,18 +12,19 @@ export class Button extends LitElement {
     button {
       border: none;
       background-color: var(--iff-alias__background-color--primary);
-      --iff__font--color: var(--iff-alias__background-color--secondary);
+      --iff-state__font--color: var(--iff-alias__background-color--secondary);
       box-shadow: inset 0 0 0 2px var(--iff-alias__background-color--secondary);
       border-radius: 3px;
       cursor: pointer;
-      padding: 0.5rem 2rem;
+      padding: var(--iff-card__padding--top-bottom, 0.5rem)
+        var(--var-card__padding--left-right, 2rem);
       border-radius: 5px;
 
       transition: all 150ms ease-in;
     }
 
     :slotted(*) {
-      --iff__font--color: var(--iff-alias__background-color--secondary);
+      --iff-state__font--color: var(--iff-alias__background-color--secondary);
     }
 
     button:hover {

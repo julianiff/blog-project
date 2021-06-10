@@ -1,7 +1,6 @@
 import {css, html, LitElement} from 'lit';
 import {customElement, property, state} from 'lit/decorators.js';
 import {BuildViewsController} from '../controller/build-views-controller';
-import {classMap} from 'lit/directives/class-map.js';
 
 import '../atom/Button';
 import '../atom/Title';
@@ -31,9 +30,22 @@ export class BasePage extends LitElement {
         flex-direction: row;
         padding-top: 5px;
         padding-left: 25px;
+        flex-wrap: wrap;
       }
       .button-list :not(:last-child) {
         padding-right: 5px;
+      }
+      .base-layout {
+        padding: 25px;
+      }
+
+      @media screen and (min-width: 724px) {
+        .button-list {
+          flex-direction: row;
+        }
+        .base-layout {
+          padding: 0px;
+        }
       }
     `,
     design,
@@ -55,7 +67,7 @@ export class BasePage extends LitElement {
 
   render() {
     return html`
-      <div class="${classMap({[this.theme]: true})}">
+      <div class="base-layout">
         ${this.content.renderViews}
         <div class="button-list">
           <iff-button @button-clicked=${() => this.setThemeColor('light')}>

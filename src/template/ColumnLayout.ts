@@ -21,17 +21,14 @@ export class ColumnLayout extends LitElement {
     }
 
     ::slotted(*) {
-      max-width: 75%;
+      max-width: 100%;
+      padding-bottom: 2.5rem;
     }
 
-    @media screen and (min-width: 724px) {
-      ::slotted(*) {
-        max-width: 50%;
-      }
-    }
     @media screen and (min-width: 1024px) {
       ::slotted(*) {
         max-width: 100%;
+        padding-bottom: 0;
       }
     }
   `;

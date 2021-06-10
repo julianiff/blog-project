@@ -18,6 +18,7 @@ export class Card extends LitElement {
     :host {
       cursor: pointer;
       display: flex;
+      flex-direction: column;
       background-color: var(--iff-card__background-color);
       --iff-state__font--color: white;
     }
@@ -25,8 +26,8 @@ export class Card extends LitElement {
     .card {
       transition: all 500ms ease-in;
       display: flex;
-      flex-direction: row;
-      height: 25vh;
+      flex-direction: column;
+      height: 100%;
       width: 100%;
       border-radius: 5px;
     }
@@ -38,10 +39,21 @@ export class Card extends LitElement {
 
     img {
       border-radius: 5px;
+      height: 10rem;
     }
 
     .body {
       padding: var(--iff__dimension--20);
+    }
+
+    @media screen and (min-width: 1024px) {
+      .card {
+        flex-direction: row;
+        height: 25vh;
+      }
+      img {
+        height: 100%;
+      }
     }
   `;
 

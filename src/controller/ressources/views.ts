@@ -119,24 +119,234 @@ export const Views: ViewType = {
                   slots: [
                     {
                       slotName: '',
-                      component: 'iff-title-modal',
+                      component: 'iff-title-lead',
                       props: [],
                       innerText: 'Code',
                       slots: [
                         {
                           slotName: 'title',
                           component: 'iff-title',
-                          props: [{level: 1}],
+                          props: [{level: 2}],
                           innerText: 'Code',
                           slots: [],
                         },
                         {
-                          slotName: 'modal-text',
-                          component: 'iff-title',
-                          props: [{level: 4}],
-                          innerText:
-                            'Culpa quis ipsum anim ullamco. In aute dolor nisi do. Non quis quis duis labore. Voluptate culpa dolor labore proident exercitation occaecat. Fugiat tempor et sunt dolore veniam minim deserunt eiusmod occaecat quis proident ad. Anim deserunt amet adipisicing qui est sint consequat anim amet consequat ex. Esse eiusmod sint quis aute tempor ullamco reprehenderit irure culpa mollit tempor elit nostrud.',
-                          slots: [],
+                          slotName: 'lead-text',
+                          component: 'iff-button-list',
+                          props: [],
+                          innerText: '',
+                          slots: [
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Typescript',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'React',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Web Components',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Vue.js',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'styled-components',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Redux',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'PHP / Laravel',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Kotlin',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Go',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Node',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Spring-Boot',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'K8s',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Azure Pipelines',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                            {
+                              slotName: '',
+                              component: 'iff-button',
+                              props: [],
+                              innerText: '',
+                              slots: [
+                                {
+                                  slotName: '',
+                                  component: 'iff-text',
+                                  props: [{styling: 'label'}],
+                                  innerText: 'Scalable components',
+                                  slots: [],
+                                },
+                              ],
+                            },
+                          ],
                         },
                       ],
                     },
@@ -149,22 +359,22 @@ export const Views: ViewType = {
                   slots: [
                     {
                       slotName: '',
-                      component: 'iff-title-modal',
+                      component: 'iff-title-lead',
                       props: [],
                       slots: [
                         {
                           slotName: 'title',
                           component: 'iff-title',
-                          props: [{level: 1}],
+                          props: [{level: 2}],
                           innerText: 'Person',
                           slots: [],
                         },
                         {
-                          slotName: 'modal-text',
+                          slotName: 'lead-text',
                           component: 'iff-title',
                           props: [{level: 4}],
                           innerText:
-                            'Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolo Culpa quis ipsum anim ullamco. In aute dolo r nisi do. Non quis quis duis labore. Voluptate culpa dolor labore proident exercitation occaecat. Fugiat tempor et sunt dolore veniam minim deserunt eiusmod occaecat quis proident ad. Anim deserunt amet adipisicing qui est sint consequat anim amet consequat ex. Esse eiusmod sint quis aute tempor ullamco reprehenderit irure culpa mollit tempor elit nostrud.',
+                            'My passion is to create new digital features and products that transform how users achieve their goals.',
                           slots: [],
                         },
                       ],

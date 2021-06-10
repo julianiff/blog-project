@@ -19,16 +19,6 @@ export class ThirdOneLayout extends LitElement {
       justify-content: space-around;
     }
 
-    .start {
-      width: 40vw;
-      height: 30vh;
-    }
-
-    .end {
-      max-width: 100vw;
-      height: 100%;
-    }
-
     @media screen and (min-width: 1024px) {
       .start {
         width: 60vw;

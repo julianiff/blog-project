@@ -12,8 +12,13 @@ type textStyles = 'paragraph' | 'heading1' | 'heading2';
 export class Header extends LitElement {
   static styles = css`
     .header {
-      padding-left: 25px;
+      padding-left: 0;
       height: 100%;
+    }
+    @media screen and (min-width: 1024px) {
+      .header {
+        padding-left: 25px;
+      }
     }
   `;
 

@@ -13,22 +13,19 @@ export class Split extends LitElement {
     :host {
       position: relative;
       display: flex;
-      height: 100%;
       align-items: flex-end;
+      flex-direction: column;
     }
 
     [name='start-text']::slotted(*) {
-      display: block;
       padding: 25px;
     }
 
     [name='end-text']::slotted(*) {
-      display: block;
       padding: 25px;
     }
 
     .start {
-      width: 50%;
       transition: all 250ms ease-in;
     }
 
@@ -40,8 +37,7 @@ export class Split extends LitElement {
     }
 
     .end {
-      width: 50%;
-      background-color: var(--iff-alias__background-color--primary);
+      background-color: var(--iff-alias__background-color--complement);
       transition: all 250ms ease-in;
       border-radius: 5px;
     }
@@ -50,6 +46,37 @@ export class Split extends LitElement {
       background-color: var(--iff-alias__color--complement);
       --iff__font--color: var(--iff-alias__background-color--primary);
       transition: all 250ms ease-in;
+    }
+
+    @media screen and (min-width: 724px) {
+      :host {
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        flex-direction: row;
+      }
+
+      .start {
+        width: 50%;
+        height: auto;
+      }
+
+      .end {
+        background-color: var(--iff-alias__background-color--primary);
+        width: 50%;
+        height: auto;
+      }
+
+      [name='start-text']::slotted(*) {
+        display: block;
+        padding: 25px;
+      }
+
+      [name='end-text']::slotted(*) {
+        display: block;
+        padding: 25px;
+      }
     }
   `;
 

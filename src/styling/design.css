@@ -4,7 +4,9 @@
   --iff__color--black: black;
   --iff__font--family: 'Inter', sans-serif;
 
+  --iff__dimension--05: 0.5rem;
   --iff__dimension--10: 1rem;
+  --iff__dimension--12: 1.2rem;
   --iff__dimension--15: 1.5rem;
   --iff__dimension--20: 2rem;
   --iff__dimension--30: 3rem;

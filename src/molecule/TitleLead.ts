@@ -9,18 +9,18 @@ import {customElement} from 'lit/decorators.js';
  * @slot modal-text -  Slot to set text of modal
 
  */
-@customElement('iff-title-modal')
+@customElement('iff-title-lead')
 export class TitleModal extends LitElement {
   static styles = css`
-    .title-modal {
+    .title-lead {
       height: 100%;
     }
 
-    .modal {
+    .lead {
       --iff-state__font--color: var(--iff-alias__background-color--primary);
     }
 
-    [name='modal-text']::slotted(*) {
+    [name='lead-text']::slotted(*) {
       --iff-state__font--color: var(--iff-alias__background-color--primary);
     }
   `;
@@ -29,8 +29,8 @@ export class TitleModal extends LitElement {
     return html`
       <div class="title-modal">
         <slot name="title"></slot>
-        <div class="modal">
-          <slot name="modal-text"></slot>
+        <div class="lead">
+          <slot name="lead-text"></slot>
         </div>
       </div>
     `;
@@ -39,6 +39,6 @@ export class TitleModal extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'iff-title-modal': TitleModal;
+    'iff-title-lead': TitleModal;
   }
 }
