@@ -15,6 +15,10 @@ export class ButtonList extends LitElement {
       display: flex;
       flex-wrap: wrap;
     }
+    :host(:empty)::before {
+      content: 'SMTH';
+      color: black;
+    }
     ::slotted(*) {
       --iff-card__padding--top-bottom: 0.15rem;
       --iff-card__padding--left-right: 0.15rem;

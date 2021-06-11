@@ -1,5 +1,7 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import {viewVariants} from '../controller/ressources/views';
+import {LitCoilConnectedEvent} from '../controller/UpdateControllerConnectedEvent';
 
 /**
  * Text Styling Component
@@ -37,7 +39,7 @@ export class Button extends LitElement {
    * Type of styling
    */
   @property({reflect: true})
-  public eventName: string = 'button-clicked';
+  public event?: viewVariants;
 
   /**
    * Type of styling
@@ -48,16 +50,12 @@ export class Button extends LitElement {
   render() {
     return html`
       <button
-        @click=${() =>
-          this.dispatchEvent(
-            new CustomEvent(this.eventName, {
-              bubbles: true,
-              composed: true,
-              detail: {
-                message: this.eventPayload,
-              },
-            })
-          )}
+        @click=${() => {
+          if (this.event) {
+            const event = new LitCoilConnectedEvent(this.event);
+            this.dispatchEvent(event);
+          }
+        }}
       >
         <slot></slot>
       </button>

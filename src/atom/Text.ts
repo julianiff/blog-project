@@ -55,9 +55,9 @@ export class Text extends LitElement {
         --iff-state__font--color,
         var(--iff__font--color, var(--iff-alias__font--color))
       );
-      font-weight: 100;
+      font-weight: 400;
       font-size: var(--iff__dimension--12);
-      line-height: 0.5rem; 
+      line-height: 0.5rem;
     }
   `;
 

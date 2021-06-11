@@ -1,4 +1,4 @@
-export type viewVariants = 'Intro' | 'Slideshow' | 'Code';
+export type viewVariants = 'Intro' | 'Slideshow' | 'Code' | 'JsonToLit';
 
 type ViewType = {
   [key in viewVariants]: any[];
@@ -43,6 +43,7 @@ export const Views: ViewType = {
                       imageSrc: 'dev/welle.png',
                     },
                     {backgroundColor: '--iff-alias__color--accent-one'},
+                    {event: 'JsonToLit'},
                   ],
                   slots: [
                     {
@@ -436,6 +437,52 @@ export const Views: ViewType = {
               ],
             },
           ],
+        },
+      ],
+    },
+  ],
+  JsonToLit: [
+    {
+      component: 'iff-page-layout',
+      props: [],
+      innerText: '',
+      slots: [
+        {
+          slotName: 'header',
+          component: 'iff-title',
+          props: [{level: '1'}],
+          innerText: 'Julian Iff',
+          slots: [],
+        },
+        {
+          slotName: 'header',
+          component: 'iff-title',
+          props: [{level: '4'}],
+          innerText: 'Json to Lit (Webcomponents)',
+          slots: [],
+        },
+        {
+          slotName: 'header',
+          component: 'iff-button',
+          props: [{event: 'Intro'}],
+          innerText: '',
+          slots: [
+            {
+              slotName: '',
+              component: 'iff-text',
+              props: [{styling: 'label'}],
+              innerText: 'Zurück',
+              slots: [],
+            },
+          ],
+        },
+        {
+          slotName: 'body',
+          component: 'iff-text',
+          props: [],
+          innerText:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+          slots: [],
         },
       ],
     },

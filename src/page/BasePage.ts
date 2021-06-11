@@ -62,6 +62,7 @@ export class BasePage extends LitElement {
 
   @state()
   private setThemeColor = (theme: ThemeVariation) => {
+    console.log('test');
     document.querySelector('body')?.setAttribute('theme', theme);
   };
 
@@ -70,27 +71,25 @@ export class BasePage extends LitElement {
       <div class="base-layout">
         ${this.content.renderViews}
         <div class="button-list">
-          <iff-button @button-clicked=${() => this.setThemeColor('light')}>
+          <iff-button @click=${() => this.setThemeColor('light')}>
             <iff-text>Light</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => this.setThemeColor('black')}>
+          <iff-button @click=${() => this.setThemeColor('black')}>
             <iff-text>Black</iff-text>
           </iff-button>
-          <iff-button
-            @button-clicked=${() => this.setThemeColor('blue-gradiant')}
-          >
+          <iff-button @click=${() => this.setThemeColor('blue-gradiant')}>
             <iff-text>Blue</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => this.setThemeColor('redGreen')}>
+          <iff-button @click=${() => this.setThemeColor('redGreen')}>
             <iff-text>Red Green</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => this.setThemeColor('triColor')}>
+          <iff-button @click=${() => this.setThemeColor('triColor')}>
             <iff-text>TriColor</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => this.setThemeColor('wood')}>
+          <iff-button @click=${() => this.setThemeColor('wood')}>
             <iff-text>Wood</iff-text>
           </iff-button>
-          <iff-button @button-clicked=${() => this.setThemeColor('blueGreen')}>
+          <iff-button @click=${() => this.setThemeColor('blueGreen')}>
             <iff-text>Blue Green</iff-text>
           </iff-button>
         </div>

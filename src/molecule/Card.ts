@@ -1,6 +1,8 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {styleMap} from 'lit/directives/style-map.js';
+import {viewVariants} from '../controller/ressources/views';
+import {LitCoilConnectedEvent} from '../controller/UpdateControllerConnectedEvent';
 
 /**
  * Card to display articles
@@ -79,11 +81,32 @@ export class Card extends LitElement {
   @property({type: String})
   imageSrc = 'dev/Download.jpeg';
 
+  /**
+   * Type of styling
+   */
+  @property({reflect: true})
+  public event?: viewVariants;
+
+  /**
+   * Type of styling
+   */
+  @property({reflect: true})
+  public eventPayload: string = 'payload';
+
   render() {
     const backgroundMap = {'background-color': `var(${this.backgroundColor})`};
 
     return html`
-      <div class="card" style=${styleMap(backgroundMap)}>
+      <div
+        class="card"
+        style=${styleMap(backgroundMap)}
+        @click=${() => {
+          if (this.event) {
+            const event = new LitCoilConnectedEvent(this.event);
+            this.dispatchEvent(event);
+          }
+        }}
+      >
         <img src="${this.imageSrc}" alt="Alt tag" />
         <div class="body">
           <slot name="body">
