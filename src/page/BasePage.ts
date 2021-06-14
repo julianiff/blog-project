@@ -58,7 +58,6 @@ export class BasePage extends LitElement {
 
   @state()
   private setThemeColor = (theme: ThemeVariation) => {
-    console.log('test');
     document.querySelector('body')?.setAttribute('theme', theme);
   };
 

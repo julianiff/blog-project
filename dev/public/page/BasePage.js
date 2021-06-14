@@ -24,7 +24,6 @@ let BasePage = class BasePage extends LitElement {
         this.theme = 'blue-gradiant';
         this.setThemeColor = (theme) => {
             var _a;
-            console.log('test');
             (_a = document.querySelector('body')) === null || _a === void 0 ? void 0 : _a.setAttribute('theme', theme);
         };
     }
