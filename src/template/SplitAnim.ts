@@ -29,12 +29,12 @@ export class Split extends LitElement {
       transition: all 250ms ease-in;
     }
 
-    .start:hover {
+    /* .start:hover {
       background-color: var(--iff-alias__color--complement);
       --iff__font--color: var(--iff-alias__background-color--primary);
       transition: all 250ms ease-in;
       border-radius: 5px;
-    }
+    } */
 
     .end {
       background-color: var(--iff-alias__background-color--complement);
@@ -43,7 +43,7 @@ export class Split extends LitElement {
     }
 
     .end:hover {
-      background-color: var(--iff-alias__color--complement);
+      background-color: var(--iff-alias__color--primary);
       --iff__font--color: var(--iff-alias__background-color--primary);
       transition: all 250ms ease-in;
     }
@@ -89,6 +89,7 @@ export class Split extends LitElement {
       <div class="start">
         <slot name="start-text"></slot>
       </div>
+
       <div class="end">
         <slot name="end-text"></slot>
       </div>

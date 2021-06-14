@@ -20,19 +20,19 @@ export class RowLayout extends LitElement {
     }
 
     ::slotted(*) {
-      max-width: 75%;
+      max-width: 90%;
       margin: 2.5%;
     }
 
     @media screen and (min-width: 724px) {
       ::slotted(*) {
-        max-width: 40%;
+        max-width: 80%;
         margin: 2.5%;
       }
     }
     @media screen and (min-width: 1024px) {
       ::slotted(*) {
-        max-width: 25%;
+        max-width: 1200px;
         margin: 1%;
       }
     }

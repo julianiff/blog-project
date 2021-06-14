@@ -11,9 +11,16 @@ import {LitCoilConnectedEvent} from '../controller/UpdateControllerConnectedEven
 @customElement('iff-button')
 export class Button extends LitElement {
   static styles = css`
+    :host([disabled]) {
+      --iff-button__background-color: var(--iff-alias__body--background-color);
+    }
+
     button {
       border: none;
-      background-color: var(--iff-alias__background-color--primary);
+      background-color: var(
+        --iff-button__background-color,
+        var(--iff-alias__background-color--primary)
+      );
       --iff-state__font--color: var(--iff-alias__background-color--secondary);
       box-shadow: inset 0 0 0 2px var(--iff-alias__background-color--secondary);
       border-radius: 3px;
@@ -42,10 +49,16 @@ export class Button extends LitElement {
   public event?: viewVariants;
 
   /**
-   * Type of styling
+   * Event Payload
    */
   @property({reflect: true})
   public eventPayload: string = 'payload';
+
+  /**
+   * Type of styling
+   */
+  @property({reflect: true, type: Boolean})
+  public disabled: boolean = false;
 
   render() {
     return html`

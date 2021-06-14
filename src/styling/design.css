@@ -56,7 +56,8 @@ body[theme='black'] {
 body[theme='blue-gradiant'] {
   --iff-alias__color--positive: #023859;
   --iff-alias__color--negative: #468fbd;
-  --iff-alias__color--complement: #05aff2;
+  --iff-alias__color--complement: #033858;
+
   --iff-alias__color--accent-one: #0477bf;
   --iff-alias__color--accent-two: #0487d9;
   --iff-alias__color--accent-three: #058fe6;
@@ -74,6 +75,7 @@ body[theme='redGreen'] {
   --iff-alias__color--accent-one: #8c170d;
   --iff-alias__color--accent-two: #d93636;
   --iff-alias__color--accent-three: #df7b7b;
+  --iff-alias__body--background-color: var(--iff__color--white);
 
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
@@ -115,6 +117,7 @@ body[theme='blueGreen'] {
   --iff-alias__color--accent-one: #54aa50;
   --iff-alias__color--accent-two: #428c3b;
   --iff-alias__color--accent-three: #1b6c75;
+  --iff-alias__body--background-color: var(--iff__color--white);
 
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);

@@ -4,9 +4,6 @@ import {BuildViewsController} from '../controller/build-views-controller';
 
 import '../atom/Button';
 import '../atom/Title';
-
-import {design} from '../styling/design';
-
 type ThemeVariation =
   | 'light'
   | 'black'
@@ -48,7 +45,6 @@ export class BasePage extends LitElement {
         }
       }
     `,
-    design,
   ];
 
   @state()
