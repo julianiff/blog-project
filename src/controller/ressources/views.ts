@@ -507,7 +507,7 @@ export const Views: ViewType = {
               component: 'iff-card',
               props: [
                 {
-                  imageSrc: 'dev/blocks.jpeg',
+                  imageSrc: 'images/blocks.jpeg',
                 },
                 {backgroundColor: '--iff-alias__color--accent-one'},
                 {event: 'JsonToLit'},
@@ -534,7 +534,7 @@ export const Views: ViewType = {
               slotName: '',
               component: 'iff-card',
               props: [
-                {imageSrc: 'dev/line_down.jpeg'},
+                {imageSrc: 'images/line_down.jpeg'},
                 {backgroundColor: '--iff-alias__color--accent-two'},
               ],
               slots: [
@@ -559,7 +559,7 @@ export const Views: ViewType = {
               slotName: '',
               component: 'iff-card',
               props: [
-                {imageSrc: 'dev/round_block.jpeg'},
+                {imageSrc: 'images/round_block.jpeg'},
                 {backgroundColor: '--iff-alias__color--accent-three'},
               ],
               slots: [

@@ -1,0 +1,1 @@
+{"version":3,"file":"TitleLead.d.ts","sourceRoot":"","sources":["../../../src/molecule/TitleLead.ts"],"names":[],"mappings":"AAAA,OAAO,eAAe,CAAC;AACvB,OAAO,EAAC,UAAU,EAAY,MAAM,KAAK,CAAC;AAG1C;;;;;;GAMG;AACH,qBACa,UAAW,SAAQ,UAAU;IACxC,MAAM,CAAC,MAAM,+BAYX;IAEF,MAAM;CAUP;AAED,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,qBAAqB;QAC7B,gBAAgB,EAAE,UAAU,CAAC;KAC9B;CACF"}

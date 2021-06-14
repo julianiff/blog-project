@@ -9,3 +9,4 @@ my-element.d.ts
 my-element.d.ts.map
 .vscode
 /public
+/build
