@@ -67,25 +67,25 @@ export class BasePage extends LitElement {
         ${this.content.renderViews}
         <div class="button-list">
           <iff-button @click=${() => this.setThemeColor('light')}>
-            <iff-text>Light</iff-text>
+            <iff-text styling="label">Light</iff-text>
           </iff-button>
           <iff-button @click=${() => this.setThemeColor('black')}>
-            <iff-text>Black</iff-text>
+            <iff-text styling="label">Black</iff-text>
           </iff-button>
           <iff-button @click=${() => this.setThemeColor('blue-gradiant')}>
-            <iff-text>Blue</iff-text>
+            <iff-text styling="label">Blue</iff-text>
           </iff-button>
           <iff-button @click=${() => this.setThemeColor('redGreen')}>
-            <iff-text>Red Green</iff-text>
+            <iff-text styling="label">Red Green</iff-text>
           </iff-button>
           <iff-button @click=${() => this.setThemeColor('triColor')}>
-            <iff-text>TriColor</iff-text>
+            <iff-text styling="label">TriColor</iff-text>
           </iff-button>
           <iff-button @click=${() => this.setThemeColor('wood')}>
-            <iff-text>Wood</iff-text>
+            <iff-text styling="label">Wood</iff-text>
           </iff-button>
           <iff-button @click=${() => this.setThemeColor('blueGreen')}>
-            <iff-text>Blue Green</iff-text>
+            <iff-text styling="label">Blue Green</iff-text>
           </iff-button>
         </div>
       </div>
