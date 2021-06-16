@@ -13,7 +13,7 @@ module.exports = function (data) {
 
 const renderExample = ({name, content, collections, page}) => {
   return `
-    <h1>Example: ${name}</h1>
+    <iff-title level=1>Example: ${name}</iff-title>
     <section class="examples">
       <nav class="collection">
         <ul>
@@ -24,10 +24,13 @@ const renderExample = ({name, content, collections, page}) => {
                   .map(
                     (post) => `
                   <li class=${post.url === page.url ? 'selected' : ''}>
-                    <a href="${relative(
+                    <iff-link href="${relative(
                       page.url,
                       post.url
-                    )}">${post.data.description.replace('<', '&lt;')}</a>
+                    )}"><iff-text styling="label">${post.data.description.replace(
+                      '<',
+                      '&lt;'
+                    )}</iff-text></iff-link>
                   </li>
                 `
                   )

@@ -1,5 +1,4 @@
 import { LitElement } from 'lit';
-import { BuildViewsController } from '../controller/build-views-controller';
 export declare type ThemeVariation = 'light' | 'black' | 'blue-gradiant' | 'redGreen' | 'wood' | 'blueGreen' | 'triColor';
 import { viewVariants } from '../controller/ressources/views';
 import '../atom/Text';
@@ -12,14 +11,15 @@ import '../atom/Title';
 export declare class BasePage extends LitElement {
     static styles: import("lit").CSSResultGroup[];
     constructor();
+    connectedCallback(): void;
     /**
      * Type of styling
      */
     view?: viewVariants;
     /**
-     * Type of styling
+     * Content
      */
-    content: BuildViewsController;
+    private content?;
     /**
      * Type of styling
      */

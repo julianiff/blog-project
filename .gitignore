@@ -11,3 +11,4 @@ my-element.d.ts.map
 /public
 /build
 /docs
+/docs/*

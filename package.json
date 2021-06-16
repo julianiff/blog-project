@@ -40,7 +40,7 @@
   "author": "Google LLC",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "json-to-lit-transformer": "^0.0.3",
+    "json-to-lit-transformer": "^0.0.4",
     "lit": "^2.0.0-rc.1"
   },
   "devDependencies": {

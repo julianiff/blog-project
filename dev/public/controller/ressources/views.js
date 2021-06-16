@@ -6,13 +6,6 @@ export const Views = {
             innerText: '',
             slots: [
                 {
-                    slotName: 'header',
-                    component: 'iff-title',
-                    props: [{ level: '1' }],
-                    innerText: 'Julian Iff',
-                    slots: [],
-                },
-                {
                     slotName: 'body',
                     component: 'iff-row-layout',
                     props: [],
@@ -348,13 +341,6 @@ export const Views = {
             props: [],
             innerText: '',
             slots: [
-                {
-                    slotName: 'header',
-                    component: 'iff-title',
-                    props: [{ level: '1' }],
-                    innerText: 'Julian Iff',
-                    slots: [],
-                },
                 {
                     slotName: 'header',
                     component: 'iff-icon-text',

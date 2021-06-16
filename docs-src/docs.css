@@ -37,14 +37,14 @@ header {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 120px;
+  height: var(--iff-alias__header--height);
   padding: 12px;
   margin: 0;
 }
 
 footer {
   width: 100%;
-  min-height: 80px;
+  min-height: var(--iff-alias__footer--height);
   background: var(--iff-alias__body--background-color);
   display: flex;
   flex-direction: column;

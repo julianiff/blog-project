@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { css, html, LitElement, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import { BuildViewsController } from '../controller/build-views-controller';
+import { BuildViewsController, } from '../controller/build-views-controller';
 import { ThemeColorController } from '../controller/set-theme-color';
 import '../atom/Text';
 import '../atom/Button';
@@ -21,17 +21,18 @@ let BasePage = class BasePage extends LitElement {
         /**
          * Type of styling
          */
-        this.content = new BuildViewsController(this, this.view);
-        /**
-         * Type of styling
-         */
         this.theme = 'blue-gradiant';
         new ThemeColorController(this);
     }
+    connectedCallback() {
+        super.connectedCallback();
+        this.content = new BuildViewsController(this, this.view);
+    }
     render() {
+        var _a;
         return html `
       <div class="base-layout">
-        ${this.content.renderViews ? this.content.renderViews : nothing}
+        ${((_a = this.content) === null || _a === void 0 ? void 0 : _a.renderViews) ? this.content.renderViews : nothing}
       </div>
     `;
     }

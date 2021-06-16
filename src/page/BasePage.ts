@@ -1,6 +1,8 @@
 import {css, html, LitElement, nothing} from 'lit';
 import {customElement, property, state} from 'lit/decorators.js';
-import {BuildViewsController} from '../controller/build-views-controller';
+import {
+  BuildViewsController,
+} from '../controller/build-views-controller';
 
 export type ThemeVariation =
   | 'light'
@@ -45,6 +47,11 @@ export class BasePage extends LitElement {
     new ThemeColorController(this);
   }
 
+  connectedCallback() {
+    super.connectedCallback();
+    this.content = new BuildViewsController(this, this.view);
+  }
+
   /**
    * Type of styling
    */
@@ -52,10 +59,10 @@ export class BasePage extends LitElement {
   public view?: viewVariants;
 
   /**
-   * Type of styling
+   * Content
    */
   @state()
-  public content = new BuildViewsController(this, this.view);
+  private content?: BuildViewsController;
   /**
    * Type of styling
    */
@@ -65,7 +72,7 @@ export class BasePage extends LitElement {
   render() {
     return html`
       <div class="base-layout">
-        ${this.content.renderViews ? this.content.renderViews : nothing}
+        ${this.content?.renderViews ? this.content.renderViews : nothing}
       </div>
     `;
   }

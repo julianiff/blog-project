@@ -47,11 +47,9 @@ PageLayout.styles = css `
     }
 
     [name='body']::slotted(*) {
-      min-height: calc(
-        100vh - var(--iff-alias__header--height) -
-          var(--iff-alias__header--height) - 1.6rem
-      );
+      min-height: 100%;
     }
+
     .footer-layout {
       display: flex;
       justify-content: center;

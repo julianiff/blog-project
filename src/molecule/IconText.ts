@@ -20,11 +20,11 @@ export class IconText extends LitElement {
     }
 
     svg {
-      fill: var(--iff-alias__color--primary);
-      height: 1rem;
-      width: 1rem;
+      fill: var(--iff-icon-text__font--color, var(--iff-alias__font--color));
+      height: var(--iff__spacer--md);
+      width: var(--iff__spacer--md);
       transform: rotate(180deg);
-      margin-right: 0.5rem;
+      margin-right: var(--iff__spacer--xs);
     }
   `;
 
@@ -34,6 +34,7 @@ export class IconText extends LitElement {
       ></iff-link>`;
   }
 }
+
 const arrowLeft = svg`<svg
   slot="icon"
   viewBox="0 0 12 12"

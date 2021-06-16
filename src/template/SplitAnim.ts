@@ -29,13 +29,6 @@ export class Split extends LitElement {
       transition: all 250ms ease-in;
     }
 
-    /* .start:hover {
-      background-color: var(--iff-alias__color--complement);
-      --iff__font--color: var(--iff-alias__background-color--primary);
-      transition: all 250ms ease-in;
-      border-radius: 5px;
-    } */
-
     .end {
       background-color: var(--iff-alias__background-color--complement);
       transition: all 250ms ease-in;

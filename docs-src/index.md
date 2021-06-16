@@ -1,6 +1,6 @@
 ---
 layout: page.11ty.cjs
-title: <my-element> ⌲ Home
+title: &lt;iff-*&gt; ⌲ Home
 ---
 
-<iff-base-page></iff-base-page>
+<iff-base-page view="Intro"></iff-base-page>

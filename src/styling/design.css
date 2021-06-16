@@ -31,11 +31,12 @@
   --iff__spacer--xl: var(--iff__dimension--20);
   --iff__spacer--xxl: var(--iff__dimension--25);
 
+  --iff-alias__footer--height: var(--iff__dimension--50);
+  --iff-alias__header--height: var(--iff__dimension--70);
   /**
   Theme independent
   */
   --iff-alias__font--family: var(--iff__font--family);
-  --iff-alias__header--height: var(--iff__dimension--70);
 }
 
 body {
