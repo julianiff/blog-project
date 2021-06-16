@@ -14,3 +14,4 @@ import './template/ColumnLayout';
 import './template/ThirdOneLayout';
 import './template/SlimLayout';
 import './page/BasePage';
+import './organism/Footer';

@@ -1,9 +1,6 @@
 module.exports = function (data) {
   return `
 <footer>
-  <p>
-    Made with
-    <a href="https://github.com/PolymerLabs/lit-starter-ts">lit-starter-ts</a>
-  </p>
+  <iff-footer></iff-footer>
 </footer>`;
 };

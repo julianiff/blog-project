@@ -7,9 +7,10 @@
   "module": "my-element.js",
   "type": "module",
   "scripts": {
-    "production": "rollup -c",
+    "production": "rollup -c --watch",
     "build": "tsc",
     "build:watch": "tsc --watch",
+    "build:css": "cpx \"./src/styling/*.{css,eot,svg,ttf,woff}\" \"./docs\"",
     "clean": "rimraf my-element.{d.ts,d.ts.map,js,js.map} test/my-element.{d.ts,d.ts.map,js,js.map} test/my-element_test.{d.ts,d.ts.map,js,js.map}",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",
@@ -19,14 +20,16 @@
     "docs:clean": "rimraf docs",
     "docs:gen": "eleventy --config=.eleventy.cjs",
     "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
-    "docs:build": "rollup -c --file docs/my-element.bundled.js",
+    "docs:build": "rollup -c --file docs/index.bundled.js",
     "docs:assets": "cp node_modules/prismjs/themes/prism-okaidia.css docs/",
     "docs:serve": "wds --root-dir=docs --node-resolve --watch",
     "analyze": "wca analyze \"src/**/*.ts\" --outFile custom-elements.json",
     "serve": "wds --watch",
     "test": "wtr",
     "test:watch": "npm run test -- --watch",
-    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+    "watch:serve": "concurrently \"yarn build:css --watch\"  \"yarn docs:gen:watch\" \"yarn build:watch\" \"yarn docs:build --watch\" \"yarn docs:serve \" ",
+    "checksize": "rollup -c ; cat index.bundled.js | gzip -9 | wc -c ; rm index.bundled.js",
+    "docs:production": "yarn build:css ; yarn build ; yarn docs"
   },
   "keywords": [
     "web-components",
@@ -61,6 +64,7 @@
     "@web/test-runner-playwright": "^0.8.4",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "concurrently": "^6.2.0",
+    "cpx": "^1.5.0",
     "deepmerge": "^4.2.2",
     "eslint": "^6.8.0",
     "lit-analyzer": "^1.1.10",

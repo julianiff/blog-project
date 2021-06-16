@@ -14,16 +14,17 @@ module.exports = function (data) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
     <link rel="stylesheet" href="${relative(page.url, '/docs.css')}">
+    <link rel="stylesheet" href="${relative(page.url, '/design.css')}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Mono">
     <link href="${relative(page.url, '/prism-okaidia.css')}" rel="stylesheet" />
     <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="/node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="${relative(
       page.url,
-      '/my-element.bundled.js'
+      '/index.bundled.js'
     )}"></script>
   </head>
-  <body>
+  <body theme="light">
     ${header()}
     ${nav(data)}
     <div id="main-wrapper">

@@ -1,7 +1,6 @@
 module.exports = function (data) {
   return `
 <header>
-  <h1>&lt;my-element></h1>
-  <h2>A web component just for me.</h2>
+  <iff-title level="1">Julian Iff</iff-title>
 </header>`;
 };

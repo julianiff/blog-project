@@ -28,7 +28,6 @@ export class Button extends LitElement {
       padding: var(--iff-card__padding--top-bottom, 0.5rem)
         var(--var-card__padding--left-right, 2rem);
       border-radius: 5px;
-
       transition: all 150ms ease-in;
     }
 

@@ -6,13 +6,14 @@ import {LitCoilConnectedEvent} from './UpdateControllerConnectedEvent';
 
 export class BuildViewsController implements ReactiveController {
   host: ReactiveControllerHost;
-  renderViews: DirectiveResult;
+  renderViews?: DirectiveResult;
 
-  constructor(host: ReactiveControllerHost) {
+  constructor(host: ReactiveControllerHost, viewInput?: viewVariants) {
     this.host = host;
     host.addController(this);
 
-    this.renderViews = directive(RenderContent)(Views['Intro']);
+    if (viewInput)
+      this.renderViews = directive(RenderContent)(Views[viewInput]);
   }
 
   private _updateRender(view: viewVariants) {

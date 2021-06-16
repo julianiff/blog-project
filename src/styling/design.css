@@ -4,16 +4,33 @@
   --iff__color--black: black;
   --iff__font--family: 'Inter', sans-serif;
 
+  --iff__dimension--01: 0.1rem;
+  --iff__dimension--02: 0.2rem;
+  --iff__dimension--03: 0.3rem;
   --iff__dimension--05: 0.5rem;
+  --iff__dimension--08: 0.8rem;
   --iff__dimension--10: 1rem;
   --iff__dimension--12: 1.2rem;
   --iff__dimension--15: 1.5rem;
   --iff__dimension--20: 2rem;
+  --iff__dimension--25: 2.5rem;
   --iff__dimension--30: 3rem;
   --iff__dimension--40: 4rem;
   --iff__dimension--50: 5rem;
   --iff__dimension--60: 6rem;
   --iff__dimension--70: 7rem;
+
+  /**
+  Spacer System
+  */
+  --iff__spacer--xxs: var(--iff__dimension--03);
+  --iff__spacer--xs: var(--iff__dimension--05);
+  --iff__spacer--sm: var(--iff__dimension--08);
+  --iff__spacer--md: var(--iff__dimension--10);
+  --iff__spacer--lg: var(--iff__dimension--15);
+  --iff__spacer--xl: var(--iff__dimension--20);
+  --iff__spacer--xxl: var(--iff__dimension--25);
+
   /**
   Theme independent
   */

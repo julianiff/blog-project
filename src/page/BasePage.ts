@@ -1,10 +1,8 @@
-import {css, html, LitElement} from 'lit';
+import {css, html, LitElement, nothing} from 'lit';
 import {customElement, property, state} from 'lit/decorators.js';
 import {BuildViewsController} from '../controller/build-views-controller';
 
-import '../atom/Button';
-import '../atom/Title';
-type ThemeVariation =
+export type ThemeVariation =
   | 'light'
   | 'black'
   | 'blue-gradiant'
@@ -12,7 +10,12 @@ type ThemeVariation =
   | 'wood'
   | 'blueGreen'
   | 'triColor';
+import {ThemeColorController} from '../controller/set-theme-color';
+import {viewVariants} from '../controller/ressources/views';
+
 import '../atom/Text';
+import '../atom/Button';
+import '../atom/Title';
 
 /**
  * An example element.
@@ -22,16 +25,6 @@ import '../atom/Text';
 export class BasePage extends LitElement {
   static styles = [
     css`
-      .button-list {
-        display: flex;
-        flex-direction: row;
-        padding-top: 5px;
-        padding-left: 25px;
-        flex-wrap: wrap;
-      }
-      .button-list :not(:last-child) {
-        padding-right: 5px;
-      }
       .base-layout {
         padding: 5px;
       }
@@ -47,47 +40,32 @@ export class BasePage extends LitElement {
     `,
   ];
 
-  @state()
-  private content = new BuildViewsController(this);
+  constructor() {
+    super();
+    new ThemeColorController(this);
+  }
 
+  /**
+   * Type of styling
+   */
+  @property({reflect: true})
+  public view?: viewVariants;
+
+  /**
+   * Type of styling
+   */
+  @state()
+  public content = new BuildViewsController(this, this.view);
   /**
    * Type of styling
    */
   @property({reflect: true})
   public theme: ThemeVariation = 'blue-gradiant';
 
-  @state()
-  private setThemeColor = (theme: ThemeVariation) => {
-    document.querySelector('body')?.setAttribute('theme', theme);
-  };
-
   render() {
     return html`
       <div class="base-layout">
-        ${this.content.renderViews}
-        <div class="button-list">
-          <iff-button @click=${() => this.setThemeColor('light')}>
-            <iff-text styling="label">Light</iff-text>
-          </iff-button>
-          <iff-button @click=${() => this.setThemeColor('black')}>
-            <iff-text styling="label">Black</iff-text>
-          </iff-button>
-          <iff-button @click=${() => this.setThemeColor('blue-gradiant')}>
-            <iff-text styling="label">Blue</iff-text>
-          </iff-button>
-          <iff-button @click=${() => this.setThemeColor('redGreen')}>
-            <iff-text styling="label">Red Green</iff-text>
-          </iff-button>
-          <iff-button @click=${() => this.setThemeColor('triColor')}>
-            <iff-text styling="label">TriColor</iff-text>
-          </iff-button>
-          <iff-button @click=${() => this.setThemeColor('wood')}>
-            <iff-text styling="label">Wood</iff-text>
-          </iff-button>
-          <iff-button @click=${() => this.setThemeColor('blueGreen')}>
-            <iff-text styling="label">Blue Green</iff-text>
-          </iff-button>
-        </div>
+        ${this.content.renderViews ? this.content.renderViews : nothing}
       </div>
     `;
   }
