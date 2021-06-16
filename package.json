@@ -16,7 +16,7 @@
     "lint:eslint": "eslint 'src/**/*.ts'",
     "lint:lit-analyzer": "lit-analyzer",
     "format": "prettier \"**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.eslintignore --write",
-    "docs": "npm run docs:clean && npm run build && npm run analyze && npm run docs:build && npm run docs:assets && npm run docs:gen",
+    "docs": "npm run docs:clean && npm run build && npm run analyze && npm run docs:build && npm run docs:assets && npm run docs:gen && yarn build:css",
     "docs:clean": "rimraf docs",
     "docs:gen": "eleventy --config=.eleventy.cjs",
     "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
@@ -29,7 +29,7 @@
     "test:watch": "npm run test -- --watch",
     "watch:serve": "concurrently \"yarn build:css --watch\"  \"yarn docs:gen:watch\" \"yarn build:watch\" \"yarn docs:build --watch\" \"yarn docs:serve \" ",
     "checksize": "rollup -c ; cat index.bundled.js | gzip -9 | wc -c ; rm index.bundled.js",
-    "docs:production": "yarn build:css ; yarn build ; yarn docs"
+    "docs:production": "yarn docs"
   },
   "keywords": [
     "web-components",
