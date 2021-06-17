@@ -14,7 +14,7 @@ module.exports = function (data) {
 const renderExample = ({name, content, collections, page}) => {
   console.log(page);
   return `
-    <iff-title level=1>${name}</iff-title>
+    <iff-title level=2>${name}</iff-title>
 
     <section class="examples">
       <nav class="collection">

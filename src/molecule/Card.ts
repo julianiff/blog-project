@@ -107,15 +107,17 @@ export class Card extends LitElement {
           }
         }}
       >
-        <img src="${this.imageSrc}" alt="Alt tag" />
-        <div class="body">
-          <slot name="body">
-            <slot name="label"></slot>
-            <slot name="title"></slot>
-            <slot name="lead"></slot>
-          </slot>
-        </div>
-        <slot name="footer"></slot>
+        <slot name="custom">
+          <img src="${this.imageSrc}" alt="Alt tag" />
+          <div class="body">
+            <slot name="body">
+              <slot name="label"></slot>
+              <slot name="title"></slot>
+              <slot name="lead"></slot>
+            </slot>
+          </div>
+          <slot name="footer"></slot>
+        </slot>
       </div>
     `;
   }

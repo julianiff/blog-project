@@ -295,29 +295,22 @@ export const Views = {
                                 },
                                 {
                                     slotName: 'end-text',
-                                    component: 'iff-link',
-                                    props: [{ href: 'dev/projects' }],
+                                    component: 'iff-title-lead',
+                                    props: [],
                                     slots: [
                                         {
-                                            slotName: '',
-                                            component: 'iff-title-lead',
-                                            props: [],
-                                            slots: [
-                                                {
-                                                    slotName: 'title',
-                                                    component: 'iff-title',
-                                                    props: [{ level: 2 }],
-                                                    innerText: 'Whoami',
-                                                    slots: [],
-                                                },
-                                                {
-                                                    slotName: 'lead-text',
-                                                    component: 'iff-title',
-                                                    props: [{ level: 4 }],
-                                                    innerText: 'My passion is to create new digital features and products that transform how users achieve their goals.',
-                                                    slots: [],
-                                                },
-                                            ],
+                                            slotName: 'title',
+                                            component: 'iff-title',
+                                            props: [{ level: 2 }],
+                                            innerText: 'Whoami',
+                                            slots: [],
+                                        },
+                                        {
+                                            slotName: 'lead-text',
+                                            component: 'iff-title',
+                                            props: [{ level: 4 }],
+                                            innerText: 'My passion is to create new digital features and products that transform how users achieve their goals.',
+                                            slots: [],
                                         },
                                     ],
                                 },
