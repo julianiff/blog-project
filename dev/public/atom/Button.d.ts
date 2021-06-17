@@ -1,3 +1,4 @@
+import './Link';
 import { LitElement } from 'lit';
 import { viewVariants } from '../controller/ressources/views';
 /**
@@ -15,6 +16,7 @@ export declare class Button extends LitElement {
      * Event Payload
      */
     eventPayload: string;
+    href?: string;
     /**
      * Type of styling
      */

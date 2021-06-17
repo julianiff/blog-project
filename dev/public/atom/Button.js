@@ -4,6 +4,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import './Link';
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { LitCoilConnectedEvent } from '../controller/UpdateControllerConnectedEvent';
@@ -25,18 +26,31 @@ let Button = class Button extends LitElement {
         this.disabled = false;
     }
     render() {
-        return html `
-      <button
-        @click=${() => {
-            if (this.event) {
-                const event = new LitCoilConnectedEvent(this.event);
-                this.dispatchEvent(event);
-            }
-        }}
-      >
-        <slot></slot>
-      </button>
-    `;
+        return this.href
+            ? html `
+          <iff-link href=${this.href}>
+            <button
+              @click=${() => {
+                if (this.event) {
+                    const event = new LitCoilConnectedEvent(this.event);
+                    this.dispatchEvent(event);
+                }
+            }}
+            >
+              <slot></slot>
+            </button>
+          </iff-link>
+        `
+            : html `<button
+          @click=${() => {
+                if (this.event) {
+                    const event = new LitCoilConnectedEvent(this.event);
+                    this.dispatchEvent(event);
+                }
+            }}
+        >
+          <slot></slot>
+        </button>`;
     }
 };
 Button.styles = css `
@@ -75,6 +89,9 @@ __decorate([
 __decorate([
     property({ reflect: true })
 ], Button.prototype, "eventPayload", void 0);
+__decorate([
+    property({ reflect: true })
+], Button.prototype, "href", void 0);
 __decorate([
     property({ reflect: true, type: Boolean })
 ], Button.prototype, "disabled", void 0);

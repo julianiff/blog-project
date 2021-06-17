@@ -258,7 +258,7 @@ export const Views: ViewType = {
                         {
                           slotName: '',
                           component: 'iff-button',
-                          props: [{disabled: 'true'}],
+                          props: [{href: '/project/design-system/'}],
                           innerText: '',
                           slots: [
                             {

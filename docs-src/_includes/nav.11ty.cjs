@@ -6,8 +6,8 @@ module.exports = function ({page}) {
   <iff-link href="${relative(page.url, '/')}">
     <iff-text styling="paragraph-slim">Home</iff-text>
   </iff-link>
-  <iff-link href="${relative(page.url, '/examples/')}">
-    <iff-text styling="paragraph-slim">Examples</iff-text>
+  <iff-link href="${relative(page.url, '/project/')}">
+    <iff-text styling="paragraph-slim">Project</iff-text>
   </iff-link>
   <iff-link href="${relative(page.url, '/api/')}">
     <iff-text styling="paragraph-slim">Design System API</iff-text>

@@ -12,22 +12,24 @@ module.exports = function (data) {
 };
 
 const renderExample = ({name, content, collections, page}) => {
+  console.log(page);
   return `
-    <iff-title level=1>Example: ${name}</iff-title>
+    <iff-title level=1>${name}</iff-title>
+
     <section class="examples">
       <nav class="collection">
         <ul>
           ${
-            collections.example === undefined
+            collections.project === undefined
               ? ''
-              : collections.example
+              : collections.project
                   .map(
                     (post) => `
                   <li class=${post.url === page.url ? 'selected' : ''}>
                     <iff-link href="${relative(
                       page.url,
                       post.url
-                    )}"><iff-text styling="label">${post.data.description.replace(
+                    )}"><iff-text styling="paragraph-bold">${post.data.description.replace(
                       '<',
                       '&lt;'
                     )}</iff-text></iff-link>

@@ -1,3 +1,4 @@
+import './Link';
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {viewVariants} from '../controller/ressources/views';
@@ -52,7 +53,8 @@ export class Button extends LitElement {
    */
   @property({reflect: true})
   public eventPayload: string = 'payload';
-
+  @property({reflect: true})
+  public href?: string;
   /**
    * Type of styling
    */
@@ -60,18 +62,31 @@ export class Button extends LitElement {
   public disabled: boolean = false;
 
   render() {
-    return html`
-      <button
-        @click=${() => {
-          if (this.event) {
-            const event = new LitCoilConnectedEvent(this.event);
-            this.dispatchEvent(event);
-          }
-        }}
-      >
-        <slot></slot>
-      </button>
-    `;
+    return this.href
+      ? html`
+          <iff-link href=${this.href}>
+            <button
+              @click=${() => {
+                if (this.event) {
+                  const event = new LitCoilConnectedEvent(this.event);
+                  this.dispatchEvent(event);
+                }
+              }}
+            >
+              <slot></slot>
+            </button>
+          </iff-link>
+        `
+      : html`<button
+          @click=${() => {
+            if (this.event) {
+              const event = new LitCoilConnectedEvent(this.event);
+              this.dispatchEvent(event);
+            }
+          }}
+        >
+          <slot></slot>
+        </button>`;
   }
 }
 
