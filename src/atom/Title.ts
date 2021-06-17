@@ -20,8 +20,11 @@ export class Title extends LitElement {
     h1 {
       font-family: var(--iff-alias__font--family);
       color: var(
-        --iff-state__font--color,
-        var(--iff__font--color, var(--iff-alias__font--color))
+        --iff-hover__font--color,
+        var(
+          --iff-state__font--color,
+          var(--iff__font--color, var(--iff-alias__font--color))
+        )
       );
       font-weight: 100;
       font-size: var(--iff__dimension--50);
@@ -29,8 +32,11 @@ export class Title extends LitElement {
     h2 {
       font-family: var(--iff-alias__font--family);
       color: var(
-        --iff-state__font--color,
-        var(--iff__font--color, var(--iff-alias__font--color))
+        --iff-hover__font--color,
+        var(
+          --iff-state__font--color,
+          var(--iff__font--color, var(--iff-alias__font--color))
+        )
       );
       font-weight: 400;
       font-size: var(--iff__dimension--40);
@@ -38,8 +44,11 @@ export class Title extends LitElement {
     h3 {
       font-family: var(--iff-alias__font--family);
       color: var(
-        --iff-state__font--color,
-        var(--iff__font--color, var(--iff-alias__font--color))
+        --iff-hover__font--color,
+        var(
+          --iff-state__font--color,
+          var(--iff__font--color, var(--iff-alias__font--color))
+        )
       );
       font-weight: 700;
       font-size: var(--iff__dimension--30);
@@ -47,8 +56,11 @@ export class Title extends LitElement {
     h4 {
       font-family: var(--iff-alias__font--family);
       color: var(
-        --iff-state__font--color,
-        var(--iff__font--color, var(--iff-alias__font--color))
+        --iff-hover__font--color,
+        var(
+          --iff-state__font--color,
+          var(--iff__font--color, var(--iff-alias__font--color))
+        )
       );
       font-weight: 400;
       font-size: var(--iff__dimension--20);

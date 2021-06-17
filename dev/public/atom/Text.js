@@ -31,8 +31,11 @@ Text.styles = css `
     :host([styling='paragraph']) {
       font-family: var(--iff-alias__font--family);
       color: var(
-        --iff-state__font--color,
-        var(--iff__font--color, var(--iff-alias__font--color))
+        --iff-hover__font--color,
+        var(
+          --iff-state__font--color,
+          var(--iff__font--color, var(--iff-alias__font--color))
+        )
       );
       font-weight: 400;
       font-size: var(--iff__dimension--15);
@@ -42,8 +45,11 @@ Text.styles = css `
     :host([styling='paragraph-slim']) {
       font-family: var(--iff-alias__font--family);
       color: var(
-        --iff-state__font--color,
-        var(--iff__font--color, var(--iff-alias__font--color))
+        --iff-hover__font--color,
+        var(
+          --iff-state__font--color,
+          var(--iff__font--color, var(--iff-alias__font--color))
+        )
       );
       font-weight: 100;
       font-size: var(--iff__dimension--15);
@@ -53,8 +59,11 @@ Text.styles = css `
     :host([styling='paragraph-bold']) {
       font-family: var(--iff-alias__font--family);
       color: var(
-        --iff-state__font--color,
-        var(--iff__font--color, var(--iff-alias__font--color))
+        --iff-hover__font--color,
+        var(
+          --iff-state__font--color,
+          var(--iff__font--color, var(--iff-alias__font--color))
+        )
       );
       font-weight: 700;
       font-size: var(--iff__dimension--15);
@@ -64,8 +73,11 @@ Text.styles = css `
     :host([styling='label']) {
       font-family: var(--iff-alias__font--family);
       color: var(
-        --iff-state__font--color,
-        var(--iff__font--color, var(--iff-alias__font--color))
+        --iff-hover__font--color,
+        var(
+          --iff-state__font--color,
+          var(--iff__font--color, var(--iff-alias__font--color))
+        )
       );
       font-weight: 400;
       font-size: var(--iff__dimension--12);

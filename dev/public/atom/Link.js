@@ -42,6 +42,10 @@ Link.styles = css `
       position: relative;
       display: block;
     }
+
+    :host :hover {
+      --iff-hover__font--color: var(--iff-alias__color--complement);
+    }
   `;
 __decorate([
     property({ reflect: true })
