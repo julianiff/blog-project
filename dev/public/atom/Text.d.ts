@@ -1,6 +1,7 @@
 import { LitElement } from 'lit';
 declare type StylingVariation = 'paragraph' | 'paragraph-slim' | 'paragraph-bold' | 'label';
 export declare type TagVariation = 'p';
+export declare type textAlignVars = 'left' | 'center' | 'right';
 /**
  * Text Styling Component
  *
@@ -12,6 +13,10 @@ export declare class Text extends LitElement {
      * Type of styling
      */
     styling: StylingVariation;
+    /**
+     * Type of styling
+     */
+    textAlign: textAlignVars;
     tag: TagVariation;
     render(): import("lit").TemplateResult<1>;
 }

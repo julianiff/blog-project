@@ -1,5 +1,5 @@
 import { LitElement } from 'lit';
-export declare type ThemeVariation = 'light' | 'black' | 'blue-gradiant' | 'redGreen' | 'wood' | 'blueGreen' | 'triColor';
+export declare type ThemeVariation = 'light' | 'black' | 'blue-gradiant' | 'redGreen' | 'wood' | 'blueGreen' | 'spotify' | 'triColor';
 import { viewVariants } from '../controller/ressources/views';
 import '../atom/Text';
 import '../atom/Button';

@@ -11,6 +11,7 @@ export type ThemeVariation =
   | 'redGreen'
   | 'wood'
   | 'blueGreen'
+  | 'spotify'
   | 'triColor';
 import {ThemeColorController} from '../controller/set-theme-color';
 import {viewVariants} from '../controller/ressources/views';

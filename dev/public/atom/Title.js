@@ -15,6 +15,10 @@ let Title = class Title extends LitElement {
     constructor() {
         super(...arguments);
         /**
+         * Type of textAlignation
+         */
+        this.textAlign = 'left';
+        /**
          * Level of styling
          */
         this.level = 3;
@@ -44,7 +48,7 @@ Title.styles = css `
         )
       );
       font-weight: 100;
-      font-size: var(--iff__dimension--50);
+      font-size: var(--iff-title__font-size, var(--iff__dimension--50));
     }
     h2 {
       font-family: var(--iff-alias__font--family);
@@ -56,7 +60,7 @@ Title.styles = css `
         )
       );
       font-weight: 400;
-      font-size: var(--iff__dimension--40);
+      font-size: var(--iff-title__font-size, var(--iff__dimension--40));
     }
     h3 {
       font-family: var(--iff-alias__font--family);
@@ -68,7 +72,7 @@ Title.styles = css `
         )
       );
       font-weight: 700;
-      font-size: var(--iff__dimension--30);
+      font-size: var(--iff-title__font-size, var(--iff__dimension--30));
     }
     h4 {
       font-family: var(--iff-alias__font--family);
@@ -80,12 +84,34 @@ Title.styles = css `
         )
       );
       font-weight: 400;
-      font-size: var(--iff__dimension--20);
+      font-size: var(--iff-title__font-size, var(--iff__dimension--20));
+    }
+
+    :host([textAlign='left']) {
+      text-align: left;
+    }
+
+    :host([textAlign='center']) {
+      text-align: center;
+    }
+
+    :host([textAlign='right']) {
+      text-align: right;
+    }
+
+    :host([surplus='giganto']) {
+      --iff-title__font-size: 10rem;
     }
   `;
 __decorate([
+    property({ reflect: true })
+], Title.prototype, "textAlign", void 0);
+__decorate([
     property({ type: Number })
 ], Title.prototype, "level", void 0);
+__decorate([
+    property()
+], Title.prototype, "surplus", void 0);
 Title = __decorate([
     customElement('iff-title')
 ], Title);

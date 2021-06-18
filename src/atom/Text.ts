@@ -7,6 +7,7 @@ type StylingVariation =
   | 'paragraph-bold'
   | 'label';
 export type TagVariation = 'p';
+export type textAlignVars = 'left' | 'center' | 'right';
 
 /**
  * Text Styling Component
@@ -71,6 +72,18 @@ export class Text extends LitElement {
       font-size: var(--iff__dimension--12);
       line-height: 0.5rem;
     }
+
+    :host([textAlign='left']) {
+      text-align: left;
+    }
+
+    :host([textAlign='center']) {
+      text-align: center;
+    }
+
+    :host([textAlign='right']) {
+      text-align: right;
+    }
   `;
 
   /**
@@ -78,6 +91,12 @@ export class Text extends LitElement {
    */
   @property({reflect: true})
   public styling: StylingVariation = 'paragraph';
+
+  /**
+   * Type of styling
+   */
+  @property({reflect: true})
+  public textAlign: textAlignVars = 'left';
 
   @property()
   public tag: TagVariation = 'p';

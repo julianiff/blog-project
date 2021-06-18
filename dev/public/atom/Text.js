@@ -18,6 +18,10 @@ let Text = class Text extends LitElement {
          * Type of styling
          */
         this.styling = 'paragraph';
+        /**
+         * Type of styling
+         */
+        this.textAlign = 'left';
         this.tag = 'p';
     }
     render() {
@@ -83,10 +87,25 @@ Text.styles = css `
       font-size: var(--iff__dimension--12);
       line-height: 0.5rem;
     }
+
+    :host([textAlign='left']) {
+      text-align: left;
+    }
+
+    :host([textAlign='center']) {
+      text-align: center;
+    }
+
+    :host([textAlign='right']) {
+      text-align: right;
+    }
   `;
 __decorate([
     property({ reflect: true })
 ], Text.prototype, "styling", void 0);
+__decorate([
+    property({ reflect: true })
+], Text.prototype, "textAlign", void 0);
 __decorate([
     property()
 ], Text.prototype, "tag", void 0);

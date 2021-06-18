@@ -1,48 +1,43 @@
 const page = require('./page.11ty.cjs');
+const splitLayout = require('./splitLayout.11ty.cjs');
 const relative = require('./relative-path.cjs');
 
 /**
  * This template extends the page template and adds an examples list.
  */
 module.exports = function (data) {
-  return page({
+  return splitLayout({
     ...data,
     content: renderExample(data),
   });
 };
 
 const renderExample = ({name, content, collections, page}) => {
-  console.log(page);
   return `
-    <iff-title level=2>${name}</iff-title>
+    <iff-grid-layout>
+        <iff-grid-item orientation="end" background="positive" spacer="component" height="full">
+          <iff-title level=2 textAlign="right" surplus="giganto">${name}</iff-title>
 
-    <section class="examples">
-      <nav class="collection">
-        <ul>
-          ${
-            collections.project === undefined
-              ? ''
-              : collections.project
-                  .map(
-                    (post) => `
-                  <li class=${post.url === page.url ? 'selected' : ''}>
-                    <iff-link href="${relative(
-                      page.url,
-                      post.url
-                    )}"><iff-text styling="paragraph-bold">${post.data.description.replace(
-                      '<',
-                      '&lt;'
-                    )}</iff-text></iff-link>
-                  </li>
-                `
-                  )
-                  .join('')
-          }
-        </ul>
-      </nav>
-      <div>
-        ${content}
-      </div>
-    </section>
+          <iff-grid-layout layout="1">
+          ${collections.project
+            .map(
+              (item) => `
+            <iff-grid-item orientation="end">
+              <iff-link href="${relative(page.url, item.url)}">
+                <iff-title level="4" textAlign="right">
+                  ${item.data.description}
+                </iff-title>
+              </iff-link>
+            </iff-grid-item>
+            
+          `
+            )
+            .join('')}
+          </iff-grid-layout>
+        </iff-grid-item>
+        <iff-grid-item orientation="start" width="slim" spacer="component">
+            ${content}
+        </iff-grid-item >
+      </iff-grid-layout>
   `;
 };

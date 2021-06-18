@@ -57,7 +57,6 @@ nav {
   max-width: 100%;
   grid-template-columns: repeat(auto-fit, 240px);
   justify-content: center;
-  border-bottom: 1px solid var(--iff-alias__color--negative);
 }
 
 nav > a {
@@ -68,14 +67,6 @@ nav > a {
   padding: 20px 0;
   text-align: center;
   text-decoration: none;
-}
-
-nav > a:hover {
-  text-decoration: underline;
-}
-
-nav.collection {
-  border: none;
 }
 
 nav.collection > ul {
@@ -89,14 +80,7 @@ nav.collection > ul > li {
 
 nav.collection > ul > li.selected {
   font-weight: 600;
-}
-
-nav.collection a {
-  text-decoration: none;
-}
-
-nav.collection a:hover {
-  text-decoration: underline;
+  --iff-alias__font--color: var(--iff-alias__color--complement);
 }
 
 section.columns {
@@ -134,4 +118,9 @@ th {
   border: solid 1px #aaa;
   padding: 4px;
   text-align: left;
+}
+
+.collection__end {
+  justify-self: start;
+  max-width: 720px;
 }

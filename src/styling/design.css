@@ -141,3 +141,17 @@ body[theme='blueGreen'] {
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
   --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
 }
+
+body[theme='spotify'] {
+  --iff-alias__color--positive: #c3f1c7;
+  --iff-alias__color--negative: black;
+  --iff-alias__color--complement: #ffc864;
+  --iff-alias__color--accent-one: #54aa50;
+  --iff-alias__color--accent-two: #428c3b;
+  --iff-alias__color--accent-three: #1b6c75;
+  --iff-alias__body--background-color: var(--iff__color--white);
+
+  --iff-alias__font--color: var(--iff-alias__color--negative);
+  --iff-alias__background-color--primary: var(--iff-alias__color--positive);
+  --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
+}
