@@ -28,11 +28,11 @@ export class GridItem extends LitElement {
     }
 
     :host([width='slim']) {
-      width: 600px;
+      width: 100%;
     }
 
     :host([width='default']) {
-      width: 1024px;
+      width: 100%;
     }
 
     :host([width='full']) {
@@ -69,6 +69,20 @@ export class GridItem extends LitElement {
 
     :host([background='complement']) {
       background: var(--iff-alias__color--complement);
+    }
+
+    @media screen and (min-width: 1024px) {
+      :host([width='slim']) {
+        width: 600px;
+      }
+
+      :host([width='default']) {
+        width: 1024px;
+      }
+
+      :host([width='full']) {
+        width: 100%;
+      }
     }
   `;
 

@@ -56,7 +56,8 @@ Split.styles = css `
 
     .end:hover {
       background-color: var(--iff-alias__color--primary);
-      --iff__font--color: var(--iff-alias__background-color--primary);
+      --iff__font--color: var(--iff-alias__color--negative);
+      --iff-hover__font--color: var(--iff-alias__color--negative);
       transition: all 250ms ease-in;
     }
 
@@ -64,7 +65,7 @@ Split.styles = css `
       :host {
         position: relative;
         display: flex;
-        height: 100%;
+        height: 70vh;
         align-items: stretch;
         flex-direction: row;
       }

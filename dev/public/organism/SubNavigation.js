@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import '../template/GridLayout';
+import '../layout/GridLayout';
 /**
  * An example element.
  *

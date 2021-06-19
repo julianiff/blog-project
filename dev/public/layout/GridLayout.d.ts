@@ -1,17 +1,21 @@
 import { LitElement } from 'lit';
-import '../layout/GridLayout';
+export declare type layoutVariant = '1' | '1-1' | '1-1-1';
 /**
  * An example element.
  *
  * @slot Slot for the content
  */
-export declare class SubNavigation extends LitElement {
+export declare class GridLayout extends LitElement {
     static styles: import("lit").CSSResultGroup;
+    /**
+     * Height
+     */
+    layout?: layoutVariant;
     render(): import("lit").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'iff-sub-navigation': SubNavigation;
+        'iff-grid-layout': GridLayout;
     }
 }
-//# sourceMappingURL=SubNavigation.d.ts.map
+//# sourceMappingURL=GridLayout.d.ts.map

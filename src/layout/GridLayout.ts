@@ -20,11 +20,25 @@ export class GridLayout extends LitElement {
     }
 
     :host([layout='1-1']) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
     }
 
     :host([layout='1-1-1']) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+      :host([layout='1']) {
+        grid-template-columns: 1fr;
+      }
+
+      :host([layout='1-1']) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      :host([layout='1-1-1']) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
   `;
 

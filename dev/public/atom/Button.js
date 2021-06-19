@@ -65,12 +65,11 @@ Button.styles = css `
         var(--iff-alias__background-color--primary)
       );
       --iff-state__font--color: var(--iff-alias__background-color--secondary);
-      box-shadow: inset 0 0 0 2px var(--iff-alias__background-color--secondary);
-      border-radius: 3px;
+      box-shadow: inset 0 0 0 1px var(--iff-alias__background-color--secondary);
       cursor: pointer;
       padding: var(--iff-card__padding--top-bottom, 0.5rem)
         var(--var-card__padding--left-right, 2rem);
-      border-radius: 5px;
+      border-radius: var(--iff-alias__border--radius);
       transition: all 150ms ease-in;
     }
 
@@ -79,7 +78,7 @@ Button.styles = css `
     }
 
     button:hover {
-      box-shadow: inset 0 0 0 4px var(--iff-alias__background-color--secondary);
+      box-shadow: inset 0 0 0 3px var(--iff-alias__background-color--secondary);
       transition: all 150ms ease-in;
     }
   `;

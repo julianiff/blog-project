@@ -37,6 +37,11 @@
   Theme independent
   */
   --iff-alias__font--family: var(--iff__font--family);
+
+  /**
+    Styling
+  */
+  --iff-alias__border--radius: var(--iff__dimension--05);
 }
 
 body {
@@ -145,7 +150,7 @@ body[theme='blueGreen'] {
 body[theme='spotify'] {
   --iff-alias__color--positive: #c3f1c7;
   --iff-alias__color--negative: black;
-  --iff-alias__color--complement: #ffc864;
+  --iff-alias__color--complement: #9954eb;
   --iff-alias__color--accent-one: #54aa50;
   --iff-alias__color--accent-two: #428c3b;
   --iff-alias__color--accent-three: #1b6c75;
