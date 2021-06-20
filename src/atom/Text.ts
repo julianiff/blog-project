@@ -17,6 +17,9 @@ export type textAlignVars = 'left' | 'center' | 'right';
 @customElement('iff-text')
 export class Text extends LitElement {
   static styles = css`
+    :host {
+      transition: var(--iff-alias__transition);
+    }
     :host([styling='paragraph']) {
       font-family: var(--iff-alias__font--family);
       color: var(

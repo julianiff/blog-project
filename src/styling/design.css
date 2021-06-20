@@ -4,6 +4,10 @@
   --iff__color--black: black;
   --iff__font--family: 'Inter', sans-serif;
 
+
+  /**
+  Spacing Token
+ */
   --iff__dimension--01: 0.1rem;
   --iff__dimension--02: 0.2rem;
   --iff__dimension--03: 0.3rem;
@@ -35,17 +39,17 @@
   --iff-alias__header--height: var(--iff__dimension--50);
 
   /**
-  Font
+  Font styling
   */
-
   --iff-font-alias__weight--thin: 100;
   --iff-font-alias__weight--default: 400;
   --iff-font-alias__weight--bold: 700;
+  --iff-alias__font--family: var(--iff__font--family);
 
   /**
-  Theme independent
+  Anmiations
   */
-  --iff-alias__font--family: var(--iff__font--family);
+  --iff-alias__transition: all 250ms ease-in;
 
   /**
     Styling

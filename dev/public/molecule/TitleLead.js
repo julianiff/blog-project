@@ -30,14 +30,6 @@ TitleModal.styles = css `
     .title-lead {
       height: 100%;
     }
-
-    .lead {
-      --iff-state__font--color: var(--iff-alias__background-color--primary);
-    }
-
-    [name='lead-text']::slotted(*) {
-      --iff-state__font--color: var(--iff-alias__background-color--primary);
-    }
   `;
 TitleModal = __decorate([
     customElement('iff-title-lead')

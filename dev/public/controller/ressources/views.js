@@ -37,7 +37,7 @@ export const Views = {
                                                 {
                                                     slotName: '',
                                                     component: 'iff-button',
-                                                    props: [{ event: 'JsonToLit' }],
+                                                    props: [{ event: 'Typescript' }],
                                                     innerText: '',
                                                     slots: [
                                                         {
@@ -321,6 +321,110 @@ export const Views = {
             ],
         },
     ],
+    Typescript: [
+        {
+            component: 'iff-page-layout',
+            props: [],
+            innerText: '',
+            slots: [
+                {
+                    slotName: 'body',
+                    component: 'iff-row-layout',
+                    props: [],
+                    slots: [
+                        {
+                            slotName: '',
+                            component: 'iff-split',
+                            props: [],
+                            slots: [
+                                {
+                                    slotName: 'start-text',
+                                    component: 'iff-title-lead',
+                                    props: [],
+                                    innerText: 'What I like',
+                                    slots: [
+                                        {
+                                            slotName: 'title',
+                                            component: 'iff-title',
+                                            props: [{ level: 2 }],
+                                            innerText: 'What I like',
+                                            slots: [],
+                                        },
+                                        {
+                                            slotName: 'lead-text',
+                                            component: 'iff-grid-item',
+                                            props: [{ width: 'slim' }],
+                                            innerText: '',
+                                            slots: [
+                                                {
+                                                    slotName: '',
+                                                    component: 'iff-icon-text',
+                                                    props: [{ event: 'Intro' }],
+                                                    innerText: '',
+                                                    slots: [
+                                                        {
+                                                            slotName: 'text',
+                                                            component: 'iff-text',
+                                                            props: [{ styling: 'paragraph' }],
+                                                            innerText: 'Overview',
+                                                            slots: [],
+                                                        },
+                                                    ],
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            slotName: 'lead-text',
+                                            component: 'iff-grid-item',
+                                            props: [{ width: 'slim' }],
+                                            innerText: '',
+                                            slots: [
+                                                {
+                                                    slotName: '',
+                                                    component: 'iff-title',
+                                                    props: [{ level: '3' }],
+                                                    innerText: 'Json to Lit (Webcomponents)',
+                                                    slots: [],
+                                                },
+                                                {
+                                                    slotName: '',
+                                                    component: 'iff-text',
+                                                    props: [],
+                                                    innerText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                                                    slots: [],
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
+                                {
+                                    slotName: 'end-text',
+                                    component: 'iff-title-lead',
+                                    props: [],
+                                    slots: [
+                                        {
+                                            slotName: 'title',
+                                            component: 'iff-title',
+                                            props: [{ level: 2 }],
+                                            innerText: 'Whoami',
+                                            slots: [],
+                                        },
+                                        {
+                                            slotName: 'lead-text',
+                                            component: 'iff-title',
+                                            props: [{ level: 4 }],
+                                            innerText: 'My passion is to create new digital features and products that transform how users achieve their goals.',
+                                            slots: [],
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    ],
     JsonToLit: [
         {
             component: 'iff-page-layout',
@@ -329,23 +433,31 @@ export const Views = {
             slots: [
                 {
                     slotName: 'header',
-                    component: 'iff-icon-text',
-                    props: [{ event: 'Intro' }],
+                    component: 'iff-grid-item',
+                    props: [{ width: 'slim' }],
                     innerText: '',
                     slots: [
                         {
-                            slotName: 'text',
-                            component: 'iff-text',
-                            props: [{ styling: 'paragraph' }],
-                            innerText: 'back',
-                            slots: [],
+                            slotName: '',
+                            component: 'iff-icon-text',
+                            props: [{ event: 'Intro' }],
+                            innerText: '',
+                            slots: [
+                                {
+                                    slotName: 'text',
+                                    component: 'iff-text',
+                                    props: [{ styling: 'paragraph' }],
+                                    innerText: 'Overview',
+                                    slots: [],
+                                },
+                            ],
                         },
                     ],
                 },
                 {
                     slotName: 'body',
-                    component: 'iff-slim-layout',
-                    props: [],
+                    component: 'iff-grid-item',
+                    props: [{ width: 'slim' }],
                     innerText: '',
                     slots: [
                         {
@@ -390,7 +502,7 @@ export const Views = {
                             slotName: 'text',
                             component: 'iff-text',
                             props: [{ styling: 'paragraph' }],
-                            innerText: 'back',
+                            innerText: 'Overview',
                             slots: [],
                         },
                     ],
@@ -450,7 +562,7 @@ export const Views = {
                             slotName: 'text',
                             component: 'iff-text',
                             props: [{ styling: 'paragraph' }],
-                            innerText: 'back',
+                            innerText: 'Overview',
                             slots: [],
                         },
                     ],

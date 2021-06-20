@@ -2,6 +2,7 @@ import '../atom/Link';
 import '../atom/Text';
 import '../atom/Title';
 import { LitElement } from 'lit';
+import { viewVariants } from '../controller/ressources/views';
 /**
  * Card to display articles
  *
@@ -10,6 +11,7 @@ import { LitElement } from 'lit';
  */
 export declare class IconText extends LitElement {
     static styles: import("lit").CSSResultGroup;
+    event?: viewVariants;
     render(): import("lit").TemplateResult<1>;
 }
 declare global {

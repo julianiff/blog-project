@@ -32,6 +32,9 @@ let Text = class Text extends LitElement {
     }
 };
 Text.styles = css `
+    :host {
+      transition: var(--iff-alias__transition);
+    }
     :host([styling='paragraph']) {
       font-family: var(--iff-alias__font--family);
       color: var(

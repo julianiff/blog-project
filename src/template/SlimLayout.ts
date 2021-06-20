@@ -14,6 +14,12 @@ export class SlimLayout extends LitElement {
     :host {
       width: 800px;
     }
+
+    @media screen and (min-width: 1024px) {
+      :host([height='full']) {
+        min-height: 80vh;
+      }
+    }
   `;
 
   render() {

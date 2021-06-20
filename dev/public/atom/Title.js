@@ -40,6 +40,7 @@ Title.styles = css `
       font-family: var(--iff-alias__font--family);
       font-weight: var(--iff-text__font--weight);
       text-align: var(--iff-text__text--align);
+      transition: var(--iff-alias__transition);
     }
     h1 {
       color: var(

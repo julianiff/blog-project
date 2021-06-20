@@ -15,14 +15,6 @@ export class TitleModal extends LitElement {
     .title-lead {
       height: 100%;
     }
-
-    .lead {
-      --iff-state__font--color: var(--iff-alias__background-color--primary);
-    }
-
-    [name='lead-text']::slotted(*) {
-      --iff-state__font--color: var(--iff-alias__background-color--primary);
-    }
   `;
 
   render() {

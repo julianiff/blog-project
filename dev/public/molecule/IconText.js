@@ -8,7 +8,8 @@ import '../atom/Link';
 import '../atom/Text';
 import '../atom/Title';
 import { LitElement, html, css, svg } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
+import { LitCoilConnectedEvent } from '../controller/UpdateControllerConnectedEvent';
 /**
  * Card to display articles
  *
@@ -17,32 +18,56 @@ import { customElement } from 'lit/decorators.js';
  */
 let IconText = class IconText extends LitElement {
     render() {
-        return html `${arrowLeft}<iff-link event="Intro"
-        ><slot name="text"></slot
-      ></iff-link>`;
+        return html `<div
+      class="icon-text"
+      @click=${() => {
+            if (this.event) {
+                const event = new LitCoilConnectedEvent(this.event);
+                this.dispatchEvent(event);
+            }
+        }}
+    >
+      ${arrowLeft}<slot name="text"></slot>
+    </div>`;
     }
 };
 IconText.styles = css `
-    :host {
+    .icon-text {
       display: flex;
       flex-direction: row;
       align-items: center;
+      cursor: pointer;
     }
 
     svg {
-      fill: var(--iff-icon-text__font--color, var(--iff-alias__font--color));
+      fill: var(
+        --iff-icon-text__font--color,
+        var(--iff-hover__font--color, var(--iff-alias__font--color))
+      );
       height: var(--iff__spacer--md);
       width: var(--iff__spacer--md);
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateX(var(--iff-icon-text__offset));
       margin-right: var(--iff__spacer--xs);
+      transition: var(--iff-alias__transition);
+    }
+
+    :host {
+      --iff-icon-text__offset: 0px;
+    }
+
+    :host :hover {
+      --iff-hover__font--color: var(--iff-alias__color--complement);
+      --iff-icon-text__offset: 5px;
     }
   `;
+__decorate([
+    property({ reflect: true })
+], IconText.prototype, "event", void 0);
 IconText = __decorate([
     customElement('iff-icon-text')
 ], IconText);
 export { IconText };
 const arrowLeft = svg `<svg
-  slot="icon"
   viewBox="0 0 12 12"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"

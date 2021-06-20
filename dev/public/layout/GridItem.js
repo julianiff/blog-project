@@ -72,9 +72,6 @@ GridItem.styles = css `
       padding: var(--iff__spacer--xxl);
     }
 
-    :host([height='full']) {
-    }
-
     :host([background='positive']) {
       background: var(--iff-alias__color--positive);
     }
