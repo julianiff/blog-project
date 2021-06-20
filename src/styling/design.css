@@ -32,7 +32,15 @@
   --iff__spacer--xxl: var(--iff__dimension--25);
 
   --iff-alias__footer--height: var(--iff__dimension--50);
-  --iff-alias__header--height: var(--iff__dimension--4  0);
+  --iff-alias__header--height: var(--iff__dimension--50);
+
+  /**
+  Font
+  */
+
+  --iff-font-alias__weight--thin: 100;
+  --iff-font-alias__weight--default: 400;
+  --iff-font-alias__weight--bold: 700;
 
   /**
   Theme independent

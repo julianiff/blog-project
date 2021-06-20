@@ -56,7 +56,6 @@ export class GridItem extends LitElement {
     }
 
     :host([height='full']) {
-      min-height: 80vh;
     }
 
     :host([background='positive']) {
@@ -72,6 +71,10 @@ export class GridItem extends LitElement {
     }
 
     @media screen and (min-width: 1024px) {
+      :host([height='full']) {
+        min-height: 80vh;
+      }
+
       :host([width='slim']) {
         width: 600px;
       }

@@ -73,7 +73,6 @@ GridItem.styles = css `
     }
 
     :host([height='full']) {
-      min-height: 80vh;
     }
 
     :host([background='positive']) {
@@ -89,6 +88,10 @@ GridItem.styles = css `
     }
 
     @media screen and (min-width: 1024px) {
+      :host([height='full']) {
+        min-height: 80vh;
+      }
+
       :host([width='slim']) {
         width: 600px;
       }
