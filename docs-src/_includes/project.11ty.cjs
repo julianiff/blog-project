@@ -1,12 +1,11 @@
-const page = require('./page.11ty.cjs');
-const splitLayout = require('./splitLayout.11ty.cjs');
+const blog = require('./blog.cjs');
 const relative = require('./relative-path.cjs');
 
 /**
  * This template extends the page template and adds an examples list.
  */
 module.exports = function (data) {
-  return splitLayout({
+  return blog({
     ...data,
     content: renderExample(data),
   });

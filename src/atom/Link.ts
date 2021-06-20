@@ -24,6 +24,10 @@ export class Link extends LitElement {
     :host :hover {
       --iff-hover__font--color: var(--iff-alias__color--complement);
     }
+
+    :host([active='true']) {
+      --iff-hover__font-color: var(--iff-alias__color--accent-one);
+    }
   `;
 
   @property({reflect: true})

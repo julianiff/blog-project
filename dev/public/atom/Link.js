@@ -46,6 +46,10 @@ Link.styles = css `
     :host :hover {
       --iff-hover__font--color: var(--iff-alias__color--complement);
     }
+
+    :host([active='true']) {
+      --iff-hover__font-color: var(--iff-alias__color--accent-one);
+    }
   `;
 __decorate([
     property({ reflect: true })

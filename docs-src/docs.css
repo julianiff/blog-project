@@ -31,15 +31,6 @@ a:visited {
   color: inherit;
 }
 
-header {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  height: var(--iff-alias__header--height);
-}
-
 footer {
   width: 100%;
   min-height: var(--iff-alias__footer--height);
@@ -51,36 +42,22 @@ footer {
   margin-top: var(--iff__spacer--sm);
 }
 
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: var(--iff-alias__header--height);
+  background-color: transparent;
+}
+
 nav {
   display: grid;
   width: 100%;
   max-width: 100%;
-  grid-template-columns: repeat(auto-fit, 240px);
+  grid-template-columns: repeat(auto-fit, 80px);
   justify-content: center;
-}
-
-nav > a {
-  color: #444;
-  display: block;
-  flex: 1;
-  font-size: 18px;
-  padding: 20px 0;
-  text-align: center;
-  text-decoration: none;
-}
-
-nav.collection > ul {
-  padding: 0;
-  list-style: none;
-}
-
-nav.collection > ul > li {
-  padding: 4px 0;
-}
-
-nav.collection > ul > li.selected {
-  font-weight: 600;
-  --iff-alias__font--color: var(--iff-alias__color--complement);
 }
 
 section.columns {

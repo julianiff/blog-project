@@ -4,16 +4,12 @@ module.exports = function ({page}) {
   return `
 <nav>
   <iff-link href="${relative(page.url, '/')}">
-    <iff-text styling="paragraph-slim">Home</iff-text>
+    <iff-text styling="paragraph-slim">Julian Iff</iff-text>
   </iff-link>
-  <iff-link href="${relative(page.url, '/project/')}">
-    <iff-text styling="paragraph-slim">Project</iff-text>
-  </iff-link>
-  <iff-link href="${relative(page.url, '/api/')}">
-    <iff-text styling="paragraph-slim">Design System API</iff-text>
-  </iff-link>
-  <iff-link href="${relative(page.url, '/install/')}">
-    <iff-text styling="paragraph-slim">Install</iff-text>
+  <iff-link href="${relative(page.url, '/project/')}" active="${
+    page.url === '/project/'
+  }">
+    <iff-text styling="paragraph-slim">Projects</iff-text>
   </iff-link>
 </nav>`;
 };

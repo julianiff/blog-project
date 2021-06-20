@@ -25,7 +25,7 @@ module.exports = function (data) {
     )}"></script>
   </head>
   <body theme="light">
-      ${header()}
+      ${header(data)}
       ${content}  
       ${footer()}
   </body>

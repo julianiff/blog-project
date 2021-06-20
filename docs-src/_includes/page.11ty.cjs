@@ -1,6 +1,5 @@
 const header = require('./header.11ty.cjs');
 const footer = require('./footer.11ty.cjs');
-const nav = require('./nav.11ty.cjs');
 const relative = require('./relative-path.cjs');
 
 module.exports = function (data) {
@@ -24,14 +23,9 @@ module.exports = function (data) {
       '/index.bundled.js'
     )}"></script>
   </head>
-  <body theme="light">
-    ${header()}
-    ${nav(data)}
-    <div id="main-wrapper">
-      <main>
-        ${content}
-      </main>
-    </div>
+  <body theme="blue-gradiant">
+    ${header(data)}
+    ${content}
     ${footer()}
   </body>
 </html>`;

@@ -32,7 +32,8 @@
   --iff__spacer--xxl: var(--iff__dimension--25);
 
   --iff-alias__footer--height: var(--iff__dimension--50);
-  --iff-alias__header--height: var(--iff__dimension--70);
+  --iff-alias__header--height: var(--iff__dimension--4  0);
+
   /**
   Theme independent
   */
@@ -56,6 +57,7 @@ body[theme='light'] {
   --iff-alias__color--accent-two: #898989;
   --iff-alias__color--accent-three: #898989;
   --iff-alias__body--background-color: var(--iff__color--white);
+  --iff-alias__header--background-color: var(--iff__color--black);
 
   --iff-alias__font--color: var(--iff__color--black);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
@@ -70,6 +72,7 @@ body[theme='black'] {
   --iff-alias__color--accent-two: var(--iff__color--black);
   --iff-alias__color--accent-three: var(--iff__color--black);
   --iff-alias__body--background-color: var(--iff__color--black);
+  --iff-alias__header--background-color: var(--iff__color--white);
 
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
@@ -85,6 +88,7 @@ body[theme='blue-gradiant'] {
   --iff-alias__color--accent-two: #0487d9;
   --iff-alias__color--accent-three: #058fe6;
   --iff-alias__body--background-color: var(--iff__color--black);
+  --iff-alias__header--background-color: var(--iff__color--white);
 
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
@@ -99,6 +103,7 @@ body[theme='redGreen'] {
   --iff-alias__color--accent-two: #d93636;
   --iff-alias__color--accent-three: #df7b7b;
   --iff-alias__body--background-color: var(--iff__color--white);
+  --iff-alias__header--background-color: var(--iff__color--black);
 
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
@@ -113,6 +118,7 @@ body[theme='triColor'] {
   --iff-alias__color--accent-two: #262626;
   --iff-alias__color--accent-three: #df9c9c;
   --iff-alias__body--background-color: var(--iff__color--black);
+  --iff-alias__header--background-color: var(--iff__color--white);
 
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
@@ -127,6 +133,7 @@ body[theme='wood'] {
   --iff-alias__color--accent-two: #8c8c88;
   --iff-alias__color--accent-three: #59593c;
   --iff-alias__body--background-color: var(--iff__color--black);
+  --iff-alias__header--background-color: var(--iff__color--white);
 
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
@@ -141,6 +148,7 @@ body[theme='blueGreen'] {
   --iff-alias__color--accent-two: #428c3b;
   --iff-alias__color--accent-three: #1b6c75;
   --iff-alias__body--background-color: var(--iff__color--white);
+  --iff-alias__header--background-color: var(--iff__color--black);
 
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
@@ -155,6 +163,7 @@ body[theme='spotify'] {
   --iff-alias__color--accent-two: #428c3b;
   --iff-alias__color--accent-three: #1b6c75;
   --iff-alias__body--background-color: var(--iff__color--white);
+  --iff-alias__header--background-color: var(--iff__color--white);
 
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);

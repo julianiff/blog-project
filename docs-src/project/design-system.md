@@ -2,8 +2,8 @@
 layout: project.11ty.cjs
 title: Project ⌲ Name Property
 tags: project
-name: Design System
-description: Intro in iff-* design system
+name: Projects
+description: iff-* design system
 ---
 
 <iff-title level="3">What is a Design System, how is it build and what the purpose?</hls-title>
