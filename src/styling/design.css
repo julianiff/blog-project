@@ -38,7 +38,7 @@
   --iff-alias__header--height: var(--iff__dimension--50);
 
   --iff-dynamic__navigation--indent: 15vw;
-
+  --iff-alias__navigation--ztop: 100;
   /**
   Font styling
   */
