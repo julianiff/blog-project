@@ -4,6 +4,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import '../molecule/ButtonList';
 import { LitElement, html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { ThemeColorController } from '../controller/set-theme-color';
@@ -24,7 +25,7 @@ let Footer = class Footer extends LitElement {
     }
     render() {
         return html `
-      <div class="button-list">
+      <iff-button-list>
         <iff-button @click=${() => this.setThemeColor('light')}>
           <iff-text styling="label">Light</iff-text>
         </iff-button>
@@ -54,21 +55,13 @@ let Footer = class Footer extends LitElement {
         <iff-button @click=${() => this.setThemeColor('pantone')}>
           <iff-text styling="label">pantone</iff-text>
         </iff-button>
-      </div>
+      </iff-button-list>
     `;
     }
 };
 Footer.styles = css `
-    .button-list {
-      display: flex;
-      flex-direction: row;
-      padding-top: 5px;
-      padding-left: 25px;
-      flex-wrap: wrap;
+    :host {
       padding: 0px var(--iff-dynamic__navigation--indent);
-    }
-    .button-list :not(:last-child) {
-      padding-right: 5px;
     }
   `;
 __decorate([

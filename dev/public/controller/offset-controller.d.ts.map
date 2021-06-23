@@ -1,0 +1,1 @@
+{"version":3,"file":"offset-controller.d.ts","sourceRoot":"","sources":["../../../src/controller/offset-controller.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,UAAU,EAAC,MAAM,KAAK,CAAC;AAE/B,qBAAa,gBAAgB;IAC3B,OAAO,CAAC,IAAI,CAAa;IACzB,SAAS,CAAC,EAAE,MAAM,CAAC;IAEnB,SAAS,aAGP;gBAEU,IAAI,EAAE,UAAU;IAI5B,aAAa;IAIb,gBAAgB;CAGjB"}

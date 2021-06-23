@@ -50,10 +50,11 @@
   /**
   Anmiations
   */
-  --iff-alias__transition: all 250ms ease-in;
+  --iff-alias__transition--intervall: 250ms ease-in;
+  --iff-alias__transition: all var(--iff-alias__transition--intervall);
 
   /**
-    Styling
+  Border
   */
   --iff-alias__border--radius: var(
     --iff-state__button--border-radius,

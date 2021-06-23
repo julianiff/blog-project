@@ -1,3 +1,4 @@
+import '../molecule/ButtonList';
 import {LitElement, html, css} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
 import {ThemeColorController} from '../controller/set-theme-color';
@@ -11,16 +12,8 @@ import {ThemeVariation} from '../page/BasePage';
 @customElement('iff-footer')
 export class Footer extends LitElement {
   static styles = css`
-    .button-list {
-      display: flex;
-      flex-direction: row;
-      padding-top: 5px;
-      padding-left: 25px;
-      flex-wrap: wrap;
+    :host {
       padding: 0px var(--iff-dynamic__navigation--indent);
-    }
-    .button-list :not(:last-child) {
-      padding-right: 5px;
     }
   `;
 
@@ -37,7 +30,7 @@ export class Footer extends LitElement {
 
   render() {
     return html`
-      <div class="button-list">
+      <iff-button-list>
         <iff-button @click=${() => this.setThemeColor('light')}>
           <iff-text styling="label">Light</iff-text>
         </iff-button>
@@ -67,7 +60,7 @@ export class Footer extends LitElement {
         <iff-button @click=${() => this.setThemeColor('pantone')}>
           <iff-text styling="label">pantone</iff-text>
         </iff-button>
-      </div>
+      </iff-button-list>
     `;
   }
 }
