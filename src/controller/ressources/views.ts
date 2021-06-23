@@ -136,7 +136,7 @@ export const Views: ViewType = {
                   slotName: 'start-text',
                   component: 'iff-title-lead',
                   props: [],
-                  innerText: 'What I like',
+                  innerText: '',
                   slots: [
                     {
                       slotName: 'title',

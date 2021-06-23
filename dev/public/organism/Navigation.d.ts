@@ -1,17 +1,16 @@
-import './Navigation';
 import { LitElement } from 'lit';
 /**
- * Text Styling Component
+ * An example element.
  *
- * @slot - This element has a slot
+ * @slot Slot for the content
  */
-export declare class Header extends LitElement {
+export declare class Navigation extends LitElement {
     static styles: import("lit").CSSResultGroup;
     render(): import("lit").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'iff-header': Header;
+        'iff-head-navigation': Navigation;
     }
 }
-//# sourceMappingURL=Header.d.ts.map
+//# sourceMappingURL=Navigation.d.ts.map

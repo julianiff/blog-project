@@ -82,7 +82,7 @@ Card.styles = css `
       flex-direction: column;
       height: 100%;
       width: 100%;
-      border-radius: 5px;
+      border-radius: var(--iff-alias__border--radius);
       overflow: hidden;
     }
 
@@ -92,7 +92,7 @@ Card.styles = css `
     }
 
     img {
-      border-radius: 5px;
+      border-radius: var(--iff-alias__border--radius);
       height: 10rem;
     }
 

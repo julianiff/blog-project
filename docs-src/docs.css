@@ -42,24 +42,6 @@ footer {
   margin-top: var(--iff__spacer--sm);
 }
 
-header {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  height: var(--iff-alias__header--height);
-  background-color: transparent;
-}
-
-nav {
-  display: grid;
-  width: 100%;
-  max-width: 100%;
-  grid-template-columns: repeat(auto-fit, 80px);
-  justify-content: center;
-}
-
 section.columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 488px));

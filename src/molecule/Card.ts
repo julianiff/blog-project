@@ -31,7 +31,7 @@ export class Card extends LitElement {
       flex-direction: column;
       height: 100%;
       width: 100%;
-      border-radius: 5px;
+      border-radius: var(--iff-alias__border--radius);
       overflow: hidden;
     }
 
@@ -41,7 +41,7 @@ export class Card extends LitElement {
     }
 
     img {
-      border-radius: 5px;
+      border-radius: var(--iff-alias__border--radius);
       height: 10rem;
     }
 

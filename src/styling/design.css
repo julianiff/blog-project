@@ -2,8 +2,7 @@
 :root {
   --iff__color--white: white;
   --iff__color--black: black;
-  --iff__font--family: 'Inter', sans-serif;
-
+  --iff__font--family: var(--iff-alias__font--family, 'Inter', sans-serif);
 
   /**
   Spacing Token
@@ -38,6 +37,8 @@
   --iff-alias__footer--height: var(--iff__dimension--50);
   --iff-alias__header--height: var(--iff__dimension--50);
 
+  --iff-dynamic__navigation--indent: 15vw;
+
   /**
   Font styling
   */
@@ -54,7 +55,10 @@
   /**
     Styling
   */
-  --iff-alias__border--radius: var(--iff__dimension--05);
+  --iff-alias__border--radius: var(
+    --iff-state__button--border-radius,
+    var(--iff__dimension--05)
+  );
 }
 
 body {
@@ -180,4 +184,21 @@ body[theme='spotify'] {
   --iff-alias__font--color: var(--iff-alias__color--negative);
   --iff-alias__background-color--primary: var(--iff-alias__color--positive);
   --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
+}
+
+body[theme='pantone'] {
+  --iff-alias__color--positive: #f5df4d;
+  --iff-alias__color--negative: #929597;
+  --iff-alias__color--complement: #9954eb;
+  --iff-alias__color--accent-one: #54aa50;
+  --iff-alias__color--accent-two: #428c3b;
+  --iff-alias__color--accent-three: #1b6c75;
+  --iff-alias__body--background-color: var(--iff__color--white);
+  --iff-alias__header--background-color: var(--iff__color--white);
+
+  --iff-alias__font--color: var(--iff-alias__color--negative);
+  --iff-alias__background-color--primary: var(--iff-alias__color--positive);
+  --iff-alias__background-color--secondary: var(--iff-alias__color--negative);
+  --iff-alias__font--family: 'Bitter', serif;
+  --iff-alias__border--radius: 0rem;
 }

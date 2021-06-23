@@ -32,7 +32,7 @@ export class Split extends LitElement {
     .end {
       background-color: var(--iff-alias__background-color--complement);
       transition: all 250ms ease-in;
-      border-radius: 5px;
+      border-radius: var(--iff-alias__border--radius);
     }
 
     .end:hover {

@@ -50,6 +50,10 @@ let Footer = class Footer extends LitElement {
         <iff-button @click=${() => this.setThemeColor('spotify')}>
           <iff-text styling="label">spotify</iff-text>
         </iff-button>
+        </iff-button>
+        <iff-button @click=${() => this.setThemeColor('pantone')}>
+          <iff-text styling="label">pantone</iff-text>
+        </iff-button>
       </div>
     `;
     }
@@ -61,6 +65,7 @@ Footer.styles = css `
       padding-top: 5px;
       padding-left: 25px;
       flex-wrap: wrap;
+      padding: 0px var(--iff-dynamic__navigation--indent);
     }
     .button-list :not(:last-child) {
       padding-right: 5px;

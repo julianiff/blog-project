@@ -45,7 +45,7 @@ export class PageLayout extends LitElement {
   render() {
     return html`
 
-      <iff-header><slot name="header"></slot></iff-header>
+      <slot name="header"></slot>
       <div class="body-layout">
         <slot name="body"></slot>
       </div>

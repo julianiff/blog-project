@@ -52,6 +52,7 @@ Title.styles = css `
       );
       --iff-text__font--weight: var(--iff-font-alias__weight--thin);
       font-size: var(--iff-title__font-size, var(--iff__dimension--50));
+      line-height: 2em;
     }
     h2 {
       color: var(
@@ -63,6 +64,7 @@ Title.styles = css `
       );
       --iff-text__font--weight: var(--iff-font-alias__weight--default);
       font-size: var(--iff-title__font-size, var(--iff__dimension--40));
+      line-height: 2em;
     }
     h3 {
       color: var(
