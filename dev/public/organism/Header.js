@@ -38,7 +38,7 @@ Header.styles = css `
     }
 
     :host([position='0']) {
-      border-bottom: 0px solid white;
+      border-bottom: 0px solid var(--iff-alias__color--positive);
       transition: border-bottom var(--iff-alias__transition--intervall);
     }
   `;
