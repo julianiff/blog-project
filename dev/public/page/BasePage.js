@@ -4,6 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import { css, html, LitElement, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { BuildViewsController, } from '../controller/build-views-controller';
@@ -54,16 +57,20 @@ BasePage.styles = [
     `,
 ];
 __decorate([
-    property({ reflect: true })
+    property({ reflect: true }),
+    __metadata("design:type", String)
 ], BasePage.prototype, "view", void 0);
 __decorate([
-    state()
+    state(),
+    __metadata("design:type", BuildViewsController)
 ], BasePage.prototype, "content", void 0);
 __decorate([
-    property({ reflect: true })
+    property({ reflect: true }),
+    __metadata("design:type", String)
 ], BasePage.prototype, "theme", void 0);
 BasePage = __decorate([
-    customElement('iff-base-page')
+    customElement('iff-base-page'),
+    __metadata("design:paramtypes", [])
 ], BasePage);
 export { BasePage };
 //# sourceMappingURL=BasePage.js.map

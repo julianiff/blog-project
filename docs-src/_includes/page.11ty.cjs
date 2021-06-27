@@ -17,6 +17,7 @@ module.exports = function (data) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Mono">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="${relative(page.url, '/prism-okaidia.css')}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;400;700&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap"

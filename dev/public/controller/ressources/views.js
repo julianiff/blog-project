@@ -431,6 +431,21 @@ export const Views = {
                                                         },
                                                     ],
                                                 },
+                                                {
+                                                    slotName: '',
+                                                    component: 'iff-button',
+                                                    props: [{ href: '/project/apollo/' }],
+                                                    innerText: '',
+                                                    slots: [
+                                                        {
+                                                            slotName: '',
+                                                            component: 'iff-text',
+                                                            props: [{ styling: 'label' }],
+                                                            innerText: 'Apollo / GraphQL',
+                                                            slots: [],
+                                                        },
+                                                    ],
+                                                },
                                             ],
                                         },
                                     ],

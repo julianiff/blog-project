@@ -7,8 +7,9 @@ import { LitElement } from 'lit';
  */
 export declare class Header extends LitElement {
     static styles: import("lit").CSSResultGroup;
+    constructor();
     private offsetController;
-    position?: number | undefined;
+    position?: number;
     render(): import("lit").TemplateResult<1>;
 }
 declare global {

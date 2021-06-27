@@ -4,6 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import './Navigation';
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
@@ -15,12 +18,12 @@ import { OffsetController } from '../controller/offset-controller';
  */
 let Header = class Header extends LitElement {
     constructor() {
-        super(...arguments);
+        super();
         this.offsetController = new OffsetController(this);
         this.position = 0;
     }
     render() {
-        this.position = this.offsetController.offsetTop;
+        this.position = this.offsetController.offsetTop || 0;
         return html `<slot></slot> `;
     }
 };
@@ -43,10 +46,31 @@ Header.styles = css `
     }
   `;
 __decorate([
-    property({ reflect: true, type: Number })
+    property({ reflect: true, type: Number }),
+    __metadata("design:type", Number)
 ], Header.prototype, "position", void 0);
 Header = __decorate([
-    customElement('iff-header')
+    customElement('iff-header'),
+    __metadata("design:paramtypes", [])
 ], Header);
 export { Header };
+// function log(val: number) {
+//   return function (
+//     target: any,
+//     propertyKey: string,
+//     descriptor: PropertyDescriptor
+//   ) {
+//     console.log(target, propertyKey, descriptor, val);
+//   };
+// }
+// export class Tracking {
+//   tracking?: string;
+// }
+// function logClass(message: string): ClassDecorator {
+//   console.log(`${message} evaluated`);
+//   return function (constructor: Function): void {
+//     console.log(`${message} called`);
+//     console.log(Object.values(constructor));
+//   };
+// }
 //# sourceMappingURL=Header.js.map

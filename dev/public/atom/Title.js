@@ -4,6 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 /**
@@ -41,6 +44,7 @@ Title.styles = css `
       font-weight: var(--iff-text__font--weight);
       text-align: var(--iff-text__text--align);
       transition: var(--iff-alias__transition);
+      line-height: 2em;
     }
     h1 {
       color: var(
@@ -52,7 +56,6 @@ Title.styles = css `
       );
       --iff-text__font--weight: var(--iff-font-alias__weight--thin);
       font-size: var(--iff-title__font-size, var(--iff__dimension--50));
-      line-height: 2em;
     }
     h2 {
       color: var(
@@ -64,7 +67,6 @@ Title.styles = css `
       );
       --iff-text__font--weight: var(--iff-font-alias__weight--default);
       font-size: var(--iff-title__font-size, var(--iff__dimension--40));
-      line-height: 2em;
     }
     h3 {
       color: var(
@@ -120,13 +122,16 @@ Title.styles = css `
     }
   `;
 __decorate([
-    property({ reflect: true })
+    property({ reflect: true }),
+    __metadata("design:type", String)
 ], Title.prototype, "textAlign", void 0);
 __decorate([
-    property({ type: Number })
+    property({ type: Number }),
+    __metadata("design:type", Number)
 ], Title.prototype, "level", void 0);
 __decorate([
-    property()
+    property(),
+    __metadata("design:type", String)
 ], Title.prototype, "surplus", void 0);
 Title = __decorate([
     customElement('iff-title')

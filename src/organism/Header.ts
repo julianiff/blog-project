@@ -29,13 +29,17 @@ export class Header extends LitElement {
     }
   `;
 
+  constructor() {
+    super();
+  }
+
   private offsetController = new OffsetController(this);
 
   @property({reflect: true, type: Number})
-  position? = 0;
+  position?: number = 0;
 
   render() {
-    this.position = this.offsetController.offsetTop;
+    this.position = this.offsetController.offsetTop || 0;
     return html`<slot></slot> `;
   }
 }
@@ -45,3 +49,25 @@ declare global {
     'iff-header': Header;
   }
 }
+
+// function log(val: number) {
+//   return function (
+//     target: any,
+//     propertyKey: string,
+//     descriptor: PropertyDescriptor
+//   ) {
+//     console.log(target, propertyKey, descriptor, val);
+//   };
+// }
+
+// export class Tracking {
+//   tracking?: string;
+// }
+
+// function logClass(message: string): ClassDecorator {
+//   console.log(`${message} evaluated`);
+//   return function (constructor: Function): void {
+//     console.log(`${message} called`);
+//     console.log(Object.values(constructor));
+//   };
+// }

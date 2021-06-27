@@ -27,7 +27,7 @@
     "serve": "wds --watch",
     "test": "wtr",
     "test:watch": "npm run test -- --watch",
-    "watch:serve": "concurrently \"yarn build:css --watch\"  \"yarn docs:gen:watch\" \"yarn build:watch\" \"yarn docs:build --watch\" \"yarn docs:serve \" ",
+    "watch:serve": "concurrently \"yarn build:css --watch\"  \"yarn docs:gen:watch\" \"yarn build:watch\" \"yarn docs:build --watch\" \"yarn docs:serve \" \"yarn docs:assets \"",
     "checksize": "rollup -c ; cat index.bundled.js | gzip -9 | wc -c ; rm index.bundled.js",
     "docs:production": "yarn docs"
   },
@@ -41,7 +41,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "json-to-lit-transformer": "^0.0.4",
-    "lit": "^2.0.0-rc.1"
+    "lit": "^2.0.0-rc.2"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",

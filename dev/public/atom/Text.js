@@ -4,6 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 /**
@@ -45,9 +48,8 @@ Text.styles = css `
         )
       );
       font-weight: 400;
-      font-size: var(--iff__dimension--15);
-      margin-block-start: 1em;
-      margin-block-end: 1em;
+      font-size: calc(1.125rem + 0.25 * ((100vw - 48rem) / 42));
+      line-height: 180%;
     }
     :host([styling='paragraph-slim']) {
       font-family: var(--iff-alias__font--family);
@@ -63,6 +65,7 @@ Text.styles = css `
       margin-block-start: 1em;
       margin-block-end: 1em;
     }
+
     :host([styling='paragraph-bold']) {
       font-family: var(--iff-alias__font--family);
       color: var(
@@ -77,6 +80,7 @@ Text.styles = css `
       margin-block-start: 1em;
       margin-block-end: 1em;
     }
+
     :host([styling='label']) {
       font-family: var(--iff-alias__font--family);
       color: var(
@@ -104,13 +108,16 @@ Text.styles = css `
     }
   `;
 __decorate([
-    property({ reflect: true })
+    property({ reflect: true }),
+    __metadata("design:type", String)
 ], Text.prototype, "styling", void 0);
 __decorate([
-    property({ reflect: true })
+    property({ reflect: true }),
+    __metadata("design:type", String)
 ], Text.prototype, "textAlign", void 0);
 __decorate([
-    property()
+    property(),
+    __metadata("design:type", String)
 ], Text.prototype, "tag", void 0);
 Text = __decorate([
     customElement('iff-text')

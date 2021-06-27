@@ -30,9 +30,8 @@ export class Text extends LitElement {
         )
       );
       font-weight: 400;
-      font-size: var(--iff__dimension--15);
-      margin-block-start: 1em;
-      margin-block-end: 1em;
+      font-size: calc(1.125rem + 0.25 * ((100vw - 48rem) / 42));
+      line-height: 180%;
     }
     :host([styling='paragraph-slim']) {
       font-family: var(--iff-alias__font--family);
@@ -48,6 +47,7 @@ export class Text extends LitElement {
       margin-block-start: 1em;
       margin-block-end: 1em;
     }
+
     :host([styling='paragraph-bold']) {
       font-family: var(--iff-alias__font--family);
       color: var(
@@ -62,6 +62,7 @@ export class Text extends LitElement {
       margin-block-start: 1em;
       margin-block-end: 1em;
     }
+
     :host([styling='label']) {
       font-family: var(--iff-alias__font--family);
       color: var(

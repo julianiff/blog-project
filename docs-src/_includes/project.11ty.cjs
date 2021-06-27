@@ -13,7 +13,7 @@ module.exports = function (data) {
 
 const renderExample = ({name, content, collections, page}) => {
   return `
-    <iff-grid-layout>
+    <iff-grid-layout layout="1-1-1">
         <iff-grid-item orientation="end" background="positive" spacer="component" height="full">
           <iff-title level=2 textAlign="right" surplus="giganto">${name}</iff-title>
 
@@ -34,7 +34,7 @@ const renderExample = ({name, content, collections, page}) => {
             .join('')}
           </iff-grid-layout>
         </iff-grid-item>
-        <iff-grid-item orientation="start" width="slim" spacer="component">
+        <iff-grid-item orientation="start" spacer="component">
             ${content}
         </iff-grid-item >
       </iff-grid-layout>
