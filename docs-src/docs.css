@@ -83,3 +83,7 @@ th {
   justify-self: start;
   max-width: 720px;
 }
+
+pre {
+  font-size: 1.75rem !important;
+}
