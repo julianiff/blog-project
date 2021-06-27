@@ -84,6 +84,8 @@ th {
   max-width: 720px;
 }
 
-pre {
-  font-size: 1.75rem !important;
+@media screen and (min-width: 1024px) {
+  pre {
+    font-size: 1.75rem !important;
+  }
 }
