@@ -45,8 +45,6 @@ Title.styles = css `
       text-align: var(--iff-text__text--align);
       transition: var(--iff-alias__transition);
       line-height: 2em;
-    }
-    h1 {
       color: var(
         --iff-hover__font--color,
         var(
@@ -54,41 +52,23 @@ Title.styles = css `
           var(--iff__font--color, var(--iff-alias__font--color))
         )
       );
+    }
+    h1 {
       --iff-text__font--weight: var(--iff-font-alias__weight--thin);
       font-size: var(--iff-title__font-size, var(--iff__dimension--50));
     }
     h2 {
-      color: var(
-        --iff-hover__font--color,
-        var(
-          --iff-state__font--color,
-          var(--iff__font--color, var(--iff-alias__font--color))
-        )
-      );
       --iff-text__font--weight: var(--iff-font-alias__weight--default);
       font-size: var(--iff-title__font-size, var(--iff__dimension--40));
     }
     h3 {
-      color: var(
-        --iff-hover__font--color,
-        var(
-          --iff-state__font--color,
-          var(--iff__font--color, var(--iff-alias__font--color))
-        )
-      );
       --iff-text__font--weight: var(--iff-font-alias__weight--bold);
       font-size: var(--iff-title__font-size, var(--iff__dimension--30));
     }
     h4 {
-      color: var(
-        --iff-hover__font--color,
-        var(
-          --iff-state__font--color,
-          var(--iff__font--color, var(--iff-alias__font--color))
-        )
-      );
-      --iff-text__font--weight: var(--iff-font-alias__weight--default);
+      --iff-text__font--weight: var(--iff-font-alias__weight--bold);
       font-size: var(--iff-title__font-size, var(--iff__dimension--20));
+      line-height: 1.75em;
     }
 
     :host([textAlign='left']) {

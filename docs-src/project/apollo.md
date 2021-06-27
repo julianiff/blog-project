@@ -8,7 +8,7 @@ description: 'apollo client'
 
 <iff-title level="2">Apollo</hls-title>
 <iff-title level="4">Apollo Cilent promises to simplify managing remote and local data in React applications. It brings with it an intelligent and declarative caching approach. Apollo takes care of the request cycle from the start to finish and provides loading and error states. In general the promise that Apollo brings is to have less code without compromising on features.</iff-text>
-<iff-text>Out of the box, Apollo has a Zero-config cache that comes with an intelligent cache. The combination of local & remove data management allows to take advantage of GraphQL as the unified interface to all of the data. The plug-in architecture of Apollo Link allows for stack functionality and gives the flexibility to extend the client and customize the funcitonality.</iff-text>
+<iff-text>Out of the box, Apollo has a Zero-config cache that comes with an intelligent cache. The combination of local & remote data management allows to take advantage of GraphQL as the unified interface to all of the data. The plug-in architecture of Apollo Link allows for stack functionality and gives the flexibility to extend the client and customize the funcitonality.</iff-text>
 
 <iff-title level=3>Setting up Apollo</iff-title>
 <iff-text>Adding Apollo to a react project is as easy as adding the dependency and wrapping the application. To connect the Apollo Client ApolloProvider wraps the React app and places Apollo client on the context to access. This is also why it is suggested to put the Provider high in the app. For example directly in the top-level index.js</iff-text>

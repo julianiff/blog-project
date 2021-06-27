@@ -18,10 +18,8 @@ export type textAlignVars = 'left' | 'center' | 'right';
 export class Text extends LitElement {
   static styles = css`
     :host {
-      transition: var(--iff-alias__transition);
-    }
-    :host([styling='paragraph']) {
       font-family: var(--iff-alias__font--family);
+      transition: var(--iff-alias__transition);
       color: var(
         --iff-hover__font--color,
         var(
@@ -29,49 +27,23 @@ export class Text extends LitElement {
           var(--iff__font--color, var(--iff-alias__font--color))
         )
       );
-      font-weight: 400;
-      font-size: calc(1.125rem + 0.25 * ((100vw - 48rem) / 42));
       line-height: 180%;
     }
+    :host([styling='paragraph']) {
+      font-weight: 400;
+      font-size: 1.8rem;
+    }
     :host([styling='paragraph-slim']) {
-      font-family: var(--iff-alias__font--family);
-      color: var(
-        --iff-hover__font--color,
-        var(
-          --iff-state__font--color,
-          var(--iff__font--color, var(--iff-alias__font--color))
-        )
-      );
       font-weight: 100;
       font-size: var(--iff__dimension--15);
-      margin-block-start: 1em;
-      margin-block-end: 1em;
     }
 
     :host([styling='paragraph-bold']) {
-      font-family: var(--iff-alias__font--family);
-      color: var(
-        --iff-hover__font--color,
-        var(
-          --iff-state__font--color,
-          var(--iff__font--color, var(--iff-alias__font--color))
-        )
-      );
       font-weight: 700;
       font-size: var(--iff__dimension--15);
-      margin-block-start: 1em;
-      margin-block-end: 1em;
     }
 
     :host([styling='label']) {
-      font-family: var(--iff-alias__font--family);
-      color: var(
-        --iff-hover__font--color,
-        var(
-          --iff-state__font--color,
-          var(--iff__font--color, var(--iff-alias__font--color))
-        )
-      );
       font-weight: 400;
       font-size: var(--iff__dimension--12);
       line-height: 0.5rem;
@@ -87,6 +59,13 @@ export class Text extends LitElement {
 
     :host([textAlign='right']) {
       text-align: right;
+    }
+
+    @media screen and (min-width: 1024px) {
+      :host([styling='paragraph']) {
+        font-weight: 100;
+        font-size: calc(1.125rem + 0.25 * ((100vw - 48rem) / 42));
+      }
     }
   `;
 
