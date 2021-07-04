@@ -1,5 +1,4 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const CleanCSS = require('clean-css');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -10,9 +9,7 @@ module.exports = function (eleventyConfig) {
     'node_modules/@webcomponents/webcomponentsjs'
   );
   eleventyConfig.addPassthroughCopy('node_modules/lit/polyfill-support.js');
-  eleventyConfig.addFilter('cssmin', function (code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
+
   return {
     dir: {
       input: 'src',
