@@ -28,6 +28,6 @@
       }
     ]
   },
-  "include": ["src/**/*.ts", "src/controller/build-views-controllerts"],
+  "include": ["src/**/*.ts", "src/controller/build-views-controller.ts"],
   "exclude": []
 }
