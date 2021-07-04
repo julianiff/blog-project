@@ -11,7 +11,8 @@ module.exports = function (data) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://unpkg.com/es-module-shims@0.12.1/dist/es-module-shims.js"></script>
+    <script async src="/node_modules/es-module-shims/dist/es-module-shims.js"></script>
+    <script async src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <title>${title}</title>
     <link rel="stylesheet" href="${relative(page.url, '/docs.css')}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,7 +25,6 @@ module.exports = function (data) {
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/iff-design-system@0.0.2/lib/index.css">
     <script type="importmap">
