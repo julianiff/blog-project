@@ -14,6 +14,8 @@ module.exports = function (data) {
     <script async src="/node_modules/es-module-shims/dist/es-module-shims.js"></script>
     <script async src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <title>${title}</title>
+    <meta name="description" content="Hey, My passion is to create new digital features and products that transform how users achieve their goals.">
+
     <link rel="stylesheet" href="${relative(page.url, '/styling.css')}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
