@@ -11,6 +11,7 @@ module.exports = function (data) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://unpkg.com/es-module-shims@0.12.1/dist/es-module-shims.js"></script>
     <title>${title}</title>
     <link rel="stylesheet" href="${relative(page.url, '/docs.css')}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
