@@ -1,31 +1,18 @@
 {
-  "name": "@lit/lit-starter-ts",
+  "name": "@julianiff/blog-project",
   "private": true,
-  "version": "0.0.0",
-  "description": "A simple web component",
-  "main": "my-element.js",
-  "module": "my-element.js",
+  "version": "0.0.1",
+  "description": "Blog template in 11ty",
+  "main": "docs-src/index.md",
+  "module": "docs-src/index.md",
   "type": "module",
   "scripts": {
-    "clean": "rimraf my-element.{d.ts,d.ts.map,js,js.map} test/my-element.{d.ts,d.ts.map,js,js.map} test/my-element_test.{d.ts,d.ts.map,js,js.map}",
-    "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
-    "lint:eslint": "eslint 'src/**/*.ts'",
-    "lint:lit-analyzer": "lit-analyzer",
     "format": "prettier \"**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.eslintignore --write",
     "docs": "npm run docs:clean && npm run docs:gen",
     "docs:clean": "rimraf docs",
     "docs:gen": "eleventy --config=.eleventy.cjs",
     "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
-    "docs:build": "rollup -c --file docs/index.bundled.js",
-    "docs:serve": "wds --root-dir=docs --node-resolve --watch",
-    "serve": "wds --watch",
-    "test": "wtr",
-    "test:watch": "npm run test -- --watch",
-    "watch:serve": "concurrently \"yarn build:css --watch\"  \"yarn docs:gen:watch\" \"yarn build:watch\" \"yarn docs:build --watch\" \"yarn docs:serve \" \"yarn docs:assets \"",
-    "checksize": "rollup -c ; cat index.bundled.js | gzip -9 | wc -c ; rm index.bundled.js",
-    "esbuild": "node .esbuild.js",
-    "build:snowpack": "snowpack build",
-    "generate-custom-elements-manifest": "yarn custom-elements-manifest analyze --litelement --dev --exclude \"./**/*.stories.ts\""
+    "docs:serve": "wds --root-dir=docs --node-resolve --watch"
   },
   "keywords": [
     "web-components",
@@ -33,12 +20,13 @@
     "typescript",
     "lit"
   ],
-  "author": "Google LLC",
+  "author": "Julian Iff",
   "license": "BSD-3-Clause",
   "dependencies": {
     "es-module-shims": "^0.12.1",
     "json-to-lit-transformer": "^0.0.4",
-    "lit": "^2.0.0-rc.2"
+    "lit": "^2.0.0-rc.2",
+    "@webcomponents/webcomponentsjs": "^2.5.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -60,11 +48,9 @@
     "@web/test-runner": "^0.12.15",
     "@web/test-runner-mocha": "^0.3.5",
     "@web/test-runner-playwright": "^0.8.4",
-    "@webcomponents/webcomponentsjs": "^2.5.0",
     "concurrently": "^6.2.0",
     "cpx": "^1.5.0",
     "deepmerge": "^4.2.2",
-    "esbuild": "^0.12.12",
     "eslint": "^6.8.0",
     "lit-analyzer": "^1.1.10",
     "mocha": "^7.1.1",
@@ -74,7 +60,6 @@
     "rollup-plugin-minify-html-literals": "^1.2.6",
     "rollup-plugin-summary": "^1.3.0",
     "rollup-plugin-terser": "^7.0.2",
-    "snowpack": "^3.7.1",
     "typescript": "^4.2.4",
     "web-component-analyzer": "^1.0.3"
   }
