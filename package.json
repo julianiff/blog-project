@@ -3,16 +3,16 @@
   "private": true,
   "version": "0.0.1",
   "description": "Blog template in 11ty",
-  "main": "docs-src/index.md",
-  "module": "docs-src/index.md",
+  "main": "src/index.md",
+  "module": "src/index.md",
   "type": "module",
   "scripts": {
     "format": "prettier \"**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.eslintignore --write",
-    "docs": "npm run docs:clean && npm run docs:gen",
-    "docs:clean": "rimraf docs",
-    "docs:gen": "eleventy --config=.eleventy.cjs",
-    "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
-    "docs:serve": "wds --root-dir=docs --node-resolve --watch"
+    "build": "npm run build:clean && npm run build:gen",
+    "build:clean": "rimraf public",
+    "build:gen": "eleventy --config=.eleventy.cjs",
+    "build:gen:watch": "eleventy --config=.eleventy.cjs --watch",
+    "build:serve": "wds --root-dir=public --node-resolve --watch"
   },
   "keywords": [
     "web-components",
@@ -23,10 +23,11 @@
   "author": "Julian Iff",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "clean-css": "^5.1.3",
     "es-module-shims": "^0.12.1",
     "json-to-lit-transformer": "^0.0.4",
-    "lit": "^2.0.0-rc.2",
-    "@webcomponents/webcomponentsjs": "^2.5.0"
+    "lit": "^2.0.0-rc.2"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
