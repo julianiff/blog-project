@@ -1,1 +1,0 @@
-{"version":3,"file":"RowLayout.d.ts","sourceRoot":"","sources":["../../../src/template/RowLayout.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,UAAU,EAAY,MAAM,KAAK,CAAC;AAG1C,OAAO,eAAe,CAAC;AACvB,OAAO,gBAAgB,CAAC;AACxB;;;;GAIG;AACH,qBACa,SAAU,SAAQ,UAAU;IACvC,MAAM,CAAC,MAAM,+BA0BX;IAEF,MAAM;CAGP;AAED,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,qBAAqB;QAC7B,gBAAgB,EAAE,SAAS,CAAC;KAC7B;CACF"}

@@ -1,11 +1,11 @@
-const blog = require('./blog.cjs');
+const page = require('./page.11ty.cjs');
 const relative = require('./relative-path.cjs');
 
 /**
  * This template extends the page template and adds an examples list.
  */
 module.exports = function (data) {
-  return blog({
+  return page({
     ...data,
     content: renderExample(data),
   });

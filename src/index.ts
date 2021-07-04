@@ -18,3 +18,4 @@ import './template/SlimLayout';
 import './layout/GridItem';
 import './layout/GridLayout';
 import './page/BasePage';
+import './styling/design.css';

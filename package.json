@@ -29,7 +29,10 @@
     "test:watch": "npm run test -- --watch",
     "watch:serve": "concurrently \"yarn build:css --watch\"  \"yarn docs:gen:watch\" \"yarn build:watch\" \"yarn docs:build --watch\" \"yarn docs:serve \" \"yarn docs:assets \"",
     "checksize": "rollup -c ; cat index.bundled.js | gzip -9 | wc -c ; rm index.bundled.js",
-    "docs:production": "yarn docs"
+    "docs:production": "yarn docs",
+    "esbuild": "node .esbuild.js",
+    "build:snowpack": "snowpack build",
+    "generate-custom-elements-manifest": "yarn custom-elements-manifest analyze --litelement --dev --exclude \"./**/*.stories.ts\""
   },
   "keywords": [
     "web-components",
@@ -44,6 +47,9 @@
     "lit": "^2.0.0-rc.2"
   },
   "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.3.11",
+    "esbuild": "^0.12.12",
+    "snowpack": "^3.7.1",
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@esm-bundle/chai": "^4.1.5",
@@ -75,7 +81,8 @@
     "rollup-plugin-minify-html-literals": "^1.2.6",
     "rollup-plugin-summary": "^1.3.0",
     "rollup-plugin-terser": "^7.0.2",
-    "typescript": "^3.8.3",
+    "typescript": "^4.2.4",
     "web-component-analyzer": "^1.0.3"
-  }
+  },
+  "customElements": "custom-elements.json"
 }

@@ -13,21 +13,30 @@ module.exports = function (data) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
     <link rel="stylesheet" href="${relative(page.url, '/docs.css')}">
-    <link rel="stylesheet" href="${relative(page.url, '/design.css')}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Mono">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="${relative(page.url, '/prism-okaidia.css')}" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="${relative(page.url, '/prism-okaidia.css')}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap"
       rel="stylesheet"
     />
     <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="${relative(
-      page.url,
-      '/index.bundled.js'
-    )}"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/iff-design-system@0.0.2/lib/index.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "/index.js": "https://unpkg.com/iff-design-system@0.0.2/lib/index.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import '/index.js';
+    </script>
   </head>
   <body theme="blue-gradiant">
     ${header(data)}
