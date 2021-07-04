@@ -2,7 +2,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPassthroughCopy('src/docs.css');
+  eleventyConfig.addPassthroughCopy('src/styling.css');
   eleventyConfig.addPassthroughCopy('src/.nojekyll');
   eleventyConfig.addPassthroughCopy('node_modules/es-module-shims');
   eleventyConfig.addPassthroughCopy(
