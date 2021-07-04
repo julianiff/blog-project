@@ -5001,7 +5001,7 @@ html-minifier-terser@^5.1.1:
 
 html-minifier@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.npmjs.org/html-minifier/-/html-minifier-4.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-4.0.0.tgz#cca9aad8bce1175e02e17a8c33e46d8988889f56"
   integrity sha512-aoGxanpFPLg7MkIl/DDFYtb0iWz7jMFGqFhvEDZga6/4QTjneiD8I/NXL1x5aaoCp7FSIT6h/OhykDdPsbtMig==
   dependencies:
     camel-case "^3.0.0"

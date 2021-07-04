@@ -32,7 +32,7 @@ module.exports = function (data) {
     <script type="importmap">
       {
         "imports": {
-          "/index.js": "https://unpkg.com/iff-design-system@0.0.2/lib/index.js?module"
+          "/index.js": "https://unpkg.com/iff-design-system@0.0.3/lib/index.js?module"
         }
       }
     </script>
