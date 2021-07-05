@@ -6,10 +6,9 @@ name: 'Projects'
 description: 'apollo client'
 ---
 
-<iff-title level="2">Apollo Client</hls-title>
-<iff-title level="4">Apollo Client promises to simplify managing remote and local data in React applications. It brings with it an intelligent and declarative caching approach. Apollo takes care of the request cycle from start to finish and provides loading and error states. In general, the promise that Apollo brings is to have less code without compromising on features.</iff-text>
+<iff-title level="2">Apollo Client</iff-title>
+<iff-title level="4">Apollo Client promises to simplify managing remote and local data in React applications. It brings with it an intelligent and declarative caching approach. Apollo takes care of the request cycle from start to finish and provides loading and error states. In general, the promise that Apollo brings is to have less code without compromising on features.</iff-title>
 <iff-text>Out of the box, Apollo has a Zero-config cache that comes with an intelligent cache. The combination of local & remote data management allows taking advantage of GraphQL as the unified interface to all of the data. The plug-in architecture of Apollo Link allows for stack functionality and gives the flexibility to extend the client and customize the functionality.</iff-text>
-
 <iff-title level=3>Setting up Apollo</iff-title>
 <iff-text>Adding Apollo to a react project is as easy as adding the dependency and wrapping the application. To connect the Apollo Client, ApolloProvider wraps the React app and places Apollo client in the context to access. This is also why it is suggested to put the Provider high in the app. For example directly in the top-level index.js</iff-text>
 
@@ -63,7 +62,7 @@ Apollo supports two strategies for caching. One is polling that sets recurring i
 </iff-text>
 
 <iff-title level=3>Reacting to event</iff-title>
-<iff-text>When using the useQuery hook in a component, it directly executes when the component is mounted. If you want to delay the execution of a query, useLazyQuery can be used. useLazyQuery returns a function that then takes an object that gets executed. This is especially useful when user input is needed to trigger an event. Another useful result Object is the fetchMore function that helps fetch the next set of results for a paginated list field. </iff-text>
+<iff-text>When using the useQuery hook in a component, it directly executes when the component is mounted. If you want to delay the execution of a query, useLazyQuery can be used. useLazyQuery returns a function that then takes an object that gets executed. This is especially useful when user input is needed to trigger an event. Another useful result Object is the fetchMore function that helps fetch the next set of results for a paginated list field.</iff-text>
 
 <iff-title level=3>Local State</iff-title>
 <iff-text>In its core, apollo client is a state management library that uses GraphQL to interact with a remote server. But the remote server is not entirely needed. A Memory cache can be defined, and a field directive @client is added to the query object. When adding a field @client field directive, apollo omits to query the backend and just queries locally. </iff-text>

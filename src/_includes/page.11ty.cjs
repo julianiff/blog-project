@@ -28,11 +28,11 @@ module.exports = function (data) {
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="https://unpkg.com/iff-design-system@0.0.2/lib/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/iff-design-system@0.0.6/lib/index.css">
     <script type="importmap">
       {
         "imports": {
-          "/index.js": "https://unpkg.com/iff-design-system@0.0.3/lib/index.js?module"
+          "/index.js": "https://unpkg.com/iff-design-system@0.0.6/lib/index.js?module"
         }
       }
     </script>
