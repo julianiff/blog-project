@@ -7,4 +7,4 @@ description: overview
 ---
 
 <iff-title level="3">Overview</hls-title>
-<iff-title level="4">A list with some of the Projects and Blog posts about Web topics.</hls-title>
+<iff-title level="4">A list with some of the Projects and Blog posts about Web topics. In general</hls-title>
