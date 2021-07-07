@@ -40,7 +40,7 @@ module.exports = function (data) {
       import '/index.js';
     </script>
   </head>
-  <body theme="blue-gradiant">
+  <body theme="triColor">
     ${header(data)}
     ${content}
     ${footer()}
