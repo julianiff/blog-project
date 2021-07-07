@@ -14,7 +14,6 @@ module.exports = function (data) {
     <script async src="/node_modules/es-module-shims/dist/es-module-shims.js"></script>
     <script async src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <title>${title}</title>
-    <meta name="description" content="Hey, My passion is to create new digital features and products that transform how users achieve their goals.">
 
     <link rel="stylesheet" href="${relative(page.url, '/styling.css')}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,22 +27,20 @@ module.exports = function (data) {
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="https://unpkg.com/iff-design-system@0.0.16/lib/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/iff-design-system@0.0.13/lib/index.css">
     <script type="importmap">
       {
         "imports": {
-          "/index.js": "https://unpkg.com/iff-design-system@0.0.16/lib/index.js?module"
+          "/index.js": "https://unpkg.com/iff-design-system@0.0.13/lib/atom/Title.js?module"
         }
       }
     </script>
     <script type="module">
-      import '/index.js';
+       // import '/index.js';
     </script>
   </head>
-  <body theme="blue-gradiant">
-    ${header(data)}
+  <body>
     ${content}
-    ${footer()}
   </body>
 </html>`;
 };
