@@ -28,11 +28,11 @@ module.exports = function (data) {
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="https://unpkg.com/iff-design-system@0.0.9/lib/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/iff-design-system@0.0.12/lib/index.css">
     <script type="importmap">
       {
         "imports": {
-          "/index.js": "https://unpkg.com/iff-design-system@0.0.9/lib/index.js?module"
+          "/index.js": "https://unpkg.com/iff-design-system@0.0.12/lib/index.js?module"
         }
       }
     </script>
@@ -40,7 +40,7 @@ module.exports = function (data) {
       import '/index.js';
     </script>
   </head>
-  <body theme="triColor">
+  <body theme="blue-gradiant">
     ${header(data)}
     ${content}
     ${footer()}

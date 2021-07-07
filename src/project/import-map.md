@@ -3,8 +3,8 @@ layout: project.11ty.cjs
 title: Project ⌲ Test
 tags: project
 name: Projects
-description: Import Maps
+description: Frontend Deployments
 ---
 
-<iff-title level="3">JS Import Maps</hls-title>
-<iff-title level="4"></hls-title>
+<iff-title level="3">Frontend Deployments</hls-title>
+<iff-title level="4">Import Maps, CDN, and a Component Library are a match made in heaven.</hls-title>
