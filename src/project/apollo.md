@@ -3,7 +3,7 @@ layout: project.11ty.cjs
 title: Project ⌲ Apollo
 tags: 'project'
 name: 'Projects'
-description: 'apollo client'
+description: 'Apollo client'
 ---
 
 <iff-title level="2">Apollo GraphQl</iff-title>
