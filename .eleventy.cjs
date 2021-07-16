@@ -3,6 +3,7 @@ const htmlmin = require('html-minifier');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPassthroughCopy('src/**/*.svg');
   eleventyConfig.addPassthroughCopy('src/styling.css');
   eleventyConfig.addPassthroughCopy('src/.nojekyll');
   eleventyConfig.addPassthroughCopy('node_modules/es-module-shims');

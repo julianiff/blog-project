@@ -1,6 +1,6 @@
 ---
 layout: project.11ty.cjs
-title: Project ⌲ Test
+title: Project ⌲ Import Map
 tags: project
 name: Projects
 description: Frontend Deployments
