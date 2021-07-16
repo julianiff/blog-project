@@ -3,7 +3,6 @@ layout: project.11ty.cjs
 title: Project ⌲ Test
 tags: project
 name: Projects
-description: overview
 ---
 
 <iff-title level="3">Overview</hls-title>

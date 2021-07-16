@@ -15,10 +15,12 @@ const renderExample = ({name, content, collections, page}) => {
   return `
     <iff-grid-layout layout="1-1-1">
         <iff-grid-item orientation="end" background="positive" spacer="component" height="full">
-          <iff-title level=2 textAlign="right" surplus="giganto">${name}</iff-title>
-
+        <iff-link href="${relative(page.url, '/project')}">
+          <iff-title level=2 textAlign="right" surplus="giganto">Projects</iff-title>
+        </iff-link>
           <iff-grid-layout layout="1">
           ${collections.project
+            .filter((item) => !!item.data.description)
             .map(
               (item) => `
             <iff-grid-item orientation="end">
