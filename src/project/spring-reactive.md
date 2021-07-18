@@ -12,5 +12,3 @@ description: Spring Reactive
 <iff-svg src="/img/reactive.svg" />
 
 <iff-title level="3">Spring WebFlux Framework</hls-title>
-<iff-text>Spring </iff-text>
-
