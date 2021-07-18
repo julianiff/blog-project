@@ -7,7 +7,11 @@ description: Javascript Tipps
 ---
 
 <iff-title level="2">Javascript Tipps</hls-title>
-<iff-title level="4">Best practises for Javascript from Airbnb github that are worth remembering.</hls-title>
+<iff-title level="4">Best practises for Javascript that are worth remembering.</hls-title>
+
+<iff-icon-text icon="end" href="https://github.com/airbnb/javascript" target="_blank"><iff-text styling="label" slot="text">Airbnb StyleGuide</iff-text></iff-icon-text>
+<iff-icon-text icon="end" href="https://github.com/bendc/frontend-guidelines" target="_blank"><iff-text styling="label" slot="text">Frontend Guidelines</iff-text></iff-icon-text>
+<iff-icon-text icon="end" href="https://eloquentjavascript.net/" target="_blank"><iff-text styling="label" slot="text">Eloquent Javascript</iff-text></iff-icon-text>
 
 <iff-text>Use Array.from for converting array-like objects to an array</hls-text>
 
