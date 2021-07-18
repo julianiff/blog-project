@@ -9,7 +9,6 @@ description: Design System
 <iff-title level="2">Design System</hls-title>
 <iff-title level="4">Incremental improvements with reusable Components, easy application integration and Component Delivery Systems.</hls-title>
 
-<iff-text noLineHeight styling="paragraph-bold">Github Repository:</iff-text>
 <iff-icon-text icon="end" href="https://github.com/julianiff/design-system" target="_blank"><iff-text styling="label" slot="text">Design System</iff-text></iff-icon-text>
 
 <iff-title level="3">Reusable Components</hls-title>
