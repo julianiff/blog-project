@@ -125,6 +125,13 @@ pre[class*='language-'] {
   hyphens: auto;
 }
 
+@media screen and (min-width: 1024px) {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    max-width: 750px;
+  }
+}
+
 /* Code blocks */
 pre[class*='language-'] {
   padding: 1em;

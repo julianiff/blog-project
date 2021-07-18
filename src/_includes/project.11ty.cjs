@@ -13,6 +13,7 @@ module.exports = function (data) {
 
 const renderExample = ({name, content, collections, page}) => {
   return `
+    
     <iff-grid-layout layout="1-1-1">
         <iff-grid-item orientation="end" background="positive" spacer="component" height="full">
         <iff-link href="${relative(page.url, '/project')}">
@@ -37,8 +38,11 @@ const renderExample = ({name, content, collections, page}) => {
           </iff-grid-layout>
         </iff-grid-item>
         <iff-grid-item orientation="start" spacer="component">
+          <article>
             ${content}
+          </article>
         </iff-grid-item >
       </iff-grid-layout>
+    
   `;
 };
