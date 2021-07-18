@@ -7,9 +7,9 @@ description: Javascript Tipps
 ---
 
 <iff-title level="2">Javascript Tipps</hls-title>
-<iff-title level="4">Best practises for Javascript from Airbnb github that i found interesting.</hls-title>
+<iff-title level="4">Best practises for Javascript from Airbnb github that are worth remembering.</hls-title>
 
-<iff-text>Use Array.from for converting array-linke object to an array</hls-text>
+<iff-text>Use Array.from for converting array-like objects to an array</hls-text>
 
 ```js
 const arrLike = {0: 'foo', 1: 'bar', 2: 'baz', length: 3};
