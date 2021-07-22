@@ -290,3 +290,28 @@ const obj = Object.create(shared, {
 // good
 Object.keys(obj).forEach((prop) => console.log(prop));
 ```
+
+<iff-text>Javascript memoization</hls-text>
+
+```js
+const add = () => {
+  const cache = {};
+  return num => {
+    if (num in cache) {
+      return `From cache! ${cache[num]}`;
+    } else {
+      const result = num + 10;
+      cache[num] = result;
+      return `Calculated! ${result}`;
+    }
+  };
+};
+
+const addFunction = add();
+// Now the function is memoized and speeds up the execution. 
+// with a simple object a cache can be built
+addFunction(15);
+addFunction(12); // it would take the data from the cache.
+
+```
+
