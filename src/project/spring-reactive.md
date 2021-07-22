@@ -3,11 +3,10 @@ layout: project.11ty.cjs
 title: Project ⌲ Spring Reactive
 tags: project
 name: Projects
-description: Spring Reactive
+pageTitle: Spring WebFLux Kotlin
+lead: Spring Reactive is non-blocking, supports Reactive Streams, and is the reactive alternative to Spring MVC. Spring MVC uses the Servlet Stack. Spring Reactive uses a non-blocking web framework to take advantage of multi-core, next-generation processors to handle massive numbers of concurrent connections.
+navigation: Spring Reactive
 ---
-
-<iff-title level="2">Spring WebFlux Kotlin</hls-title>
-<iff-title level="4">Spring Reactive is non-blocking, supports Reactive Streams, and is the reactive alternative to Spring MVC. Spring MVC uses the Servlet Stack. Spring Reactive uses a non-blocking web framework to take advantage of multi-core, next-generation processors to handle massive numbers of concurrent connections.</hls-title>
 
 <iff-svg src="/img/reactive.svg"></svg>
 

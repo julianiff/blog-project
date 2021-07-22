@@ -3,11 +3,10 @@ layout: project.11ty.cjs
 title: Project ⌲ Import Map
 tags: project
 name: Projects
-description: Javascript Tipps
+pageTitle: Javascript Tipps
+lead: Best practises and Tipps for Javascript that are worth remembering.
+navigation: Javascript Tipps
 ---
-
-<iff-title level="2">Javascript Tipps</hls-title>
-<iff-title level="4">Best practises for Javascript that are worth remembering.</hls-title>
 
 <iff-icon-text icon="end" href="https://github.com/airbnb/javascript" target="_blank"><iff-text styling="label" slot="text">Airbnb StyleGuide</iff-text></iff-icon-text>
 <iff-icon-text icon="end" href="https://github.com/bendc/frontend-guidelines" target="_blank"><iff-text styling="label" slot="text">Frontend Guidelines</iff-text></iff-icon-text>
@@ -296,7 +295,7 @@ Object.keys(obj).forEach((prop) => console.log(prop));
 ```js
 const add = () => {
   const cache = {};
-  return num => {
+  return (num) => {
     if (num in cache) {
       return `From cache! ${cache[num]}`;
     } else {
@@ -308,10 +307,8 @@ const add = () => {
 };
 
 const addFunction = add();
-// Now the function is memoized and speeds up the execution. 
+// Now the function is memoized and speeds up the execution.
 // with a simple object a cache can be built
 addFunction(15);
 addFunction(12); // it would take the data from the cache.
-
 ```
-

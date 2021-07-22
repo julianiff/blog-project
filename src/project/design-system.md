@@ -3,11 +3,10 @@ layout: project.11ty.cjs
 title: Project ⌲ Design System
 tags: project
 name: Projects
-description: Design System
+pageTitle: Design System
+lead: Small building Blocks that integrate with many Web Interfaces to streamline UI development and simply development.
+navigation: Design System
 ---
-
-<iff-title level="2">Design System</hls-title>
-<iff-title level="4">Incremental improvements with reusable Components, easy application integration and Component Delivery Systems.</hls-title>
 
 <iff-icon-text icon="end" href="https://github.com/julianiff/design-system" target="_blank"><iff-text styling="label" slot="text">Design System</iff-text></iff-icon-text>
 

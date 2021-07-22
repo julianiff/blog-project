@@ -3,11 +3,10 @@ layout: project.11ty.cjs
 title: Project ⌲ Apollo
 tags: 'project'
 name: 'Projects'
-description: 'Apollo client'
+pageTitle: Apollo GraphQL
+lead: Apollo Client promises to simplify managing remote and local data in applications. Apollo takes care of the request cycle from start to finish and provides loading and error states. In general, Apollo promises to do more with less code.
+navigation: 'Apollo client'
 ---
-
-<iff-title level="2">Apollo GraphQl</iff-title>
-<iff-title level="4">Apollo Client promises to simplify managing remote and local data in applications. Apollo takes care of the request cycle from start to finish and provides loading and error states. In general, Apollo promises to do more with less code.</iff-title>
 <iff-text>It brings with it an intelligent and declarative caching approach. Out of the box, Apollo has a Zero-config cache that comes with an intelligent cache. The combination of local & remote data management allows taking advantage of GraphQL as the unified interface to all of the data. The plug-in architecture of Apollo Link allows for stack functionality and gives the flexibility to extend the client and customize the functionality.</iff-text>
 <iff-title level=3>Setting up Apollo</iff-title>
 <iff-text>Adding Apollo to a react project is as easy as adding the dependency and wrapping the application. To connect the Apollo Client, ApolloProvider wraps the React app and places Apollo client in the context to access. This is also why it is suggested to put the Provider high in the app. For example directly in the top-level index.js</iff-text>
