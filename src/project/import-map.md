@@ -11,7 +11,7 @@ navigation: Buildless Frontend
 <iff-title level="3">Big picture</iff-title>
 
 <iff-text styling="label">Architecture for Frontend Deployments with importMaps and a CDN</iff-text>
-<iff-svg style="padding-top: 24px; padding-bottom: 24px;" src="/img/frontend.png"></svg>
+<iff-svg style="padding-top: 24px; padding-bottom: 24px;" src="/img/frontend.svg"></svg>
 
 <iff-title level="3">1: Import Maps</iff-title>
 <iff-text>The centerpiece of buildless deployments for frontend apps is the import map. Import maps allow a website to declare their dependencies in the head of the html. Lets imagine an app uses a versioned UI library. When the UI library releases a new version and fixes some bugs the app also needs to rebuild their codebase, bundle all up to then be able to deploy the new change.</iff-text>
