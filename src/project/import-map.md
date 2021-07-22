@@ -42,7 +42,7 @@ navigation: Buildless Frontend
 <iff-title level="3">2: Notify</iff-title>
 <iff-text>With import maps the management of dependencies slides from the build step to the pipelines. To not needing to update the head of the html by hand a release pipeline can be used to update the import map in the application. Or alternatively use a CDN for a hosted Import map.</iff-text>
 
-<iff-title level="3">Serving</iff-title>
+<iff-title level="3">3 & 4: Serving</iff-title>
 <iff-text>When the html is served the browser reads the import map and requests the packages from a CDN like unpkg.</iff-text>
 
 <iff-text>If a pipeline or external import map is too much effort, or it is wanted to always have the latest version of a certain library, the import map also allows for the latest tag.</iff-text>

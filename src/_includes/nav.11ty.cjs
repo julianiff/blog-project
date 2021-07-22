@@ -14,7 +14,7 @@ module.exports = function ({page}) {
     <iff-link slot="end" href="${relative(page.url, '/project/')}" active="${
     page.url === '/project/'
   }">
-      <iff-text styling="paragraph-slim">Projects</iff-text>
+      <iff-text styling="paragraph-slim">Posts</iff-text>
     </iff-link>
   </iff-head-navigation>
   `;
