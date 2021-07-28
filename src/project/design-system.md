@@ -4,11 +4,9 @@ title: Project ⌲ Design System
 tags: project
 name: Projects
 pageTitle: Design System
-lead: Small building Blocks that integrate with many Web Interfaces to streamline UI development and simply development.
+lead: Small building Blocks that integrate with many Web Interfaces to streamline UI development and simplyfy development.
 navigation: Design System
 ---
-
-<iff-icon-text icon="end" href="https://github.com/julianiff/design-system" target="_blank"><iff-text styling="label" slot="text">Design System</iff-text></iff-icon-text>
 
 <iff-title level="3">Reusable Components</hls-title>
 <iff-text>At its core, a design system offers reusable components for consumer systems. A known mental model to guide the creation of design systems is the concept of atomic design. An atomic design has different layers of abstraction. The smallest abstraction is the atom. These are small design tokens or elements. Building on these atoms are the molecules. These elements are combinations of atoms and sometimes also molcules itself.</iff-text>
@@ -29,9 +27,9 @@ navigation: Design System
 ```js
 color:
 var(--iff-hover__font--color,
-var(--iff-state__font--color,
-var(--iff__font--color,
-var(--iff-alias__font--color
+  var(--iff-state__font--color,
+    var(--iff__font--color,
+      var(--iff-alias__font--color
 ))));
 ```
 
