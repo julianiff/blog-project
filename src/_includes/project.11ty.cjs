@@ -5,14 +5,13 @@ const relative = require('./relative-path.cjs');
  * This template extends the page template and adds an examples list.
  */
 module.exports = function (data) {
-  console.log(data.date);
   return page({
     ...data,
     content: renderExample(data),
   });
 };
 
-const renderExample = ({name, content, collections, page, pageTitle, lead}) => {
+const renderExample = ({content, collections, page, pageTitle, lead}) => {
   return `
     
     <iff-grid-layout layout="1-1-1">
@@ -43,8 +42,6 @@ const renderExample = ({name, content, collections, page, pageTitle, lead}) => {
               <iff-title level="2">${pageTitle}</iff-title>
               <iff-title level="4">${lead}</iff-title>
               <iff-text styling="label">${page.date.toDateString()}</iff-text>
-              
-              
             ${content}
           </article>
         </iff-grid-item >
