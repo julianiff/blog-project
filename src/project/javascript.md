@@ -12,6 +12,21 @@ navigation: Javascript Tipps
 <iff-icon-text icon="end" href="https://github.com/bendc/frontend-guidelines" target="_blank"><iff-text styling="label" slot="text">Frontend Guidelines</iff-text></iff-icon-text>
 <iff-icon-text icon="end" href="https://eloquentjavascript.net/" target="_blank"><iff-text styling="label" slot="text">Eloquent Javascript</iff-text></iff-icon-text>
 
+<iff-text>How to Iterate over Objects</hls-text>
+
+```js
+// Objects aren't iterable by default
+// Add iterator symbol and return a generator object.
+const person = {
+  name: "Arnold Iterator",
+  age: 55
+  *[Symbol.iterator]() { yield* Object.values(this) }
+}
+
+
+[...person] // ["Arnold Iterator", 55]
+```
+
 <iff-text>Use Array.from for converting array-like objects to an array</hls-text>
 
 ```js
