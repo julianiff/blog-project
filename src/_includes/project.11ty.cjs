@@ -15,7 +15,7 @@ const renderExample = ({content, collections, page, pageTitle, lead}) => {
   return `
     
     <iff-grid-layout layout="1-1-1">
-        <iff-grid-item orientation="end" background="positive" spacer="component" height="full">
+        <iff-grid-item orientation="end" background="positive" polygon="true" spacer="component" height="full">
         <iff-link href="${relative(page.url, '/project')}">
           <iff-title level=2 textAlign="right" surplus="giganto">Posts</iff-title>
         </iff-link>
