@@ -13,7 +13,8 @@ html {
 body {
   margin: 0;
   color: #333;
-  font-family: 'Open Sans', arial, sans-serif;
+  font-family: Inter, sans-serif;
+  font-display: optional;
   min-width: min-content;
   min-height: 100vh;
   display: flex;
