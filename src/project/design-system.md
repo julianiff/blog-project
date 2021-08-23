@@ -80,6 +80,6 @@ var(--iff-hover__font--color,
 
 <iff-text styling="paragraph-slim">An example Design System can be found under the following link. It is build with atoms, molecules and organisms. Lit.dev is a library that creates webcomponents with ease and offers a flexible way to create design-system.</iff-text>
 
-<iff-icon-text icon="end" href="https://github.com/julianiff/design-system" target="_blank"><iff-text styling="paragraph-bold" slot="text">Design System Github</iff-text></iff-icon-text>
+<iff-icon-text icon="end" rel="noopener" href="https://github.com/julianiff/design-system" target="_blank"><iff-text styling="paragraph-bold" slot="text">Design System Github</iff-text></iff-icon-text>
 
-<iff-icon-text icon="end" href="https://lit.dev/" target="_blank"><iff-text noLineHeight styling="paragraph-bold" slot="text">Lit.dev Webcomponents</iff-text></iff-icon-text>
+<iff-icon-text icon="end" rel="noopener" href="https://lit.dev/" target="_blank"><iff-text noLineHeight styling="paragraph-bold" slot="text">Lit.dev Webcomponents</iff-text></iff-icon-text>

@@ -3,7 +3,8 @@ const footer = require('./footer.11ty.cjs');
 const relative = require('./relative-path.cjs');
 
 module.exports = function (data) {
-  const {title, page, content} = data;
+  const {title, page, content, hideFooter} = data;
+  console.log(data.hideFooter);
   return `
 <!doctype html>
 
@@ -20,10 +21,12 @@ module.exports = function (data) {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;400;700&display=swap"
       rel="stylesheet"
     />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap"
       rel="stylesheet"
     />
@@ -43,7 +46,7 @@ module.exports = function (data) {
   <body theme="blue-gradiant">
     ${header(data)}
     ${content}
-    ${footer()}
+    ${hideFooter ? footer() : ''}
   </body>
 </html>`;
 };
