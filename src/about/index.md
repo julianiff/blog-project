@@ -1,7 +1,7 @@
 ---
 layout: page.11ty.cjs
 title: About ⌲
-hideFooter: true
+hideNavigation: true
 ---
 
 <iff-base-page view="Intro"></iff-base-page>

@@ -3,8 +3,7 @@ const footer = require('./footer.11ty.cjs');
 const relative = require('./relative-path.cjs');
 
 module.exports = function (data) {
-  const {title, page, content, hideFooter} = data;
-  console.log(data.hideFooter);
+  const {title, page, content, hideNavigation} = data;
   return `
 <!doctype html>
 
@@ -46,7 +45,7 @@ module.exports = function (data) {
   <body theme="blue-gradiant">
     ${header(data)}
     ${content}
-    ${hideFooter ? footer() : ''}
+    ${!!hideNavigation ? footer() : ''}
   </body>
 </html>`;
 };
