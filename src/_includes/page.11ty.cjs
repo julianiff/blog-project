@@ -35,8 +35,8 @@ module.exports = function (data) {
     <script type="module">
     import '/index.js';
     </script>
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.skypack.dev/-/iff-design-system@v1.8.3-g5H3NAfp5G41b0yFmtM8/dist=es2020,mode=raw/lib/index.css">
     <link rel="stylesheet" href="${relative(page.url, '/styling.css')}">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.skypack.dev/-/iff-design-system@v1.8.3-g5H3NAfp5G41b0yFmtM8/dist=es2020,mode=raw/lib/index.css">
     <meta name="description" content="Hey, My passion is to create new digital features and products that transform how users achieve their goals.">
     </head>
     <body theme="blue-gradiant">
