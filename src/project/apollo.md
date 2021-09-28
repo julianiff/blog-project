@@ -7,9 +7,14 @@ pageTitle: Apollo GraphQL
 lead: Apollo Client promises to simplify managing remote and local data in applications. Apollo takes care of the request cycle from start to finish and provides loading and error states. In general, Apollo promises to do more with less code.
 navigation: 'Apollo client'
 ---
+
+<iff-animated-container>
+
 <iff-text>Apollo brings with it an intelligent and declarative caching approach. Out of the box, Apollo has a Zero-config cache that comes with an intelligent cache mechanism. The combination of local & remote data management allows taking advantage of GraphQL as the unified interface to all of the data. The plug-in architecture of Apollo Link allows for stack functionality and gives the flexibility to extend the client and customize the functionality.</iff-text>
 <iff-title level=3>Setting up Apollo</iff-title>
 <iff-text>Adding Apollo to a react project is as easy as adding the dependency and wrapping the application. To connect the Apollo Client, ApolloProvider wraps the React app and places Apollo client in the context to access. This is also why it is suggested to put the Provider high in the app. For example directly in the top-level index.js</iff-text>
+</iff-animated-container>
+<iff-animated-container>
 
 ```js
 function App() {
@@ -27,6 +32,9 @@ render(
   document.getElementById('root')
 );
 ```
+
+</iff-animated-container>
+<iff-animated-container>
 
 <iff-title level=3>
 Data Fetching
@@ -51,6 +59,8 @@ With GraphQL you can query for specific fields on objects. A simple query looks 
   }
 }
 ```
+
+</iff-animated-container>
 
 <iff-text>
 GraphQL can also traverse related objects and return their fields by simply nesting the object. GraphQL is used in apollo by wrapping the queries into a gql function to parse them into the query Document. Again an advantage of using apollo is that the apollo hook returns a loading, error, and data state of the request. With arguments, the graphql query can be enriched to search for arguments, which can also be nested inside the GraphQL object.

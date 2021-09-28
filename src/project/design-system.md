@@ -8,9 +8,13 @@ lead: Small building Blocks that integrate with many Web Interfaces to streamlin
 navigation: Design System
 ---
 
+<iff-animated-container>
+
 <iff-title level="3">Reusable Components</hls-title>
 <iff-text>At its core, a design system offers reusable components for consumer systems. A known mental model to guide the creation of design systems is the concept of atomic design. An atomic design has different layers of abstraction. The smallest abstraction is the atom. These are small design tokens or elements. Building on these atoms are the molecules. These elements are combinations of atoms and sometimes also molcules itself.</iff-text>
 <iff-text>At the top are organisms and then pages/templates. Like a molecule, an organism is built by combining multiple atoms and molecules. The main distinction from a molecule is that it is a finished construct. That means it does not offer styling extensability but mostly only variations through attributes. Following up with some example for clarity.</iff-text>
+</iff-animated-container>
+<iff-animated-container>
 
 <iff-title level="3">Atom</hls-title>
 
@@ -34,6 +38,8 @@ var(--iff-hover__font--color,
 ```
 
 <iff-text>Atoms have attribute and styling interfaces. Attributes allow to build preset variations to be used. For example the styling of a paragraph can be preset with an attribute. The styling interface allows to control the degree of freedom of the component. It displays the user what can be changed and how. The styling interface can be very free with atoms to allows for many design variants.<iff-text>
+</iff-animated-container>
+<iff-animated-container>
 
 <iff-title level="3">Molecules / Organism</hls-title>
 <iff-text>Composed of atoms, the molecules also offer a attribute and styling interface. The styling interface is already usually more restrictive then with atoms and a molecule offers more attributes to change.<iff-text>
@@ -49,6 +55,8 @@ var(--iff-hover__font--color,
 <iff-icon-text icon="start">Link</iff-icon-text>
 
 <iff-text>The example above shows how a icon-text can look like. The component can be used to display an icon with a text. But it can also be extended to be clickable and adjust the position of the icon. Additionally a slot with the text styling exists that allows to customize the appearance of the text inside the icon-text.</iff-text>
+</iff-animated-container>
+<iff-animated-container>
 
 ```html
 <iff-grid-layout layout="1-1-1">
@@ -75,6 +83,8 @@ var(--iff-hover__font--color,
     <iff-text styling="paragraph">Three</iff-text>
   </iff-grid-item>
 </iff-grid-layout>
+</iff-animated-container>
+<iff-animated-container>
 
 <iff-text>This example shows a grid-layout that separated into 3 columns and can be used in combination with grid-item childs that have different variantions to be configured. Inside the grid-item is then a text component with a paragraph styling.</iff-text>
 
@@ -83,3 +93,4 @@ var(--iff-hover__font--color,
 <iff-icon-text icon="end" rel="noopener" href="https://github.com/julianiff/design-system" target="_blank"><iff-text styling="paragraph-bold" slot="text">Design System Github</iff-text></iff-icon-text>
 
 <iff-icon-text icon="end" rel="noopener" href="https://lit.dev/" target="_blank"><iff-text noLineHeight styling="paragraph-bold" slot="text">Lit.dev Webcomponents</iff-text></iff-icon-text>
+</iff-animated-container>
