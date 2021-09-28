@@ -30,14 +30,14 @@ module.exports = function (data) {
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="https://unpkg.com/iff-design-system@latest/lib/index.css">
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="https://cdn.skypack.dev/-/iff-design-system@v1.8.3-g5H3NAfp5G41b0yFmtM8/dist=es2020,mode=raw/lib/index.css">
     <script type="importmap">
-      {
-        "imports": {
-          "/index.js": "https://unpkg.com/iff-design-system@latest/lib/index.js?module"
-        }
-      }
-    </script>
+    {
+    "imports": {
+        "/index.js": "https://cdn.skypack.dev/pin/iff-design-system@v1.8.3-g5H3NAfp5G41b0yFmtM8/mode=imports,min/optimized/iff-design-system.js"
+    }
+    }
+</script>
     <script type="module">
       import '/index.js';
     </script>
