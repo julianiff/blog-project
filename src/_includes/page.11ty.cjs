@@ -18,7 +18,7 @@ module.exports = function (data) {
     <script type="importmap">
     {
       "imports": {
-        "/index.js": "https://cdn.skypack.dev/pin/iff-design-system@v1.8.3-g5H3NAfp5G41b0yFmtM8/mode=imports,min/optimized/iff-design-system.js"
+        "/index.js": "https://cdn.skypack.dev/pin/iff-design-system@v1.10.0-g5H3NAfp5G41b0yFmtM8/mode=imports,min/optimized/iff-design-system.js"
       }
     }
     </script>
@@ -26,8 +26,8 @@ module.exports = function (data) {
     import '/index.js';
     </script>
     <link rel="stylesheet" href="${relative(page.url, '/styling.css')}">
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.skypack.dev/-/iff-design-system@v1.8.3-g5H3NAfp5G41b0yFmtM8/dist=es2020,mode=raw/lib/index.css">
-        <link
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.skypack.dev/-/iff-design-system@v1.10.0-g5H3NAfp5G41b0yFmtM8/dist=es2020,mode=raw/lib/index.css">
+    <link
     rel="preload"
     href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;400;700&display=swap"
     rel="stylesheet"
