@@ -25,7 +25,6 @@ module.exports = function (data) {
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap"
     rel="stylesheet"
     />
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.skypack.dev/-/iff-design-system@v1.8.3-g5H3NAfp5G41b0yFmtM8/dist=es2020,mode=raw/lib/index.css">
     <script type="importmap">
     {
       "imports": {
@@ -33,6 +32,7 @@ module.exports = function (data) {
       }
     }
     </script>
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.skypack.dev/-/iff-design-system@v1.8.3-g5H3NAfp5G41b0yFmtM8/dist=es2020,mode=raw/lib/index.css">
     <script type="module">
     import '/index.js';
     </script>
